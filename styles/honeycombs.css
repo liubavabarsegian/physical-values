@@ -1,0 +1,107 @@
+.hexagon{
+	width: 100px;
+	height: 100px;
+}
+.hexagon-red
+{
+	border: 30px solid rgb(178, 112, 112);
+}
+.hexagon-yellow
+{
+	border: 30px solid rgb(223, 223, 145);
+}
+.hexagon-green
+{
+	border: 30px solid rgb(99, 175, 99);
+}
+.hexagon-white
+{
+	border: 30px solid   rgb(190, 200, 210);
+}
+.hexagon-blue
+{
+	border: 30px solid rgb(111, 154, 233);
+}
+.hexagon-pink
+{
+	border: 30px solid rgb(209, 115, 215);
+}
+.hexagon_zero{
+	width: 0;
+	height: 0;
+}
+.hexagon_triangle_left{
+	border-left-width: 0;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.hexagon_triangle_left_large{
+	border-top-width: 45px;
+	border-bottom-width: 45px;
+}
+.hexagon_triangle_right{
+	border-right-width: 0;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.hexagon_triangle_right_large{
+	border-top-width: 45px;
+	border-bottom-width: 45px;
+}
+.inside{
+	width: 90px;
+	height: 90px;
+}
+body
+{
+	text-align: center;
+}
+.row
+{
+	display: flex;
+	justify-content: center;
+}
+.one-hexagon
+{
+	display: flex;
+}
+.red
+{
+	background-color: rgb(178, 112, 112);
+}
+.yellow
+{
+	background-color: rgb(223, 223, 145);
+}
+.green
+{
+	background-color: rgb(99, 175, 99);
+}
+.white
+{
+	background-color: rgb(190, 200, 210);
+}
+.blue
+{
+	background-color: rgb(111, 154, 233);
+}
+.pink
+{
+	background-color: rgb(209, 115, 215);
+}
+.one-hexagon:hover
+{
+	box-shadow: 10px 0 10px rgba(0,0,0,0.5); ;
+}
+#row-4
+{
+	margin-left: 10%;
+}
+#row-6
+{
+	margin-right: 10%;
+}
+#row-7
+{
+	margin-right: 10%;
+}
