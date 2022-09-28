@@ -1,0 +1,41 @@
+header { 
+	width: 100%;  
+	height: 50px;
+	/*background-color: #;*/
+	border-radius: 0.5em;
+	background-image: url(img/113.jpg);
+ 	padding-top: 10px;
+ 	font-family: garamond;
+ 	font-size: 30px;
+	font-weight: bold;
+	background: rgba(0,0,0,0.5);
+ }
+ main { padding-top: 50px; }
+.leftSide {
+	float: left;
+	padding-right: 10%;
+}
+._href_ {
+	color:  #F0E68C;
+	text-decoration: none;
+}
+.bg-ex-parallax { 
+  background: url(img/111.jpg); /* Картинка на фоне сайта*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+.bg-ex-parallax .parallax-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8); /* Прозрачность */
+  z-index: 2;
+}
+.bg-ex-parallax span {
+    z-index: 3;
+}
+#header_1 { padding-left: 5%; }
+#h1 { text-align: center; color: #ffffff; font-size: 50px; }
