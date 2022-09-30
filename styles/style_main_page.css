@@ -43,13 +43,18 @@ main
 	z-index: 2;
 }
 .bg-ex-parallax span {
-    z-index: 3;
+  z-index: 3;
 }
-h1
-{
+h1 {
 	text-align: center; 
 	color: #ffffff; 
-	font-size: 50px; 
+	font-size: 100px; 
+  margin-top: 0px;
+}
+h2 {
+  text-align: center; 
+  color: #ffffff; 
+  font-size: 50px; 
 }
 a:hover
 {
@@ -62,14 +67,157 @@ a:hover
 .hexagon-menu
 {
 	display: flex;
+  margin-top: 50px;
 	justify-content: center;
 }
+#main_content {
+  margin-top: 8%;
+  margin-left: 10%;
+  width: 80%;
+  height: 1000px;
+  border-radius: 3em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/*Стили для неонового текста*/
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+:root {
+  /* Base font size */
+  font-size: 10px;   
+  
+  /* Set neon color */
+  --neon-text-color: #44D62C;
+  --neon-border-color: #08f;
+}
+
+body main div h1 {
+  width: 30%;
+  height: 10%;
+  margin-left: 32%;
+  font-family: 'Exo 2', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+
+  font-size: 13rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 4rem 6rem 5.5rem;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  animation: flicker 1.5s infinite alternate;     
+}
+
+
+/*_____________________________________*/
+
+body main div h2 {
+  width: 100%;
+  height: 10%;
+  padding-top: 50px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 60px;
+  animation: flicker_2 1.5s infinite alternate;     
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+/* Animate neon flicker_2 */
+@keyframes flicker_2 {
+    
+    0%, 0%, 0%, 0%, 0%, 0%, 0%, 100% {
+      
+        text-shadow:
+            /*-0.2rem -0.2rem 1rem #fff,*/
+            0.0rem 0.0rem 1rem #44D62C,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 1rem var(--neon-text-color),
+            0 0 1rem var(--neon-text-color);
+    } 
+}
+
+/*Конец стилей неона*/
+
+/*Стили для стрелки*/
+
+.arrow-7 {
+    margin: 40px auto 10px auto;
+    width: 38px;
+    height: 100px;
+    padding-top: 5%;
+}
+.arrow-7 span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-bottom: 10px solid #337AB7;
+    border-right: 10px solid #337AB7;
+    transform: rotate(45deg);
+    margin: -16px 0;
+    animation: arrow-7 2s infinite;
+}
+.arrow-7 span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow-7 span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes arrow-7 {
+    0%{
+        opacity: 0;
+        transform: translate(0,-20px) rotate(45deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(0,20px) rotate(45deg);
+    }
+}
+
+/*Конец стилей для стрелки*/
+
 
 /*вот начиная с этого момента просто копи паста ради анимации. 
 Если хочешь, можешь не трогать, я потом разберусь и лишнее выкину*/
-.clear:before, .clear:after {
+
+/*.clear:before, .clear:after {
 content: " ";
-display: table; }
+display: table; }                   //И БЕЗ ВСЕГО ЭТОГО РАБОТАЕТ, ХЗ)
 
 .clear:after {
 clear: both; }
@@ -77,16 +225,16 @@ clear: both; }
 
 .hexagon-item:first-child {
     margin-left: 0;
-}
+}*/
 
-.page-home {
+/*.page-home {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   vertical-align: middle; }
   .page-home .overlay {
     background-color: rgba(14, 17, 24, 0.97);
-}
+}*/
 
 /* End of container */
 .hexagon-item {
@@ -102,36 +250,34 @@ clear: both; }
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg); }
-  .hexagon-item:first-child {
-    margin-left: 0; }
-  .hexagon-item:hover {
-    z-index: 1; }
-    .hexagon-item:hover .hex-item:last-child {
-      opacity: 1;
-      -webkit-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -o-transform: scale(1.3);
-      transform: scale(1.3); }
-    .hexagon-item:hover .hex-item:first-child {
-      opacity: 1;
-      -webkit-transform: scale(1.2);
-      -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      -o-transform: scale(1.2);
-      transform: scale(1.2); }
-      .hexagon-item:hover .hex-item:first-child div:before,
-      .hexagon-item:hover .hex-item:first-child div:after {
-        height: 5px; }
-    .hexagon-item:hover .hex-item div::before,
-    .hexagon-item:hover .hex-item div::after {
-      background-color: #ff0037; }
-    .hexagon-item:hover .hex-content svg {
-      -webkit-transform: scale(0.97);
-      -moz-transform: scale(0.97);
-      -ms-transform: scale(0.97);
-      -o-transform: scale(0.97);
-      transform: scale(0.97); }
+.hexagon-item:first-child { margin-left: 0; }
+.hexagon-item:hover { z-index: 1; }
+.hexagon-item:hover .hex-item:last-child {
+    opacity: 1;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3); }
+.hexagon-item:hover .hex-item:first-child {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+.hexagon-item:hover .hex-item:first-child div:before,
+.hexagon-item:hover .hex-item:first-child div:after {
+      height: 5px; }
+  .hexagon-item:hover .hex-item div::before,
+  .hexagon-item:hover .hex-item div::after {
+    background-color: #ff0037; }
+  .hexagon-item:hover .hex-content svg {
+    -webkit-transform: scale(0.97);
+    -moz-transform: scale(0.97);
+    -ms-transform: scale(0.97);
+    -o-transform: scale(0.97);
+    transform: scale(0.97); }
 
 .page-home .hexagon-item:nth-last-child(1),
 .page-home .hexagon-item:nth-last-child(2),
