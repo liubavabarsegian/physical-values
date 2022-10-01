@@ -73,8 +73,9 @@ a:hover
 #main_content {
   margin-top: 14%;
   margin-left: 10%;
+  padding: 30px;
   width: 80%;
-  height: 1000px;
+  height: 500px;
   border-radius: 3em;
   background: rgba(0, 0, 0, 0.8);
   color: white;
