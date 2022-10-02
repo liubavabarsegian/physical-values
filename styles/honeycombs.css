@@ -105,5 +105,22 @@ body
 	/*font-weight: bold;*/
 	
 	/*color: red;*/
-	opacity: 0.7;
+	opacity: 0.6;
+}
+p
+{
+	word-wrap: normal;
+	font-size: 15px;
+}
+
+/* не работает почему-то */
+.inside .name
+{
+	position: relative;
+	top: 0px;
+}
+.inside .MLT
+{
+	position: relative;
+	bottom: 0px;
 }
