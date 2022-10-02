@@ -6,3 +6,5 @@ class hexagon {
         return this.name;
     }
 }
+
+export {hexagon}
