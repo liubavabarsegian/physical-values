@@ -41,7 +41,7 @@
 	border-bottom-color: transparent;
 }
 .hexagon_triangle_left_large{
-	border-top-width: 45px;
+	border-top-width: 45px;				
 	border-bottom-width: 45px;
 }
 .hexagon_triangle_right{
@@ -54,7 +54,7 @@
 	border-bottom-width: 45px;
 }
 .inside{
-	width: 90px;
+	width: 90px;			
 	height: 90px;
 }
 body
@@ -110,7 +110,7 @@ body
 p
 {
 	word-wrap: normal;
-	font-size: 15px;
+	font-size: 20px;
 }
 
 /* не работает почему-то */
