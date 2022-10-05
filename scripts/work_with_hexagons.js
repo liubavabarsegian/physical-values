@@ -42,6 +42,7 @@ redDark = "rgb(171, 59, 59)";
 
 hexagonElements = document.querySelectorAll(".one-hexagon");
 clickedHexagons = [];
+clickedTwice = false;
 
 levels = ['red', 'green', 'blue', 'orange', 'black']
 formulas = ['1', '2', '3', '4', '5']
@@ -64,7 +65,7 @@ function changeColor(hex, darkColor, lightColor) {
 			rightTriangle.borderTopColor = "transparent";
 			rightTriangle.borderBottomColor = "transparent";
 		} else {
-			//this.style.opacity = 0.7;
+			clickedTwice = true;
 			inside.style.background = darkColor;
 
 			leftTriangle.style.borderRightColor = darkColor;
@@ -100,7 +101,11 @@ for (hex of hexagonElements) {
 			changeColor(this, grayDark, grayLight);
 		}
 		//remember all the data of the clicked element
-		rememberHexagon(this);
+		if (!clickedTwice) {
+			rememberHexagon(this);
+		}
+		clickedTwice = false;
+		
 		
 	})
 	// var cnt = 0
