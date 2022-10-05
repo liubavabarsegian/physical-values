@@ -76,7 +76,7 @@
   var contextMenuLinkClassName = "context-menu__link";
   var contextMenuActive = "context-menu--active";
 
-  var taskItemClassName = "task";
+  var taskItemClassName = "menu";
   var taskItemInContext;
 
   var clickCoords;

@@ -1,15 +1,17 @@
 .hexagon{
 	width: 100px;
 	height: 100px;
+	
 }
-.font_size { font-size: 25px; }
+/* .font_size { font-size: 5100px;} */
 .hexagon-red
 {
-	border: 30px solid rgb(178, 112, 112);
+	border: 30px solid rgb(135, 47, 47);
 }
 .hexagon-yellow
 {
 	border: 30px solid rgb(223, 223, 145);
+	/* border: rgb(196, 196, 95); */
 }
 .hexagon-green
 {
@@ -76,7 +78,7 @@ body
 }
 .red
 {
-	background-color: rgb(178, 112, 112);
+	background-color: rgb(232, 119, 119);
 }
 .yellow
 {
