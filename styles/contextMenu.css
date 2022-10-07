@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 
 *,
 *::before,
@@ -11,16 +11,14 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
   font-weight: 300;
-  /*line-height: 1.5;*/
 }
+
 
 .container {
   margin: 0 auto;
   padding: 0 24px;
   max-width: 960px;
 }
-
-/* primary header */
 
 .primary-header {
   padding: 24px 0;
@@ -38,7 +36,6 @@ body {
   color: #898989;
 }
 
-/* content */
 
 .content {
   padding: 48px 0;
@@ -50,7 +47,6 @@ body {
   text-align: center;
 }
 
-/* footer */
 
 .primary-footer {
   padding: 24px 0;
@@ -59,7 +55,6 @@ body {
   text-align: center;
 }
 
-/* tasks */
 
 .tasks {
   list-style: none;
@@ -67,13 +62,6 @@ body {
   padding: 0;
 }
 
-/*.task {  }*/
-
-/*.task:last-child {*/
-  /*border-bottom: none;*/
-/*}*/
-
-/* context menu */
 
 .context-menu {
   display: none;
@@ -84,6 +72,7 @@ body {
   background-color: #fff;
   border: solid 1px #dfdfdf;
   box-shadow: 1px 1px 2px #cfcfcf;
+  font-size: 20px;
 }
 
 .context-menu--active {
@@ -104,7 +93,7 @@ body {
 .context-menu__item:last-child {
   margin-bottom: 0;
 }
-
+*/
 .context-menu__link {
   display: block;
   padding: 4px 12px;
@@ -112,7 +101,28 @@ body {
   text-decoration: none;
 }
 
-.context-menu__link:hover {
-  color: #fff;
-  background-color: #0066aa;
+
+.context-menu__items {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  list-style: none;
+  background: white;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  display: none;
+}
+
+.context-menu__items.active { display: block; border-radius: 0.5em; }
+
+.context-menu__items li {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 20px;
+}
+.context-menu__items li:hover {
+  background: #D3D3D3;
 }
