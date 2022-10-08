@@ -170,16 +170,38 @@ function changeColor(hex, darkColor, lightColor) {
 		rightTriangle.borderBottomColor = "transparent";
 	}
 }
-
-var levels = ['red', 'green', 'blue', 'orange', 'black'];
+		//      	  1 		 G 		  G^-1 		  Gk 		k^-1 	   Gk^2 	 G^-1k^-2  
+var levels =     [ 'lvl_1',   'lvl_2',  'lvl_3',    'lvl_4',   'lvl_5',   'lvl_6',   'lvl_7'];
+var lvl_colors = ['#dfe59c', '#c9c9c9', '#8f8f8f', '#a6f7ae', '#65b3eb', '#f0bc8b', '#f5b3d3'];
 var cnt = 0;
+							//    M  ^   L     ^	T 	^   I   ^
+var lvl_texts  = [  [ ['lvl-1', ['', '', 'L', '2', 'T', '', '', '']],
+					  ['lvl-2', ['-', '', '', '', '', '', '', '']],
+					  ['lvl-3', ['-', '', '', '', '', '', '', '']],
+					  ['lvl-4', ['-', '', '', '', '', '', '', '']],
+					  ['lvl-5', ['-', '', '', '', '', '', '', '']],
+					  ['Емкость', ['M', '-1', 'L', '-2', 'T', '4', 'I', '2']],
+					  ['lvl-7', ['-', '', '', '', '', '', '', '']] 		// поля для 1 соты
+				    ],
+				    [ ['Объём, V', ['', '', 'L', '3', '', '', '', '']],
+					  ['lvl-2', ['-', '', '', '', '', '', '', '']],
+					  ['lvl-3', ['-', '', '', '', '', '', '', '']],
+					  ['lvl-4', ['-', '', '', '', '', '', '', '']],
+					  ['lvl-5', ['-', '', '', '', '', '', '', '']],
+					  ['γ', ['M', '-1', 'L', '-1', 'T', '3', 'I', '2']],
+					  ['lvl-7', ['-', '', '', '', '', '', '', '']]	    // поля для 2 соты
+					],
+				    []] 
 
 function changeLevels(hex, increment) {
 	var inside = hex.querySelector(".inside");
 	var leftTriangle = hex.querySelector(".hexagon_triangle_left");
 	var rightTriangle = hex.querySelector(".hexagon_triangle_right");
 
-	clr = levels[cnt]
+	lvl = levels[cnt];
+	clr = lvl_colors[cnt];
+
+	//_______________ И з м е н е н и е   Ц В Е Т А _________________//
 
 	inside.style.background = clr;
 	leftTriangle.style.borderRightColor = clr;
@@ -192,11 +214,47 @@ function changeLevels(hex, increment) {
 	rightTriangle.borderTopColor = "transparent";
 	rightTriangle.borderBottomColor = "transparent";
 
+	//______________________________________________________________//
+
+	hex_id = hex.id;
+	changeText(hex_id, cnt);
+
 	if (increment) { cnt++; }
 	else { cnt--; }
-	if (cnt == levels.length) cnt = 0;
-	if (cnt == -1) cnt = levels.length - 1;
+	if (cnt == lvl_colors.length) cnt = 0;
+	if (cnt == -1) cnt = lvl_colors.length - 1;
 }
+
+//_______________ И з м е н е н и е   Т Е К С Т А _________________//
+
+function changeText(hex_id, cnt) {
+
+	let hex_name = hex_id + '-txt-name';
+	let hex_frml = hex_id + '-txt-frml';
+
+	let name = document.getElementById(hex_name);
+	let elements = 	document.getElementById(hex_frml);
+
+	let hex_number = hex_id.slice(4, hex_id.length) - 1; //номер соты в массиве
+	hex_date = lvl_texts[hex_number];
+	hex_date_name = hex_date[cnt][0];
+	hex_date_frml = hex_date[cnt][1];
+
+
+	name.innerText = hex_date_name;
+
+	elements.childNodes[0].innerText = hex_date_frml[0];
+	elements.childNodes[1].innerText = hex_date_frml[1];
+	elements.childNodes[2].innerText = hex_date_frml[2];
+	elements.childNodes[3].innerText = hex_date_frml[3];
+	elements.childNodes[4].innerText = hex_date_frml[4];
+	elements.childNodes[5].innerText = hex_date_frml[5];
+	elements.childNodes[6].innerText = hex_date_frml[6];
+	elements.childNodes[7].innerText = hex_date_frml[7];
+
+}
+//______________________________________________________________//
+
 
 
 const menuArea = document.querySelectorAll(".one-hexagon");

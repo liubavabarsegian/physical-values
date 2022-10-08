@@ -12,21 +12,20 @@
 	<h1>СИСТЕМА МЕХАНИЧЕСКИХ ВЕЛИЧИН</h1>
 	<h2>(два системных уровня: кинематические и динамические ФВ)</h2>
 	<div class="font_size">
-		
 		<div class = "row" id = "row-1">
 			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-1">
 				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name" data-value = ""></p>
-					<p class = "MLT" data-M = '0' data-L = '2' data-T = '1'>L<sup>2</sup>T</p>
+					<p id="hex-1-txt-name" class = "name" data-value = ""></p>
+					<p id="hex-1-txt-frml" class = "MLT"><span class="M"></span><sup class="M-sup"></sup><span class="L">L</span><sup id="L-sup">2</sup><span class="T">T</span><sup class="T-sup"></sup><span class="I"></span><sup id="I-sup"></sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
 			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-2">
 				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Объем, V</p>
-					<p class = "MLT">L<sup>3</sup></p>
+					<p id="hex-2-txt-name" class = "name">Объем, V</p>
+					<p id="hex-2-txt-frml" class = "MLT"><span class="M"></span><sup class="M-sup"></sup><span class="L">L</span><sup id="L-sup">3</sup><span class="T"></span><sup class="T-sup"></sup><span class="I"></span><sup id="I-sup"></sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
@@ -362,7 +361,7 @@
     </ul>
   </nav>
 <script src = "scripts/mechanics_dynamics.js"></script>
-<script src = "scripts/work_with_hexagons.js"></script>
+<script src = "scripts/work_with_hexagons_2.js"></script>
 <!-- <script src = "scripts/contextMenu.js"></script> -->
 
 </body>
