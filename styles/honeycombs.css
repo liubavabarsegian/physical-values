@@ -1,9 +1,17 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+h1, h2
+{
+	text-align: center;
+}
 .hexagon{
 	width: 100px;
 	height: 100px;
 	
 }
-/* .font_size { font-size: 5100px;} */
 .hexagon-red
 {
 	border: 30px solid rgb(135, 47, 47);
@@ -11,7 +19,6 @@
 .hexagon-yellow
 {
 	border: 30px solid rgb(223, 223, 145);
-	/* border: rgb(196, 196, 95); */
 }
 .hexagon-green
 {
@@ -59,10 +66,7 @@
 	width: 90px;			
 	height: 90px;
 }
-body
-{
-	text-align: center;
-}
+
 .row
 {
 	display: flex;
@@ -71,6 +75,7 @@ body
 .one-hexagon
 {
 	display: flex;
+	text-align: center;
 }
 .gray
 {
@@ -107,7 +112,7 @@ body
 	/*font-weight: bold;*/
 	
 	/*color: red;*/
-	opacity: 0.6;
+	opacity: 0.7;
 }
 p
 {

@@ -84,17 +84,7 @@ function changeColor(hex, darkColor, lightColor) {
 		}
 }
 
-function rememberHexagon(hex) {
-	var position = hex.getBoundingClientRect();
-	if (clickedHexagons.length < 3) {
-		newHex = new hexagon("name", hex.dataset.level, position.left, position.right)
-		clickedHexagons.push(newHex);
-    // console.log(newHex.x, newHex.y)
-	}
-	else {
-		drawParallelogram();
-	}
-}
+
 
 
 var contextMenuClassName = "context-menu";
@@ -297,27 +287,3 @@ for (hex of hexagonElements) {
 
 // console.log(hexagonElements[2].offsetLeft, hexagonElements[0].offsetTop)
 console.log(mas_coordinates)
-
-
-//пока не рабоатет нифигашечки.
-function drawParallelogram() {
-  line = document.createElement("line");
-  document.body.appendChild(line);
-  line.setAttribute("x1") = 300;
-  line.setAttribute("x2") = 400;
-  line.setAttribute("y1") = 500;
-  line.setAttribute("y2") = 600;
-	// var canvas = document.body.querySelector("#my-canvas");
-  //   var ctx = canvas.getContext('2d');
-	// for (var i = 0; i < 3; i++) {
-	// 	ctx.save();
-	// 	ctx.beginPath();
-	// 	ctx.translate(clickedHexagons[i].x, clickedHexagons[i].y)
-	// 	ctx.moveTo(0, 0);
-	// 	ctx.lineTo(clickedHexagons[i + 1].x, clickedHexagons[i + 1].y);
-	// 	ctx.stroke();
-	// }
-}
-
-
-
