@@ -92,7 +92,7 @@ function rememberHexagon(hex) {
     // console.log(newHex.x, newHex.y)
 	}
 	else {
-		//drawParallelogram();
+		drawParallelogram();
 	}
 }
 
@@ -301,16 +301,22 @@ console.log(mas_coordinates)
 
 //пока не рабоатет нифигашечки.
 function drawParallelogram() {
-	var canvas = document.body.querySelector("#my-canvas");
-    var ctx = canvas.getContext('2d');
-	for (var i = 0; i < 3; i++) {
-		ctx.save();
-		ctx.beginPath();
-		ctx.translate(clickedHexagons[i].x, clickedHexagons[i].y)
-		ctx.moveTo(0, 0);
-		ctx.lineTo(clickedHexagons[i + 1].x, clickedHexagons[i + 1].y);
-		ctx.stroke();
-	}
+  line = document.createElement("line");
+  document.body.appendChild(line);
+  line.setAttribute("x1") = 300;
+  line.setAttribute("x2") = 400;
+  line.setAttribute("y1") = 500;
+  line.setAttribute("y2") = 600;
+	// var canvas = document.body.querySelector("#my-canvas");
+  //   var ctx = canvas.getContext('2d');
+	// for (var i = 0; i < 3; i++) {
+	// 	ctx.save();
+	// 	ctx.beginPath();
+	// 	ctx.translate(clickedHexagons[i].x, clickedHexagons[i].y)
+	// 	ctx.moveTo(0, 0);
+	// 	ctx.lineTo(clickedHexagons[i + 1].x, clickedHexagons[i + 1].y);
+	// 	ctx.stroke();
+	// }
 }
 
 
