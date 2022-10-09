@@ -25,24 +25,6 @@ clickedTwice = false;
 						[]] 
 		
 
-//это можно удалять??
-
-// levels = ['red', 'green', 'blue', 'orange', 'black']
-// formulas = ['1', '2', '3', '4', '5']
-
-// // let func = () => {
-// // 	alert("CHECK_FOO")
-// // }
-// // export default func
-
-
-// console.log(hexagonElements)
-
-// for (hex of hexagonElements) {
-// 	hex.addEventListener("click", function(e) { console.log('check') })
-// 	hex.addEventListener("contextmenu", function(e) { console.log('check') })
-// }
-
 class hexagon {
     constructor(name, level, coordinateX, coordinateY) {
         this.name = name;
