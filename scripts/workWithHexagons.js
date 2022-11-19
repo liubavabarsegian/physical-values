@@ -70,8 +70,8 @@ redDark = "rgb(171, 59, 59)";
 
 function changeColor(hex, darkColor, lightColor) {
 	var inside = hex.querySelector(".inside");
-	var leftTriangle = hex.querySelector(".hexagon_triangle_left");
-	var rightTriangle = hex.querySelector(".hexagon_triangle_right");
+	var leftTriangle = hex.querySelector(".triangleLeft");
+	var rightTriangle = hex.querySelector(".triangleRight");
 
 	if (inside.style.background == darkColor) {
 		inside.style.background = lightColor;
@@ -100,10 +100,102 @@ function changeColor(hex, darkColor, lightColor) {
 	}
 }
 
+
+
+
+
+const menuArea = document.querySelectorAll(".one-hexagon");
+const menu = document.querySelector(".context-menu__items");
+
+fl = true;
+vsp = null;
+
+for (hex of menuArea) {
+	if (!fl) break;
+	hex.addEventListener("contextmenu", function(event) {
+		event.preventDefault();
+		menu.style.top = `${event.clientY}px`;
+        menu.style.left = `${event.clientX}px`;
+		menu.classList.add("active");
+		vsp = this;
+	});
+
+	hex.addEventListener("click", function() {
+			if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
+			makeActive(this)
+			rememberHexagon(this);
+			}
+	});
+}
+
+function makeActive(hex) {
+	let inside = hex.querySelector(".inside");
+	let leftTriangle = hex.querySelector(".triangleLeft");
+	let rightTriangle = hex.querySelector(".triangleRight");
+	inside.classList.add("active-hexagon")
+	leftTriangle.classList.add("active-triangle")
+	rightTriangle.classList.add("active-triangle")
+}
+
+function rememberHexagon(hex) {
+	var inside = hex.querySelector(".inside");
+	var headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
+	var position = inside.getBoundingClientRect();
+	xCenter = (position.left + position.right) / 2;
+	yCenter = (position.top + position.bottom) / 2 - headerHeight;
+	if (clickedHexagons.length < 3) {
+		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
+		clickedHexagons.push(newHex);
+		console.log("cl1")
+	}
+	else {
+		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
+		clickedHexagons.push(newHex);
+		drawParallelogram();
+		console.log("cl2")
+	}
+}
+
+
+let c = document.getElementById("my-canvas");
+let ctx = c.getContext("2d");
+function drawParallelogram() {
+	ctx.canvas.width  = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+	ctx.beginPath();
+	ctx.strokeStyle = "red";
+	ctx.lineWidth = 5;
+	ctx.moveTo(clickedHexagons[0].x, clickedHexagons[0].y)
+	for (var i = 1; i < 4; i++) {
+		ctx.lineTo(clickedHexagons[i].x, clickedHexagons[i].y);
+	}
+	ctx.lineTo(clickedHexagons[0].x, clickedHexagons[0].y);
+	ctx.stroke();
+	clickedHexagons = []
+
+}
+
+document.addEventListener("click", event => {
+	if (event.button !== 2) { menu.classList.remove("active"); }
+}, false)
+
+menu.addEventListener("click", event => {
+		event.stopPropagation();
+	}, false);
+
+
+document.getElementById("l1").onclick = function(){
+	changeLevels(vsp, true)
+}
+
+document.getElementById("l2").onclick = function(){
+	changeLevels(vsp, false);
+}
+
 function changeLevels(hex, increment) {
 	var inside = hex.querySelector(".inside");
-	var leftTriangle = hex.querySelector(".hexagon_triangle_left");
-	var rightTriangle = hex.querySelector(".hexagon_triangle_right");
+	var leftTriangle = hex.querySelector(".triangleLeft");
+	var rightTriangle = hex.querySelector(".triangleRight");
 
 	lvl = levels[currentLevel];
 	clr = lvl_colors[currentLevel];
@@ -162,82 +254,3 @@ function changeText(hex_id, currentLevel) {
 }
 //______________________________________________________________//
 
-
-
-const menuArea = document.querySelectorAll(".one-hexagon");
-const menu = document.querySelector(".context-menu__items");
-
-fl = true;
-vsp = null;
-
-for (hex of menuArea) {
-	if (!fl) break;
-	hex.addEventListener("contextmenu", function(event) {
-		event.preventDefault();
-		menu.style.top = `${event.clientY}px`;
-        menu.style.left = `${event.clientX}px`;
-		menu.classList.add("active");
-		vsp = this;
-	});
-
-	hex.addEventListener("click", function() {
-		if (this.dataset.level == "yellow") {
-			changeColor(this, yellowDark, yellowLight);
-		}
-		if (this.dataset.level == "gray") {
-			changeColor(this, grayDark, grayLight);
-		}
-		rememberHexagon(this);
-	});
-
-	document.addEventListener("click", event => {
-		if (event.button !== 2) { menu.classList.remove("active"); }
-	}, false)
-
-	menu.addEventListener("click", event => {
-    	event.stopPropagation();
-    }, false);
-
-	document.getElementById("l1").onclick = function(){
-		changeLevels(vsp, true)
-	}
-
-	document.getElementById("l2").onclick = function(){
-		changeLevels(vsp, false);
-	}
-
-}
-
-function rememberHexagon(hex) {
-	var inside = hex.querySelector(".inside");
-	var headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
-	var position = inside.getBoundingClientRect();
-	xCenter = (position.left + position.right) / 2;
-	yCenter = (position.top + position.bottom) / 2 - headerHeight;
-	if (clickedHexagons.length < 3) {
-		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
-		clickedHexagons.push(newHex);
-	}
-	else {
-		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
-		clickedHexagons.push(newHex);
-		drawParallelogram();
-	}
-}
-
-function drawParallelogram() {
-	var c = document.getElementById("my-canvas");
-	var ctx = c.getContext("2d");
-	ctx.canvas.width  = window.innerWidth;
-  	ctx.canvas.height = window.innerHeight;
-	ctx.beginPath();
-	ctx.strokeStyle = "red";
-	ctx.lineWidth = 5;
-	ctx.moveTo(clickedHexagons[0].x, clickedHexagons[0].y)
-	for (var i = 1; i < 4; i++) {
-		ctx.lineTo(clickedHexagons[i].x, clickedHexagons[i].y);
-	}
-	ctx.lineTo(clickedHexagons[0].x, clickedHexagons[0].y);
-	ctx.stroke();
-	clickedHexagons = []
-}
