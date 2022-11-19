@@ -7,8 +7,21 @@
 	<title>Механические и динамические</title>
 	<link rel = "stylesheet" href = "styles/honeycombs.css">
 	<link rel = "stylesheet" href = "styles/contextMenu.css">
+	<link rel="stylesheet" href="styles/navbar.css">
+	<link rel="stylesheet" href="styles/popup.css">
 </head>
 <body>
+	<ul id="navbar">
+		<li><a href="../main_page.html">Главная</a></li> <!--хочу в root-->
+		<li>
+			<a href="#">Таблицы-ссылок нет</a>
+			<ul>
+				<li><a href="#">Механика</a></li>
+				<li><a href="#">Электричество</a></li>
+			</ul>
+		</li>
+		<li><a href="#zatemnenie">Связь уровней</a></li>
+	</ul>
 	<h1>СИСТЕМА МЕХАНИЧЕСКИХ ВЕЛИЧИН</h1>
 	<h2>(два системных уровня: кинематические и динамические ФВ)</h2>
 	<canvas id = "my-canvas" style="position: absolute;"></canvas>
@@ -53,6 +66,11 @@
 <script src="scripts/generatehex.js"></script>
 <script src = "scripts/workWithHexagons.js"></script>
 <!-- <script src = "scripts/contextMenu.js"></script> -->
-
+<div id="zatemnenie">
+	<div id="okno">
+		<img src="styles/img/connect.png" style="text-align: center;">
+		<a href="#" class="close">Закрыть окно</a>
+	</div>
+</div>
 </body>
 </html>
