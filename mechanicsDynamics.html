@@ -5,323 +5,336 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Механические и динамические</title>
-	<link rel = "stylesheet" href = "styles/honeycombs.css">
-	<link rel = "stylesheet" href = "styles/contextMenu.css">
+	<link rel="stylesheet" href="styles/honeycombs.css">
+	<link rel="stylesheet" href="styles/contextMenu.css">
+	<link rel="stylesheet" href="styles/navbar.css">
+	<link rel="stylesheet" href="styles/popup.css">
 </head>
 <body>
+	<ul id="navbar">
+		<li><a href="/main_page.html">Главная</a></li> <!--хочу в root-->
+		<li>
+			<a href="#">Таблицы-ссылок нет</a>
+			<ul>
+				<li><a href="#">Механика</a></li>
+				<li><a href="#">Электричество</a></li>
+			</ul>
+		</li>
+		<li><a href="#zatemnenie">Связь уровней</a></li>
+	</ul>
 	<h1>СИСТЕМА МЕХАНИЧЕСКИХ ВЕЛИЧИН</h1>
 	<h2>(два системных уровня: кинематические и динамические ФВ)</h2>
-	<canvas id = "my-canvas" style="position: absolute;"></canvas>
+	<canvas id="my-canvas" style="position: absolute;"></canvas>
 	<div class="font_size">
-		<div class = "row" id = "row-1">
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-1">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+		<div class="row" id="row-1">
+			<div class="one-hexagon menu" data-level="yellow" id="hex-1">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p id="hex-1-txt-name" class = "name" data-value = ""></p>
-					<p id="hex-1-txt-frml" class = "MLT"><span class="M"></span><sup class="M-sup"></sup><span class="L">L</span><sup id="L-sup">2</sup><span class="T">T</span><sup class="T-sup"></sup><span class="I"></span><sup id="I-sup"></sup></p>
+					<p id="hex-1-txt-name" class="name" data-value=""></p>
+					<p id="hex-1-txt-frml" class="MLT"><span class="M"></span><sup class="M-sup"></sup><span class="L">L</span><sup id="L-sup">2</sup><span class="T">T</span><sup class="T-sup"></sup><span class="I"></span><sup id="I-sup"></sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-2">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-2">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p id="hex-2-txt-name" class = "name">Объем, V</p>
-					<p id="hex-2-txt-frml" class = "MLT"><span class="M"></span><sup class="M-sup"></sup><span class="L">L</span><sup id="L-sup">3</sup><span class="T"></span><sup class="T-sup"></sup><span class="I"></span><sup id="I-sup"></sup></p>
+					<p id="hex-2-txt-name" class="name">Объем, V</p>
+					<p id="hex-2-txt-frml" class="MLT"><span class="M"></span><sup class="M-sup"></sup><span class="L">L</span><sup id="L-sup">3</sup><span class="T"></span><sup class="T-sup"></sup><span class="I"></span><sup id="I-sup"></sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-3">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-3">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Поток объема, Vv</p>
-					<p class = "MLT">L<sup>4</sup>T<sup>-1</sup></p>
+					<p class="name">Поток объема, Vv</p>
+					<p class="MLT">L<sup>4</sup>T<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-4">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-4">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Момент инерции, I = mr<sup>2</sup></p>
-					<p class = "MLT">ML<sup>2</sup></p>
+					<p class="name">Момент инерции, I = mr<sup>2</sup></p>
+					<p class="MLT">ML<sup>2</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
 		</div>
 
-		<div class = "row" id = "row-2">
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-5">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+		<div class="row" id="row-2">
+			<div class="one-hexagon menu" data-level="yellow" id="hex-5">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name"></p>
-					<p class = "MLT">LT</p>
+					<p class="name"></p>
+					<p class="MLT">LT</p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-6">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-6">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Площадь, S</p>
-					<p class = "MLT">L<sup>2</sup></p>
+					<p class="name">Площадь, S</p>
+					<p class="MLT">L<sup>2</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-7">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-7">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Изменение объема, V/t</p>
-					<p class = "MLT">L<sup>3</sup>T<sup>-1</sup></p>
+					<p class="name">Изменение объема, V/t</p>
+					<p class="MLT">L<sup>3</sup>T<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-8">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-8">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">?</p>
-					<p class = "MLT">ML</p>
+					<p class="name">?</p>
+					<p class="MLT">ML</p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-9">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-9">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Момент импульса,L = mvr = nh</p>
-					<p class = "MLT">ML<sup>2</sup>T<sup>-1</sup></p>
+					<p class="name">Момент импульса,L = mvr = nh</p>
+					<p class="MLT">ML<sup>2</sup>T<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
 		</div>
-		<div class = "row" id = "row-3">
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-10">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+		<div class="row" id="row-3">
+			<div class="one-hexagon menu" data-level="yellow" id="hex-10">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Время, <var>t</var></p>
-					<p class = "MLT">T</p>
+					<p class="name">Время, <var>t</var></p>
+					<p class="MLT">T</p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-11">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-11">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Длина, <var>l</var></p>
-					<p class = "MLT">L</p>
+					<p class="name">Длина, <var>l</var></p>
+					<p class="MLT">L</p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-12">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-12">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Вязкость кинематич.</p>
-					<p class = "MLT">L<sup>2</sup>T<sup>-1</sup></p>
+					<p class="name">Вязкость кинематич.</p>
+					<p class="MLT">L<sup>2</sup>T<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-13">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-13">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Масса, m</p>
-					<p class = "MLT">M</p>
+					<p class="name">Масса, m</p>
+					<p class="MLT">M</p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-14">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-14">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Импульс, P = mv</p>
-					<p class = "MLT">MLT<sup>-1</sup></p>
+					<p class="name">Импульс, P = mv</p>
+					<p class="MLT">MLT<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-15">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-15">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Энергия, W</p>
-					<p class = "MLT">ML<sup>2</sup>T<sup>-2</sup></p>
+					<p class="name">Энергия, W</p>
+					<p class="MLT">ML<sup>2</sup>T<sup>-2</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
 		</div>
-		<div class = "row" id = "row-4">
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-16">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+		<div class="row" id="row-4">
+			<div class="one-hexagon menu" data-level="yellow" id="hex-16">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">(Скорость)<sup>-1</sup>, <var>t/l</var></p>
-					<p class = "MLT">L<sup>-1</sup>T</p>
+					<p class="name">(Скорость)<sup>-1</sup>, <var>t/l</var></p>
+					<p class="MLT">L<sup>-1</sup>T</p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-17">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-17">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Безразмерная константа</p>
-					<p class = "MLT">L<sup>0</sup>T<sup>0</sup></p>
+					<p class="name">Безразмерная константа</p>
+					<p class="MLT">L<sup>0</sup>T<sup>0</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-18">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-18">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Скорость, v</p>
-					<p class = "MLT">LT<sup>-1</sup></p>
+					<p class="name">Скорость, v</p>
+					<p class="MLT">LT<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-19">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-19">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Гравитацион. потенциал, V<sup>2</sup></p>
-					<p class = "MLT">LT<sup>-1</sup></p>
+					<p class="name">Гравитацион. потенциал, V<sup>2</sup></p>
+					<p class="MLT">LT<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-20">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-20">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Ток массы, m/t</p>
-					<p class = "MLT">MT<sup>-1</sup></p>
+					<p class="name">Ток массы, m/t</p>
+					<p class="MLT">MT<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-21">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-21">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Сила, F</p>
-					<p class = "MLT">MLT<sup>-2</sup></p>
+					<p class="name">Сила, F</p>
+					<p class="MLT">MLT<sup>-2</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-22">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-22">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Мощность, N</p>
-					<p class = "MLT">ML<sup>2</sup>T<sup>-3</sup></p>
+					<p class="name">Мощность, N</p>
+					<p class="MLT">ML<sup>2</sup>T<sup>-3</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
 		</div>
-		<div class = "row" id = "row-5">
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-23">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+		<div class="row" id="row-5">
+			<div class="one-hexagon menu" data-level="yellow" id="hex-23">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Кривизна пространства,</p>
-					<p class = "MLT">L<sup>-1</sup></p>
+					<p class="name">Кривизна пространства,</p>
+					<p class="MLT">L<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-24">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-24">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">ГРадиент скорости</p>
-					<p class = "MLT">T<sup>-1</sup></p>
+					<p class="name">ГРадиент скорости</p>
+					<p class="MLT">T<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-25">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="yellow" id="hex-25">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside yellow">
-					<p class = "name">Ускорение, a</p>
-					<p class = "MLT">LT<sup>-2</sup></p>
+					<p class="name">Ускорение, a</p>
+					<p class="MLT">LT<sup>-2</sup></p>
 				</div>
 				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-26">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-26">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Вязкость динамическая</p>
-					<p class = "MLT">MLT<sup>-1</sup>T<sup>-1</sup></p>
+					<p class="name">Вязкость динамическая</p>
+					<p class="MLT">MLT<sup>-1</sup>T<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-27">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-27">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Натяжение, f = <var>F/l</var></p>
-					<p class = "MLT">MT<sup>-2</sup></p>
+					<p class="name">Натяжение, f = <var>F/l</var></p>
+					<p class="MLT">MT<sup>-2</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-28">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-28">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Изменение силы F/t</p>
-					<p class = "MLT">MLT<sup>-3</sup></p>
-				</div>
-				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-		</div>
-
-		<div class = "row" id = "row-6">
-			<div class = "one-hexagon menu" data-level = "yellow" id = "hex-29">
-				<div class = "hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside yellow">
-					<p class = "name">Градиент углов. скорости (вихрь)</p>
-					<p class = "MLT">L<sup>-1</sup>T<sup>-1</sup></p>
-				</div>
-				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-30">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside gray">
-					<p class = "name">Объемная плотность массы p<sub>m</sub></p>
-					<p class = "MLT">ML<sup>-3</sup></p>
-				</div>
-				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-31">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside gray">
-					<p class = "name">Объемн. плотн. импульса p<sub>m</sub>v</p>
-					<p class = "MLT">ML<sup>-2</sup>T<sup>-1</sup></p>
-				</div>
-				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-32">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside gray">
-					<p class = "name">Давление, p = F/S</p>
-					<p class = "MLT">ML<sup>-1</sup>T<sup>-2</sup></p>
-				</div>
-				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-33">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside gray">
-					<p class = "name">Вектор Умова, s</p>
-					<p class = "MLT">MT<sup>-3</sup></p>
+					<p class="name">Изменение силы F/t</p>
+					<p class="MLT">MLT<sup>-3</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
 		</div>
 
-		<div class = "row" id = "row-7">
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-34">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+		<div class="row" id="row-6">
+			<div class="one-hexagon menu" data-level="yellow" id="hex-29">
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside yellow">
+					<p class="name">Градиент углов. скорости (вихрь)</p>
+					<p class="MLT">L<sup>-1</sup>T<sup>-1</sup></p>
+				</div>
+				<div class="hexagon hexagon-yellow hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-30">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Градиент объемной плотности массы</p>
-					<p class = "MLT">ML<sup>-4</sup></p>
+					<p class="name">Объемная плотность массы p<sub>m</sub></p>
+					<p class="MLT">ML<sup>-3</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-35">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-31">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Изменение объемной плотности массы</p>
-					<p class = "MLT">ML<sup>-3</sup>T<sup>-1</sup></p>
+					<p class="name">Объемн. плотн. импульса p<sub>m</sub>v</p>
+					<p class="MLT">ML<sup>-2</sup>T<sup>-1</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-36">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-32">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Градиент давление</p>
-					<p class = "MLT">ML<sup>-2</sup>T<sup>-2</sup></p>
+					<p class="name">Давление, p = F/S</p>
+					<p class="MLT">ML<sup>-1</sup>T<sup>-2</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
-			<div class = "one-hexagon menu" data-level = "gray" id = "hex-37">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-33">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">
-					<p class = "name">Изменение давления</p>
-					<p class = "MLT">ML<sup>-1</sup>T<sup>-3</sup></p>
+					<p class="name">Вектор Умова, s</p>
+					<p class="MLT">MT<sup>-3</sup></p>
+				</div>
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+		</div>
+
+		<div class="row" id="row-7">
+			<div class="one-hexagon menu" data-level="gray" id="hex-34">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside gray">
+					<p class="name">Градиент объемной плотности массы</p>
+					<p class="MLT">ML<sup>-4</sup></p>
+				</div>
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-35">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside gray">
+					<p class="name">Изменение объемной плотности массы</p>
+					<p class="MLT">ML<sup>-3</sup>T<sup>-1</sup></p>
+				</div>
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-36">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside gray">
+					<p class="name">Градиент давление</p>
+					<p class="MLT">ML<sup>-2</sup>T<sup>-2</sup></p>
+				</div>
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+			<div class="one-hexagon menu" data-level="gray" id="hex-37">
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside gray">
+					<p class="name">Изменение давления</p>
+					<p class="MLT">ML<sup>-1</sup>T<sup>-3</sup></p>
 				</div>
 				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
 			</div>
@@ -345,26 +358,31 @@
 			</div>
 		</div> -->
 	</div>
-	<button><a href = "main_page.html">Go back</a></Go></button>
+	<button><a href="main_page.html">Go back</a></Go></button>
 	<nav id="context-menu" class="context-menu">
-    <ul class="context-menu__items">
-      <li id="l1" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
-      </li>
-      <li id="l2" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
-      </li>
-      <li id="l3" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
-      </li>
-      <li id="l4" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
-      </li>
-    </ul>
-  </nav>
-<script src = "scripts/mechanics_dynamics.js"></script>
-<script src = "scripts/workWithHexagons.js"></script>
-<!-- <script src = "scripts/contextMenu.js"></script> -->
-
+		<ul class="context-menu__items">
+			<li id="l1" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
+			</li>
+			<li id="l2" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
+			</li>
+			<li id="l3" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
+			</li>
+			<li id="l4" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
+			</li>
+		</ul>
+	</nav>
+	<script src="scripts/mechanics_dynamics.js"></script>
+	<script src="scripts/workWithHexagons.js"></script>
+	<!-- <script src = "scripts/contextMenu.js"></script> -->
+	<div id="zatemnenie">
+		<div id="okno">
+			<img src="styles/img/connect.png" align="middle">
+			<a href="#" class="close">Закрыть окно</a>
+		</div>
+	</div>
 </body>
 </html>
