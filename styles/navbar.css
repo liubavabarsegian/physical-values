@@ -41,6 +41,10 @@
     float: none;
 }
 
+#navbar ul li ul{
+    float: none;
+}
+
 #navbar li:hover {
     background-color: #f90;
 }
