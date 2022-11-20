@@ -9,6 +9,16 @@
 	<link rel = "stylesheet" href = "styles/contextMenu.css">
 	<link rel="stylesheet" href="styles/navbar.css">
 	<link rel="stylesheet" href="styles/popup.css">
+	<style>
+        #footer {
+            position: fixed; /* Фиксированное положение */
+            left: 0;
+            bottom: 0; /* Левый нижний угол */
+            padding: 10px; /* Поля вокруг текста */
+            background: gray; /* Цвет фона */
+            width: 100%; /* Ширина слоя */
+        }
+	</style>
 </head>
 <body>
 	<ul id="navbar">
@@ -74,9 +84,9 @@
 		<a href="#" class="close">Закрыть окно</a>
 	</div>
 </div>
-<footer>
-	<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled/>
-	<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled/>
-</footer>
+<div id="footer">
+	<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
+	<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
+</div>
 </body>
 </html>

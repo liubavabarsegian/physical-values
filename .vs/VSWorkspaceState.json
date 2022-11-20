@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\scripts",
+    "\\styles",
+    "\\styles\\img"
   ],
-  "SelectedNode": "\\mechanics_dynamics.html",
+  "SelectedNode": "\\styles\\navbar.css",
   "PreviewInSolutionExplorer": false
 }
