@@ -186,7 +186,7 @@
             G⁻¹K⁻¹: { "name": "", "color": "", "usl_ob": "", "M":  0, "L": 0, "T": 0, "I": 0, "ed_izm": "", "ob_ed_izm": "", "LT": "", "GK": "G⁻¹K⁻¹"},
             G⁰K⁻²: { "name": "", "color": "dark_blue", "usl_ob": "", "M":  0, "L": 0, "T": 0, "I": 0, "ed_izm": "", "ob_ed_izm": "", "LT": "", "GK": "G⁰K⁻²"},
             G⁻¹K⁻²: { "name": "", "color": "purple", "usl_ob": "", "M":  0, "L": 0, "T": 0, "I": 0, "ed_izm": "", "ob_ed_izm": "", "LT": "", "GK": "G⁻¹K⁻²"}],
-    L³T⁰: [ G⁰K⁰: { "name": "Объем", "MLTI": "L³", "color": "yellow", "usl_ob": "", "M": "0", "L": "3", "T": "0", "I": "0", "ed_izm": "метр³", "ob_ed_izm": "м³", "LT": "L³T⁰", "GK": "G⁰K⁰"},
+    L³T⁰: [ G⁰K⁰: { "name": "Объем", "color": "yellow", "usl_ob": "", "M": 0, "L": 3, "T": 0, "I": 0, "ed_izm": "метр³", "ob_ed_izm": "м³", "LT": "L³T⁰", "GK": "G⁰K⁰"},
             G¹K⁰: { "name": "", "color": "gray", "usl_ob": "", "M":  0, "L": 0, "T": 0, "I": 0, "ed_izm": "", "ob_ed_izm": "", "LT": "", "GK": "G¹K⁰"},
             G⁻¹K⁰: { "name": "", "color": "not_white", "usl_ob": "", "M":  0, "L": 0, "T": 0, "I": 0, "ed_izm": "", "ob_ed_izm": "", "LT": "", "GK": "G⁻¹K⁰"},
             G²K⁰: { "name": "", "color": "dark_gray", "usl_ob": "", "M":  0, "L": 0, "T": 0, "I": 0, "ed_izm": "", "ob_ed_izm": "", "LT": "", "GK": "G²K⁰"},
