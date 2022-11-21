@@ -41,6 +41,6 @@
     cursor: pointer;
 }
 
-    .close:hover {
-        background: #e6e6ff;
-    }
+.close:hover {
+    background: #e6e6ff;
+}
