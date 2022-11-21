@@ -1,0 +1,247 @@
+*
+{
+	font-family: "Montserrat", sans-serif;
+}
+header { 
+	width: 100%;  
+	height: 70px;
+	border-radius: 0.5em;
+	font-size: 30px;
+	font-weight: bold;
+	background: rgba(0, 24, 49, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+nav
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+main 
+{ 
+	margin-top: 50px; 
+}
+._href_ {
+	color:  #a5c0f0;
+	text-decoration: none;
+	margin-left: 30px;
+}
+.bg-ex-parallax { 
+	background: url(img/111-2.jpg); /* Картинка на фоне сайта*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+}
+.bg-ex-parallax .parallax-overlay {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.bg-ex-parallax span {
+  z-index: 3;
+}
+h1 {
+	text-align: center; 
+	color: #ffffff; 
+	font-size: 100px; 
+  margin-top: 0px;
+}
+h2 {
+  text-align: center; 
+  color: #ffffff; 
+  font-size: 50px; 
+}
+a:hover
+{
+	color: rgb(126, 130, 200);
+}
+.menu
+{
+	display: flex;
+}
+#title { font-size: 80px; color: #00ff1a; margin-left: 10px; }
+.hexagon-menu
+{
+	display: flex;
+  margin-top: 50px;
+	justify-content: center;
+}
+.title-content {
+    font-size: 40px;
+    text-align: center;
+}
+.information {
+    font-size: 30px;
+    text-align: center;
+}
+#main_content {
+  margin-top: 14%;
+  margin-left: 10%;
+  padding: 30px;
+  width: 80%;
+  height: 1500px;
+  border-radius: 3em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/*Стили для неонового текста*/
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+:root {
+  /* Base font size */
+  font-size: 10px;   
+  
+  /* Set neon color */
+  --neon-text-color: #44D62C;
+  --neon-border-color: #08f;
+}
+
+body main div h1 {
+  width: 25%;
+  margin-left: 33%;
+  font-family: 'Exo 2', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+
+  font-size: 13rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 4rem 6rem 5.5rem;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  animation: flicker 1.5s infinite alternate;     
+}
+
+
+/*_____________________________________*/
+
+body main div h2 {
+  width: 100%;
+  height: 10%;
+  padding-top: 0px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 50px;
+  animation: flicker_2 1.5s infinite alternate;     
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+/* Animate neon flicker_2 */
+@keyframes flicker_2 {
+    
+    0%, 0%, 0%, 0%, 0%, 0%, 0%, 100% {
+      
+        text-shadow:
+            /*-0.2rem -0.2rem 1rem #fff,*/
+            0.0rem 0.0rem 1rem #44D62C,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 1rem var(--neon-text-color),
+            0 0 1rem var(--neon-text-color);
+    } 
+}
+
+/*Конец стилей неона*/
+
+/*Стили для стрелки*/
+
+.arrow-7 {
+    margin: 10% auto 10px auto;
+    width: 38px;
+    height: 100px;   
+}
+.arrow-7 span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-bottom: 5px solid #98FB98;
+    border-right: 5px solid #98FB98;
+    transform: rotate(45deg);
+    margin: -16px 0;
+    animation: arrow-7 2s infinite;
+}
+.arrow-7 span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow-7 span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes arrow-7 {
+    0%{
+        opacity: 0;
+        transform: translate(0,-20px) rotate(45deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(0,20px) rotate(45deg);
+    }
+}
+
+/*Конец стилей для стрелки*/
+
+
+/*вот начиная с этого момента просто копи паста ради анимации. 
+Если хочешь, можешь не трогать, я потом разберусь и лишнее выкину*/
+
+/*.clear:before, .clear:after {
+content: " ";
+display: table; }                   //И БЕЗ ВСЕГО ЭТОГО РАБОТАЕТ, ХЗ)
+
+.clear:after {
+clear: both; }
+	  
+
+.hexagon-item:first-child {
+    margin-left: 0;
+}*/
+
+/*.page-home {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle; }
+  .page-home .overlay {
+    background-color: rgba(14, 17, 24, 0.97);
+}*/
+
+/* End of container */

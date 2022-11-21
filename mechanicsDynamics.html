@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Механические и динамические</title>
+	<link rel = "stylesheet" href = "styles/honeycombs.css">
+	<link rel = "stylesheet" href = "styles/contextMenu.css">
+	<link rel="stylesheet" href="styles/navbar.css">
+	<link rel="stylesheet" href="styles/popup.css">
+	<style>
+        #footer {
+            position: fixed; /* Фиксированное положение */
+            left: 0;
+            bottom: 0; /* Левый нижний угол */
+            padding: 10px; /* Поля вокруг текста */
+            background: gray; /* Цвет фона */
+            width: 100%; /* Ширина слоя */
+        }
+	</style>
+</head>
+<body>
+	<ul id="navbar">
+		<li><a href="../main_page.html">Главная</a></li> <!--хочу в root-->
+		<li>
+			<a href="#">Файл</a>
+			<ul>
+				<li><a href="#">Экспорт</a></li>
+				<li><a href="#">Импорт</a>
+					<input type="file" title="&nbsp;" id="user_sota" name="user_sota" accept=".sota">
+				</li>
+			</ul>
+		</li>
+		<li><a href="#zatemnenie">Связь уровней</a></li>
+	</ul>
+	<h1>СИСТЕМА МЕХАНИЧЕСКИХ ВЕЛИЧИН</h1>
+	<h2>(два системных уровня: кинематические и динамические ФВ)</h2>
+	<canvas id = "my-canvas" style="position: absolute;"></canvas>
+	<div id="newf" class="font_size">
+
+				<!-- <div class = "row" id = "row-8">
+			<div class = "one-hexagon" id = "hex-38">
+				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside gray">Сотик?</div>
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+			<div class = "one-hexagon" id = "hex-39">
+				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside gray">Сотик?</div>
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+			<div class = "one-hexagon" id = "hex-40">
+				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
+				<div class="inside gray">Сотик?</div>
+				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
+			</div>
+		</div> -->
+	</div>
+	<!--<button onclick = "location.href='main_page.html'">Go back</button>-->
+	<nav id="context-menu" class="context-menu">
+    <ul class="context-menu__items">
+      <li id="l1" class="context-menu__item">
+        <a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
+      </li>
+      <li id="l2" class="context-menu__item">
+        <a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
+      </li>
+      <li id="l3" class="context-menu__item">
+        <a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
+      </li>
+      <li id="l4" class="context-menu__item">
+        <a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
+      </li>
+    </ul>
+  </nav>
+<!-- <script src = "scripts/mechanics_dynamics.js"></script> -->
+<script src="scripts/generatehex.js"></script>
+<script src = "scripts/workWithHexagons.js"></script>
+<!-- <script src = "scripts/contextMenu.js"></script> -->
+<div id="zatemnenie">
+	<div id="okno">
+		<img src="styles/img/connect.png" style="text-align: center;">
+		<a href="#" class="close">Закрыть окно</a>
+	</div>
+</div>
+<div id="footer">
+	<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
+	<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
+</div>
+</body>
+</html>

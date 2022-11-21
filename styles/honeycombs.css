@@ -1,0 +1,164 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+h1, h2
+{
+	text-align: center;
+}
+
+#my-canvas {
+	pointer-events: none;
+}
+
+.hexagon{
+	width: 100px;
+	height: 100px;
+	
+}
+.hexagon-red
+{
+	border: 30px solid rgb(135, 47, 47);
+}
+.active-triangle.hexagon-red {
+	border: 30px solid rgb(171, 59, 59);
+}
+.hexagon-yellow
+{
+	border: 30px solid rgb(223, 223, 145);
+}
+.active-triangle.hexagon-yellow {
+	border: 30px solid rgb(196, 196, 95);
+}
+
+.hexagon-green
+{
+	border: 30px solid rgb(99, 175, 99);
+}
+.hexagon-gray
+{
+	border: 30px solid rgb(184, 189, 194);
+}
+.active-triangle.hexagon-gray {
+	border: 30px solid rgb(146, 148, 150);
+}
+.hexagon-white
+{
+	border: 30px solid   rgb(190, 200, 210);
+}
+.hexagon-blue
+{
+	border: 30px solid rgb(111, 154, 233);
+}
+.hexagon-pink
+{
+	border: 30px solid rgb(209, 115, 215);
+}
+
+
+.hexagon_zero, .triangleLeft, .triangleRight{
+	width: 0;
+	height: 0;
+	border-top-width: 45px !important;				
+	border-bottom-width: 45px !important;
+	border-top-color: transparent !important;
+	border-bottom-color: transparent !important;
+}
+.hexagon_triangle_left, .triangleLeft{
+	border-left-width: 0 !important;
+}
+
+.hexagon_triangle_right, .triangleRight{
+	border-right-width: 0 !important;
+}
+
+.hexagon_triangle_left_large, .hexagon_triangle_right_large{
+	border-top-width: 45px !important;				
+	border-bottom-width: 45px !important;
+}
+
+.inside{
+	width: 90px;			
+	height: 90px;
+}
+
+/* не работает почему-то */
+.inside .name
+{
+	position: relative;
+	top: 0px;
+}
+
+.inside .MLT
+{
+	position: relative;
+	bottom: 0px;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.one-hexagon
+{
+	display: flex;
+	text-align: center;
+}
+
+.one-hexagon:hover								/*убрал :nth-child(1) --> выделяются все сотики*/
+{
+	/*background-color: rgb(211, 211, 125);*/
+	/*border-radius: 5em;*/
+	/*font-weight: bold;*/
+	/*color: red;*/
+	opacity: 0.7;
+}
+
+p{
+	word-wrap: normal;
+	font-size: 16px;
+}
+
+.gray
+{
+	background-color: rgb(184, 189, 194);
+}
+.active-hexagon.gray {  /* когда сота выбрана и класс цвета - жёлтый */
+	background-color:rgb(146, 148, 150);
+}
+.red
+{
+	background-color: rgb(232, 119, 119);
+}
+.active-hexagon.red {  /* когда сота выбрана и класс цвета - жёлтый */
+	background-color:rgb(196, 196, 95);
+}
+.yellow
+{
+	background-color: rgb(223, 223, 145);
+}
+.active-hexagon.yellow {  /* когда сота выбрана и класс цвета - жёлтый */
+	background-color:rgb(196, 196, 95);
+}
+.green
+{
+	background-color: rgb(99, 175, 99);
+}
+.white
+{
+	background-color: rgb(190, 200, 210);
+}
+.blue
+{
+	background-color: rgb(111, 154, 233);
+}
+.pink
+{
+	background-color: rgb(209, 115, 215);
+}
+
+
+
+
