@@ -28,7 +28,8 @@
 			<a href="#">Файл</a>
 			<ul>
 				<li><a href="#">Экспорт</a></li>
-				<li><a href="#">Импорт</a>
+				<li>
+					<a href="#">Импорт</a>
 					<input type="file" title="&nbsp;" id="user_sota" name="user_sota" accept=".sota">
 				</li>
 			</ul>
@@ -37,10 +38,10 @@
 	</ul>
 	<h1>СИСТЕМА МЕХАНИЧЕСКИХ ВЕЛИЧИН</h1>
 	<!--<h2>(два системных уровня: кинематические и динамические ФВ)</h2>-->
-	<canvas id = "my-canvas" style="position: absolute;"></canvas>
+	<canvas id="my-canvas" style="position: absolute;"></canvas>
 	<div id="newf" class="font_size">
 
-				<!-- <div class = "row" id = "row-8">
+		<!-- <div class = "row" id = "row-8">
 			<div class = "one-hexagon" id = "hex-38">
 				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
 				<div class="inside gray">Сотик?</div>
@@ -60,34 +61,39 @@
 	</div>
 	<!--<button onclick = "location.href='main_page.html'">Go back</button>-->
 	<nav id="context-menu" class="context-menu">
-    <ul class="context-menu__items">
-      <li id="l1" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
-      </li>
-      <li id="l2" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
-      </li>
-      <li id="l3" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
-      </li>
-      <li id="l4" class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
-      </li>
-    </ul>
-  </nav>
-<!-- <script src = "scripts/mechanics_dynamics.js"></script> -->
-<script src="scripts/generatehex.js"></script>
-<script src = "scripts/workWithHexagons.js"></script>
-<!-- <script src = "scripts/contextMenu.js"></script> -->
-<div id="zatemnenie">
-	<div id="okno">
-		<img src="styles/img/connect.png" style="text-align: center;">
-		<a href="#" class="close">Закрыть окно</a>
+		<ul class="context-menu__items">
+			<li id="l1" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
+			</li>
+			<li id="l2" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
+			</li>
+			<li id="l3" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
+			</li>
+			<li id="l4" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- <script src = "scripts/mechanics_dynamics.js"></script> -->
+	<script src="scripts/generatehex.js"></script>
+	<script src="scripts/workWithHexagons.js"></script>
+	<!-- <script src = "scripts/contextMenu.js"></script> -->
+	<div id="zatemnenie">
+		<div id="okno">
+			<img src="styles/img/connect.png" style="text-align: center;">
+			<a href="#" class="close">Закрыть окно</a>
+		</div>
 	</div>
-</div>
-<div id="footer">
-	<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
-	<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
-</div>
+	<div id="footer">
+		<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
+		<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
+	</div>
+	<script>
+		window.onbeforeunload = function () {
+			return true;
+		};
+	</script>
 </body>
 </html>
