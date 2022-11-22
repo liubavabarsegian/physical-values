@@ -22,6 +22,7 @@
 	</style>
 </head>
 <body>
+	<input type="checkbox" id="nav-toggle" hidden>
 	<ul id="navbar">
 		<li><a href="../main_page.html">Главная</a></li> <!--хочу в root-->
 		<li>
@@ -30,7 +31,7 @@
 				<li><a href="#">Экспорт</a></li>
 				<li>
 					<a href="#">Импорт</a>
-					<input type="file" title="&nbsp;" id="user_sota" name="user_sota" accept=".sota">
+					<input type="file" title="&nbsp;" id="user_sota" name="user_sota" accept=".jsota">
 				</li>
 			</ul>
 		</li>
@@ -40,34 +41,15 @@
 	<!--<h2>(два системных уровня: кинематические и динамические ФВ)</h2>-->
 	<canvas id="my-canvas" style="position: absolute;"></canvas>
 	<div id="newf" class="font_size">
-
-		<!-- <div class = "row" id = "row-8">
-			<div class = "one-hexagon" id = "hex-38">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside gray">Сотик?</div>
-				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-			<div class = "one-hexagon" id = "hex-39">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside gray">Сотик?</div>
-				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-			<div class = "one-hexagon" id = "hex-40">
-				<div class = "hexagon hexagon-gray hexagon_zero hexagon_triangle_left hexagon_triangle_left_large"></div>
-				<div class="inside gray">Сотик?</div>
-				<div class="hexagon hexagon-gray hexagon_zero hexagon_triangle_right hexagon_triangle_right_large"></div>
-			</div>
-		</div> -->
 	</div>
-	<!--<button onclick = "location.href='main_page.html'">Go back</button>-->
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
 			<!--<li id="l1" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
-			</li>-->
+		<a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
+	</li>-->
 			<!--<li id="l2" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
-			</li>-->
+		<a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
+	</li>-->
 			<li id="l1" class="context-menu__item">
 				<a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
 			</li>
