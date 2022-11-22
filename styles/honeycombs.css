@@ -10,6 +10,7 @@ h1, h2
 
 #my-canvas {
 	pointer-events: none;
+	z-index: 100;
 }
 
 .hexagon{
@@ -65,17 +66,13 @@ h1, h2
 	border-top-color: transparent !important;
 	border-bottom-color: transparent !important;
 }
-.hexagon_triangle_left, .triangleLeft{
+
+.triangleLeft{
 	border-left-width: 0 !important;
 }
 
-.hexagon_triangle_right, .triangleRight{
+.triangleRight{
 	border-right-width: 0 !important;
-}
-
-.hexagon_triangle_left_large, .hexagon_triangle_right_large{
-	border-top-width: 45px !important;				
-	border-bottom-width: 45px !important;
 }
 
 .inside{
@@ -83,17 +80,11 @@ h1, h2
 	height: 90px;
 }
 
-/* не работает почему-то */
-.inside .name
-{
-	position: relative;
-	top: 0px;
-}
-
-.inside .MLT
+.inside
 {
 	position: relative;
 	bottom: 0px;
+	top: 0px;
 }
 
 .row {
@@ -114,6 +105,10 @@ h1, h2
 	/*font-weight: bold;*/
 	/*color: red;*/
 	opacity: 0.7;
+}
+
+.empty {
+	visibility: hidden;
 }
 
 p{

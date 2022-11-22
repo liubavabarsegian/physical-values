@@ -1,4 +1,3 @@
-clickedHexagons = [];
 clickedTwice = false;
 
 			//      	  1 		 G 		  G^-1 		  Gk 		k^-1 	   Gk^2 	 G^-1k^-2  
@@ -110,6 +109,12 @@ const menu = document.querySelector(".context-menu__items");
 fl = true;
 vsp = null;
 
+let redactionState = false
+
+function waitForHexclick() {
+	redactionState = true
+}
+
 for (hex of menuArea) {
 	if (!fl) break;
 	hex.addEventListener("contextmenu", function(event) {
@@ -121,14 +126,29 @@ for (hex of menuArea) {
 	});
 
 	hex.addEventListener("click", function() {
+		if (redactionState == false) {
 			if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
-			makeActive(this)
+			Activate(this)
 			rememberHexagon(this);
-			}
+			} else {}
+		} else {
+			nameInput = document.getElementById("name")
+			symbolInput = document.getElementById("symbol")
+			unitInput = document.getElementById("unit")
+			unitFullInput = document.getElementById("unit_full")
+			mInput = document.getElementById("M")
+			lInput = document.getElementById("L")
+			tInput = document.getElementById("T")
+			iInput = document.getElementById("I")
+			//curGK = data[this.parentElement.id][this.id][]
+		}
+
+
+			
 	});
 }
 
-function makeActive(hex) {
+function Activate(hex) {
 	let inside = hex.querySelector(".inside");
 	let leftTriangle = hex.querySelector(".triangleLeft");
 	let rightTriangle = hex.querySelector(".triangleRight");
@@ -136,6 +156,17 @@ function makeActive(hex) {
 	leftTriangle.classList.add("active-triangle")
 	rightTriangle.classList.add("active-triangle")
 }
+
+function Deactivate(hex) {
+	let inside = hex.querySelector(".inside");
+	let leftTriangle = hex.querySelector(".triangleLeft");
+	let rightTriangle = hex.querySelector(".triangleRight");
+	inside.classList.remove("active-hexagon")
+	leftTriangle.classList.remove("active-triangle")
+	rightTriangle.classList.remove("active-triangle")
+}
+
+
 
 function rememberHexagon(hex) {
 	var inside = hex.querySelector(".inside");
@@ -156,7 +187,7 @@ function rememberHexagon(hex) {
 	}
 }
 
-
+clickedHexagons = [];
 let c = document.getElementById("my-canvas");
 let ctx = c.getContext("2d");
 function drawParallelogram() {

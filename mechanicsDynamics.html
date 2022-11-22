@@ -22,49 +22,53 @@
 	</style>
 </head>
 <body>
-	<input type="checkbox" id="nav-toggle" hidden>
 	<ul id="navbar">
-		<li><a href="../main_page.html">Главная</a></li> <!--хочу в root-->
+		<li><a href="./main_page.html">Главная</a></li> <!--хочу в root-->
 		<li>
 			<a href="#">Файл</a>
 			<ul>
 				<li><a href="#">Экспорт</a></li>
 				<li>
 					<a href="#">Импорт</a>
-					<input type="file" title="&nbsp;" id="user_sota" name="user_sota" accept=".jsota">
+					<input type="file" title="&nbsp;" id="user_sota" name="user_sota" accept=".sota">
 				</li>
 			</ul>
 		</li>
 		<li><a href="#zatemnenie">Связь уровней</a></li>
 	</ul>
 	<h1>СИСТЕМА МЕХАНИЧЕСКИХ ВЕЛИЧИН</h1>
-	<!--<h2>(два системных уровня: кинематические и динамические ФВ)</h2>-->
 	<canvas id="my-canvas" style="position: absolute;"></canvas>
 	<div id="newf" class="font_size">
+
 	</div>
+	<input type="number" id="M" min="-99" max="99"><br>
+	<input type="number" id="L" min="-99" max="99"><br>
+	<input type="number" id="T" min="-99" max="99"><br>
+	<input type="number" id="I" min="-99" max="99"><br>
+	<input type="text" id="name"><br>
+	<input type="text" id="symbol"><br>
+	<input type="text" id="unit"><br>
+	<input type="text" id="unit_full">
+	<button onclick="waitForHexclick()">Отредактировать</button>
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
-			<!--<li id="l1" class="context-menu__item">
-		<a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
-	</li>-->
-			<!--<li id="l2" class="context-menu__item">
-		<a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
-	</li>-->
 			<li id="l1" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
+				<a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
 			</li>
 			<li id="l2" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
+				<a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
 			</li>
 			<li id="l3" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Levels">Уровни 🔼🔽</a>
+				<a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
+			</li>
+			<li id="l4" class="context-menu__item">
+				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
 			</li>
 		</ul>
 	</nav>
-	<!-- <script src = "scripts/mechanics_dynamics.js"></script> -->
+	<script src="scripts/data.js"></script>
 	<script src="scripts/generatehex.js"></script>
 	<script src="scripts/workWithHexagons.js"></script>
-	<!-- <script src = "scripts/contextMenu.js"></script> -->
 	<div id="zatemnenie">
 		<div id="okno">
 			<img src="styles/img/connect.png" style="text-align: center;">
