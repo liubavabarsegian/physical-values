@@ -1,29 +1,5 @@
 clickedTwice = false;
 
-			//      	  1 		 G 		  G^-1 		  Gk 		k^-1 	   Gk^2 	 G^-1k^-2  
-	var levels =     [ 'lvl_1',   'lvl_2',  'lvl_3',    'lvl_4',   'lvl_5',   'lvl_6',   'lvl_7'];
-	var lvl_colors = ['#dfe59c', '#c9c9c9', '#8f8f8f', '#a6f7ae', '#65b3eb', '#f0bc8b', '#f5b3d3'];
-	var currentLevel = 0;
-								//    M  ^   L     ^	T 	^   I   ^
-	var lvl_texts  = [  [ ['lvl-1', ['', '', 'L', '2', 'T', '', '', '']],
-							['lvl-2', ['-', '', '', '', '', '', '', '']],
-							['lvl-3', ['-', '', '', '', '', '', '', '']],
-							['lvl-4', ['-', '', '', '', '', '', '', '']],
-							['lvl-5', ['-', '', '', '', '', '', '', '']],
-							['Емкость', ['M', '-1', 'L', '-2', 'T', '4', 'I', '2']],
-							['lvl-7', ['-', '', '', '', '', '', '', '']] 		// поля для 1 соты
-						],
-						[ ['Объём, V', ['', '', 'L', '3', '', '', '', '']],
-							['lvl-2', ['-', '', '', '', '', '', '', '']],
-							['lvl-3', ['-', '', '', '', '', '', '', '']],
-							['lvl-4', ['-', '', '', '', '', '', '', '']],
-							['lvl-5', ['-', '', '', '', '', '', '', '']],
-							['γ', ['M', '-1', 'L', '-1', 'T', '3', 'I', '2']],
-							['lvl-7', ['-', '', '', '', '', '', '', '']]	    // поля для 2 соты
-						],
-						[]] 
-		
-
 class hexagon {
     constructor(name, level, coordinateX, coordinateY) {
         this.name = name;
@@ -58,95 +34,16 @@ class hexagon {
 	}
 }
 
+document.addEventListener("click", event => {
+	if (event.button !== 2) { menu.classList.remove("active"); }
+}, false)
 
-yellowLight = "rgb(223, 223, 145)";
-yellowDark = "rgb(196, 196, 95)";
-grayLight = "rgb(184, 189, 194)";
-grayDark = "rgb(146, 148, 150)";
-redLight = "rgb(232, 119, 119)";
-redDark = "rgb(171, 59, 59)";
-
-
-function changeColor(hex, darkColor, lightColor) {
-	var inside = hex.querySelector(".inside");
-	var leftTriangle = hex.querySelector(".triangleLeft");
-	var rightTriangle = hex.querySelector(".triangleRight");
-
-	if (inside.style.background == darkColor) {
-		inside.style.background = lightColor;
-		leftTriangle.style.borderRightColor = lightColor;
-		leftTriangle.borderLeftWidth =  0;
-		leftTriangle.borderTopColor = "transparent";
-		leftTriangle.borderBottomColor = "transparent";
-
-		rightTriangle.style.borderLeftColor = lightColor;
-		rightTriangle.borderRightWidth =  0;
-		rightTriangle.borderTopColor = "transparent";
-		rightTriangle.borderBottomColor = "transparent";
-	} else {
-		clickedTwice = true;
-		inside.style.background = darkColor;
-
-		leftTriangle.style.borderRightColor = darkColor;
-		leftTriangle.borderLeftWidth =  0;
-		leftTriangle.borderTopColor = "transparent";
-		leftTriangle.borderBottomColor = "transparent";
-
-		rightTriangle.style.borderLeftColor = darkColor;
-		rightTriangle.borderRightWidth =  0;
-		rightTriangle.borderTopColor = "transparent";
-		rightTriangle.borderBottomColor = "transparent";
-	}
-}
+menu.addEventListener("click", event => {
+		event.stopPropagation();
+}, false);
 
 
 
-
-
-const menuArea = document.querySelectorAll(".one-hexagon");
-const menu = document.querySelector(".context-menu__items");
-
-fl = true;
-vsp = null;
-
-let redactionState = false
-
-function waitForHexclick() {
-	redactionState = true
-}
-
-for (hex of menuArea) {
-	if (!fl) break;
-	hex.addEventListener("contextmenu", function(event) {
-		event.preventDefault();
-		menu.style.top = `${event.clientY}px`;
-        menu.style.left = `${event.clientX}px`;
-		menu.classList.add("active");
-		vsp = this;
-	});
-
-	hex.addEventListener("click", function() {
-		if (redactionState == false) {
-			if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
-			Activate(this)
-			rememberHexagon(this);
-			} else {}
-		} else {
-			nameInput = document.getElementById("name")
-			symbolInput = document.getElementById("symbol")
-			unitInput = document.getElementById("unit")
-			unitFullInput = document.getElementById("unit_full")
-			mInput = document.getElementById("M")
-			lInput = document.getElementById("L")
-			tInput = document.getElementById("T")
-			iInput = document.getElementById("I")
-			//curGK = data[this.parentElement.id][this.id][]
-		}
-
-
-			
-	});
-}
 
 function Activate(hex) {
 	let inside = hex.querySelector(".inside");
@@ -206,82 +103,79 @@ function drawParallelogram() {
 
 }
 
-document.addEventListener("click", event => {
-	if (event.button !== 2) { menu.classList.remove("active"); }
-}, false)
+function showRedactFormWithParams(gk) {
+	document.getElementById("form").classList.remove("invisible")
+	writeIntoInputFromObject(gk,"name","name")
+	writeIntoInputFromObject(gk,"ed_izm","unit")
+	writeIntoInputFromObject(gk,"usl_ob","symbol")
+	writeIntoInputFromObject(gk,"ob_ed_izm","unit_full")
+	writeIntoInputFromObject(gk,"M","M")
+	writeIntoInputFromObject(gk,"L","L")
+	writeIntoInputFromObject(gk,"T","T")
+	writeIntoInputFromObject(gk,"I","I")
+}
 
-menu.addEventListener("click", event => {
-		event.stopPropagation();
-	}, false);
-
+let ContextElement
+addEventListener('contextmenu', (event) => {ContextElement = event});
+let redactHexElement
 
 document.getElementById("l1").onclick = function(){
-	changeLevels(vsp, true)
+	redactHexElement = getMainHexFromSiblings(ContextElement.target)
+	gk = getHexData(redactHexElement)
+	showRedactFormWithParams(gk)
+	menu.style.top = `${10000}px`;
+}
+
+function finRedact() {
+	gk = getHexData(redactHexElement)
+	writeFromForm(gk)
+}
+
+function writeFromForm(gk)  {
+	document.getElementById("form").classList.add("invisible")
+	writeIntoObjFromInput(gk,"name","name")
+	writeIntoObjFromInput(gk,"ed_izm","unit")
+	writeIntoObjFromInput(gk,"usl_ob","symbol")
+	writeIntoObjFromInput(gk,"ob_ed_izm","unit_full")
+	writeIntoObjFromInput(gk,"M","M")
+	writeIntoObjFromInput(gk,"L","L")
+	writeIntoObjFromInput(gk,"T","T")
+	writeIntoObjFromInput(gk,"I","I")
+	createTable("newf",data)
+	console.log(gk)
+	console.log(getMLT(gk))
 }
 
 document.getElementById("l2").onclick = function(){
-	changeLevels(vsp, false);
+	redactHexElement = getMainHexFromSiblings(ContextElement.target)
+	gk = getHexData(redactHexElement)
+	deleteHexGK(gk)
+	menu.style.top = `${10000}px`;
 }
 
-function changeLevels(hex, increment) {
-	var inside = hex.querySelector(".inside");
-	var leftTriangle = hex.querySelector(".triangleLeft");
-	var rightTriangle = hex.querySelector(".triangleRight");
-
-	lvl = levels[currentLevel];
-	clr = lvl_colors[currentLevel];
-
-	//_______________ И з м е н е н и е   Ц В Е Т А _________________//
-
-	inside.style.background = clr;
-	leftTriangle.style.borderRightColor = clr;
-	leftTriangle.borderLeftWidth =  0;
-	leftTriangle.borderTopColor = "transparent";
-	leftTriangle.borderBottomColor = "transparent";
-
-	rightTriangle.style.borderLeftColor = clr;
-	rightTriangle.borderRightWidth =  0;
-	rightTriangle.borderTopColor = "transparent";
-	rightTriangle.borderBottomColor = "transparent";
-
-	//______________________________________________________________//
-
-	hex_id = hex.id;
-	changeText(hex_id, currentLevel);
-
-	if (increment) { currentLevel++; }
-	else { currentLevel--; }
-	if (currentLevel == lvl_colors.length) currentLevel = 0;
-	if (currentLevel == -1) currentLevel = lvl_colors.length - 1;
-}
-
-//_______________ И з м е н е н и е   Т Е К С Т А _________________//
-
-function changeText(hex_id, currentLevel) {
-
-	let hex_name = hex_id + '-txt-name';
-	let hex_frml = hex_id + '-txt-frml';
-
-	let name = document.getElementById(hex_name);
-	let elements = 	document.getElementById(hex_frml);
-
-	let hex_number = hex_id.slice(4, hex_id.length) - 1; //номер соты в массиве
-	hex_date = lvl_texts[hex_number];
-	hex_date_name = hex_date[currentLevel][0];
-	hex_date_frml = hex_date[currentLevel][1];
-
-
-	name.innerText = hex_date_name;
-
-	elements.childNodes[0].innerText = hex_date_frml[0];
-	elements.childNodes[1].innerText = hex_date_frml[1];
-	elements.childNodes[2].innerText = hex_date_frml[2];
-	elements.childNodes[3].innerText = hex_date_frml[3];
-	elements.childNodes[4].innerText = hex_date_frml[4];
-	elements.childNodes[5].innerText = hex_date_frml[5];
-	elements.childNodes[6].innerText = hex_date_frml[6];
-	elements.childNodes[7].innerText = hex_date_frml[7];
+function deleteHexGK(gk) {
+	console.log(gk)
+	gk.name = ""
+	gk.usl_ob = ""
+	gk.M = 0
+	gk.L = 0
+	gk.T = 0
+	gk.I = 0
+	gk.ob_ed_izm = ""
+	gk.ed_izm = ""
+	console.log(gk)
+	createTable("newf",data)
 
 }
-//______________________________________________________________//
 
+// curGK = getHexData(this)
+// writeIntoObjFromInput(curGK,"name","name")
+// writeIntoObjFromInput(curGK,"ed_izm","unit")
+// writeIntoObjFromInput(curGK,"ob_ed_izm","unit_full")
+// writeIntoObjFromInput(curGK,"M","M")
+// writeIntoObjFromInput(curGK,"L","L")
+// writeIntoObjFromInput(curGK,"T","T")
+// writeIntoObjFromInput(curGK,"I","I")
+// console.log(curGK)
+// createTable("newf",data)
+// redactionState = false

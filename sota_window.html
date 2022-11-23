@@ -46,31 +46,31 @@
 	<div id="newf" class="font_size">
 
 	</div>
-	<input type="number" id="M" min="-99" max="99"><br>
-	<input type="number" id="L" min="-99" max="99"><br>
-	<input type="number" id="T" min="-99" max="99"><br>
-	<input type="number" id="I" min="-99" max="99"><br>
-	<input type="text" id="name"><br>
-	<input type="text" id="symbol"><br>
-	<input type="text" id="unit"><br>
-	<input type="text" id="unit_full">
-	<button onclick="waitForHexclick()">Отредактировать</button>
+	<button id="export" onclick="download()">Скачать ФВиЗ</button>
+	<input id="import" type="file" accept=".jsota">Импортировать</input>
+	<div id="form" class="invisible">
+		<span>M:</span><input type="number" id="M" min="-99" max="99"><br>
+		<span>L:</span><input type="number" id="L" min="-99" max="99"><br>
+		<span>T:</span><input type="number" id="T" min="-99" max="99"><br>
+		<span>I:</span><input type="number" id="I" min="-99" max="99"><br>
+		<span>Имя:</span><input type="text" id="name"><br>
+		<span>Усл. обозначение:</span><input type="text" id="symbol"><br>
+		<span>ед. измерения кратко:</span><input type="text" id="unit"><br>
+		<span>ед. измерения полная:</span><input type="text" id="unit_full"><br>
+		<button onclick="finRedact()">Отредактировать</button>
+	</div>
+	<br><br><br><br><br><br><br>
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
 			<li id="l1" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Levels-up">На уровень ВЫШЕ 🔼</a>
-			</li>
-			<li id="l2" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Levels-down">На уровень НИЖЕ 🔽</a>
-			</li>
-			<li id="l3" class="context-menu__item">
 				<a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
 			</li>
-			<li id="l4" class="context-menu__item">
+			<li id="l2" class="context-menu__item">
 				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
 			</li>
 		</ul>
 	</nav>
+	<script src="scripts/utilities.js"></script>
 	<script src="scripts/data.js"></script>
 	<script src="scripts/generatehex.js"></script>
 	<script src="scripts/workWithHexagons.js"></script>
