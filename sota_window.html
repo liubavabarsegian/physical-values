@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="styles/contextMenu.css">
 	<link rel="stylesheet" href="styles/navbar.css">
 	<link rel="stylesheet" href="styles/popup.css">
+	<link rel="stylesheet" href="styles/workWithSota.css">
 	<style>
 		#footer {
 			position: fixed; /* Фиксированное положение */
@@ -20,9 +21,9 @@
 			width: 100%; /* Ширина слоя */
 		}
 
-        input[type="text"] {
-            font-size: 14px;
-        }
+		input[type="text"] {
+			font-size: 14px;
+		}
 	</style>
 </head>
 <body>
@@ -41,14 +42,37 @@
 		<li><a href="#zatemnenie">Связь уровней</a></li>
 		dfghfgdfghjkhjgh
 	</ul>
+	<div id="openModal" class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">Заголовок</h3>
+					<a href="#close" title="Close" class="close">×</a>
+				</div>
+				<div class="modal-body">
+					<div id="form">
+						<span>M:</span><input type="number" id="M" min="-99" max="99"><br>
+						<span>L:</span><input type="number" id="L" min="-99" max="99"><br>
+						<span>T:</span><input type="number" id="T" min="-99" max="99"><br>
+						<span>I:</span><input type="number" id="I" min="-99" max="99"><br>
+						<span>Имя:</span><input type="text" id="name"><br>
+						<span>Усл. обозначение:</span><input type="text" id="symbol"><br>
+						<span>ед. измерения кратко:</span><input type="text" id="unit"><br>
+						<span>ед. измерения полная:</span><input type="text" id="unit_full"><br>
+						<button onclick="finRedact()"><a href="#close">Отредактировать</a></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<h1>СИСТЕМА МЕХАНИЧЕСКИХ ВЕЛИЧИН</h1>
 	<canvas id="my-canvas" style="position: absolute;"></canvas>
 	<div id="newf" class="font_size">
 
 	</div>
 	<button id="export" onclick="download()">Скачать ФВиЗ</button>
-	<input id="import" type="file" accept=".jsota">Импортировать</input>
-	<div id="form" class="invisible">
+	<input id="import" type="file" accept=".jsota">Импортировать>
+	<!--<div id="form" class="invisible">
 		<span>M:</span><input type="number" id="M" min="-99" max="99"><br>
 		<span>L:</span><input type="number" id="L" min="-99" max="99"><br>
 		<span>T:</span><input type="number" id="T" min="-99" max="99"><br>
@@ -58,12 +82,12 @@
 		<span>ед. измерения кратко:</span><input type="text" id="unit"><br>
 		<span>ед. измерения полная:</span><input type="text" id="unit_full"><br>
 		<button onclick="finRedact()">Отредактировать</button>
-	</div>
+	</div>-->
 	<br><br><br><br><br><br><br>
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
 			<li id="l1" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Edit">Редактировать</a>
+				<a href="#openModal" class="context-menu__link" data-action="Edit">Редактировать</a>
 			</li>
 			<li id="l2" class="context-menu__item">
 				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>

@@ -104,7 +104,7 @@ function drawParallelogram() {
 }
 
 function showRedactFormWithParams(gk) {
-	document.getElementById("form").classList.remove("invisible")
+	//document.getElementById("form").classList.remove("invisible")
 	writeIntoInputFromObject(gk,"name","name")
 	writeIntoInputFromObject(gk,"ed_izm","unit")
 	writeIntoInputFromObject(gk,"usl_ob","symbol")
@@ -132,7 +132,7 @@ function finRedact() {
 }
 
 function writeFromForm(gk)  {
-	document.getElementById("form").classList.add("invisible")
+	//document.getElementById("form").classList.add("invisible")
 	writeIntoObjFromInput(gk,"name","name")
 	writeIntoObjFromInput(gk,"ed_izm","unit")
 	writeIntoObjFromInput(gk,"usl_ob","symbol")
