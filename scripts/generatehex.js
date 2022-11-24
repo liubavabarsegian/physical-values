@@ -82,7 +82,11 @@ function createHexagon(hexData,name) {
   newHex.appendChild(rightTriangle)
 
   return newHex
-}
+};
+
+
+
+
 
 
 

@@ -191,4 +191,9 @@ fileSelector.addEventListener('change', (event) => {
 		createTable("newf",data)
   })
   reader.readAsText(fileList[0])
-})
+});
+
+
+
+
+
