@@ -1,38 +1,3 @@
-clickedTwice = false;
-
-class hexagon {
-    constructor(name, level, coordinateX, coordinateY) {
-        this.name = name;
-		this.level = level;
-		this.x = coordinateX;
-		this.y = coordinateY;
-    }
-	// constructor() {}
-	setName(name) {
-		this.name = name;
-	}
-	setLevel(level) {
-		this.level = level;
-	}
-	setX(coordinateX) {
-		this.x = coordinateX;
-	}
-	setY(coordinateY) {
-		this.y = coordinateY;
-	}
-    getName() {
-        return this.name;
-    }
-	getLevel() {
-		return this.level;
-	}
-	getX() {
-		return this.x;
-	}
-	getY() {
-		return this.y;
-	}
-}
 
 document.addEventListener("click", event => {
 	if (event.button !== 2) { menu.classList.remove("active"); }
@@ -63,6 +28,39 @@ function Deactivate(hex) {
 	rightTriangle.classList.remove("active-triangle")
 }
 
+class hexagon {
+	constructor(name, level, coordinateX, coordinateY) {
+			this.name = name;
+	this.level = level;
+	this.x = coordinateX;
+	this.y = coordinateY;
+	}
+// constructor() {}
+setName(name) {
+	this.name = name;
+}
+setLevel(level) {
+	this.level = level;
+}
+setX(coordinateX) {
+	this.x = coordinateX;
+}
+setY(coordinateY) {
+	this.y = coordinateY;
+}
+	getName() {
+			return this.name;
+	}
+getLevel() {
+	return this.level;
+}
+getX() {
+	return this.x;
+}
+getY() {
+	return this.y;
+}
+}
 
 
 function rememberHexagon(hex) {
@@ -123,7 +121,7 @@ document.getElementById("l1").onclick = function(){
 	redactHexElement = getMainHexFromSiblings(ContextElement.target)
 	gk = getHexData(redactHexElement)
 	showRedactFormWithParams(gk)
-	menu.style.top = `${10000}px`;
+	menu.classList.remove("active")
 }
 
 function finRedact() {
@@ -142,15 +140,13 @@ function writeFromForm(gk)  {
 	writeIntoObjFromInput(gk,"T","T")
 	writeIntoObjFromInput(gk,"I","I")
 	createTable("newf",data)
-	console.log(gk)
-	console.log(getMLT(gk))
 }
 
 document.getElementById("l2").onclick = function(){
 	redactHexElement = getMainHexFromSiblings(ContextElement.target)
 	gk = getHexData(redactHexElement)
 	deleteHexGK(gk)
-	menu.style.top = `${10000}px`;
+	menu.classList.remove("active")
 }
 
 function deleteHexGK(gk) {
@@ -168,14 +164,31 @@ function deleteHexGK(gk) {
 
 }
 
-// curGK = getHexData(this)
-// writeIntoObjFromInput(curGK,"name","name")
-// writeIntoObjFromInput(curGK,"ed_izm","unit")
-// writeIntoObjFromInput(curGK,"ob_ed_izm","unit_full")
-// writeIntoObjFromInput(curGK,"M","M")
-// writeIntoObjFromInput(curGK,"L","L")
-// writeIntoObjFromInput(curGK,"T","T")
-// writeIntoObjFromInput(curGK,"I","I")
-// console.log(curGK)
-// createTable("newf",data)
-// redactionState = false
+function download() {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
+	fileName = document.getElementById("sota_filenm").value
+	if (fileName == "") {
+		fileName = "fviz"
+	}
+  element.setAttribute('download', fileName + ".jsota")
+
+  element.style.display = 'none'
+  document.body.appendChild(element)
+
+  element.click()
+
+  document.body.removeChild(element)
+}
+
+fileSelector = document.getElementById('import')
+fileSelector.addEventListener('change', (event) => {
+	fileList = event.target.files
+
+	reader = new FileReader()
+  reader.addEventListener('load', (event) => {
+    data = JSON.parse(event.target.result)
+		createTable("newf",data)
+  })
+  reader.readAsText(fileList[0])
+})

@@ -1,5 +1,39 @@
-
+sortGK(data)
 createTable("newf",data)
+
+function sortGK(tableData) {
+  for (let row in tableData) {
+    for (let hex in tableData[row]) {
+      if (findFirstNotEmptyNumber(tableData[row][hex]) != null) {
+        firstNonEmptyGK = getNGK(tableData[row][hex],findFirstNotEmptyNumber(tableData[row][hex]))
+        firstGK = getNGK(tableData[row][hex],0)
+        swapObjectParams(firstNonEmptyGK,firstGK)
+      }
+    }
+  }
+}
+
+function swapObjectParams(gk1,gk2) {
+  gkSwap = {}
+  for (let par in gk1) {
+    gkSwap[par] = gk1[par]
+  }
+  for (let par in gk2) {
+    gk1[par] = gk2[par]
+  }
+  for (let par in gkSwap) {
+    gk2[par] = gkSwap[par]
+  }
+}
+
+function findFirstNotEmptyNumber(hex) {
+  for (let gk in hex) {
+    if (getNGK(hex,gk).name != "") {
+      return gk
+    }
+  }
+  return null
+}
 
 function createTable(id,tableData) {
   Ntable = document.getElementById(id)

@@ -18,45 +18,6 @@ h1, h2
 	height: 100px;
 	
 }
-.hexagon-red
-{
-	border: 30px solid rgb(135, 47, 47);
-}
-.active-triangle.hexagon-red {
-	border: 30px solid rgb(171, 59, 59);
-}
-.hexagon-yellow
-{
-	border: 30px solid rgb(223, 223, 145);
-}
-.active-triangle.hexagon-yellow {
-	border: 30px solid rgb(196, 196, 95);
-}
-
-.hexagon-green
-{
-	border: 30px solid rgb(99, 175, 99);
-}
-.hexagon-gray
-{
-	border: 30px solid rgb(184, 189, 194);
-}
-.active-triangle.hexagon-gray {
-	border: 30px solid rgb(146, 148, 150);
-}
-.hexagon-white
-{
-	border: 30px solid   rgb(190, 200, 210);
-}
-.hexagon-blue
-{
-	border: 30px solid rgb(111, 154, 233);
-}
-.hexagon-pink
-{
-	border: 30px solid rgb(209, 115, 215);
-}
-
 
 .hexagon_zero, .triangleLeft, .triangleRight{
 	width: 0;
@@ -114,44 +75,6 @@ h1, h2
 p{
 	word-wrap: normal;
 	font-size: 16px;
-}
-
-.gray
-{
-	background-color: rgb(184, 189, 194);
-}
-.active-hexagon.gray {  /* когда сота выбрана и класс цвета - жёлтый */
-	background-color:rgb(146, 148, 150);
-}
-.red
-{
-	background-color: rgb(232, 119, 119);
-}
-.active-hexagon.red {  /* когда сота выбрана и класс цвета - жёлтый */
-	background-color:rgb(196, 196, 95);
-}
-.yellow
-{
-	background-color: rgb(223, 223, 145);
-}
-.active-hexagon.yellow {  /* когда сота выбрана и класс цвета - жёлтый */
-	background-color:rgb(196, 196, 95);
-}
-.green
-{
-	background-color: rgb(99, 175, 99);
-}
-.white
-{
-	background-color: rgb(190, 200, 210);
-}
-.blue
-{
-	background-color: rgb(111, 154, 233);
-}
-.pink
-{
-	background-color: rgb(209, 115, 215);
 }
 
 

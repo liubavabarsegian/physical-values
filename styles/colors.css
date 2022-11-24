@@ -1,0 +1,177 @@
+.hexagon-yellow
+{
+	border: 30px solid rgb(223, 223, 145);
+}
+.active-triangle.hexagon-yellow {
+	border: 30px solid rgb(196, 196, 95);
+}
+
+.hexagon-gray
+{
+	border: 30px solid rgb(184, 189, 194);
+}
+.active-triangle.hexagon-gray {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-grideperlevy
+{
+	border: 30px solid rgb(146, 148, 150);
+}
+.active-triangle.hexagon-grideperlevy {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-dark_gray
+{
+	border: 30px solid darkgray;
+}
+.active-triangle.hexagon-dark_gray {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-sky
+{
+	border: 30px solid skyblue;
+}
+.active-triangle.hexagon-sky {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-light_green
+{
+	border: 30px solid lightgreen;
+}
+.active-triangle.hexagon-light_green {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-vinous
+{
+	border: 30px solid rgb(184, 189, 194);
+}
+.active-triangle.hexagon-vinous {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-dark_green
+{
+	border: 30px solid darkgreen;
+}
+.active-triangle.hexagon-dark_green {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-blue
+{
+	border: 30px solid rgb(111, 154, 233);
+}
+.active-triangle.hexagon-blue {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-mint
+{
+	border: 30px solid rgb(184, 189, 194);
+}
+.active-triangle.hexagon-mint {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-light_green
+{
+	border: 30px solid rgb(184, 189, 194);
+}
+.active-triangle.hexagon-light_green {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-white_blue
+{
+	border: 30px solid rgb(184, 189, 194);
+}
+.active-triangle.hexagon-white_blue {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-swamp
+{
+	border: 30px solid rgb(184, 189, 194);
+}
+.active-triangle.hexagon-swamp {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-dark_blue
+{
+	border: 30px solid darkblue;
+}
+.active-triangle.hexagon-dark_blue {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.hexagon-purple
+{
+	border: 30px solid purple;
+}
+.active-triangle.hexagon-purple {
+	border: 30px solid rgb(146, 148, 150);
+}
+
+.yellow
+{
+	background-color: rgb(223, 223, 145);
+}
+.gray
+{
+	background-color: rgb(184, 189, 194);
+}
+.grideperlevy
+{
+	background-color: rgb(111, 154, 233);
+}
+.dark_gray
+{
+	background-color: rgb(111, 154, 233);
+}
+.sky
+{
+	background-color: rgb(111, 154, 233);
+}
+.light_green
+{
+	background-color: rgb(111, 154, 233);
+}
+.vinous
+{
+	background-color: rgb(111, 154, 233);
+}
+.dark_green
+{
+	background-color: rgb(111, 154, 233);
+}
+.blue
+{
+	background-color: rgb(111, 154, 233);
+}
+.mint
+{
+	background-color: rgb(111, 154, 233);
+}
+.white_blue
+{
+	background-color: rgb(111, 154, 233);
+}
+.swamp
+{
+	background-color: rgb(111, 154, 233);
+}
+.dark_blue
+{
+	background-color: rgb(111, 154, 233);
+}
+.purple
+{
+	background-color: rgb(111, 154, 233);
+}
+

@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Механические и динамические</title>
 	<link rel="icon" href="styles/img/icon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="styles/colors.css">
 	<link rel="stylesheet" href="styles/honeycombs.css">
 	<link rel="stylesheet" href="styles/contextMenu.css">
 	<link rel="stylesheet" href="styles/navbar.css">
@@ -72,6 +73,8 @@
 	</div>
 	<button id="export" onclick="download()">Скачать ФВиЗ</button>
 	<input id="import" type="file" accept=".jsota">Импортировать>
+	<div id="showGK"></div>
+	<br><br><br><br><br><br>
 	<!--<div id="form" class="invisible">
 		<span>M:</span><input type="number" id="M" min="-99" max="99"><br>
 		<span>L:</span><input type="number" id="L" min="-99" max="99"><br>
@@ -85,6 +88,9 @@
 	</div>-->
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
+			<li id="l0" class="context-menu__item">
+				<a class="context-menu__link" data-action="Edit">Все GK</a>
+			</li>
 			<li id="l1" class="context-menu__item">
 				<a href="#openModal" class="context-menu__link" data-action="Edit">Редактировать</a>
 			</li>
@@ -106,7 +112,7 @@
 	<div id="footer">
 		<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
 		<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
-		<center>Название файла: <input type="text" id="sota_filenm" placeholder="Название открытого файла" /></center>
+		<center>Название файла: <input type="text" id="sota_filenm" placeholder="Название открытого файла" value="fviz"/></center>
 	</div>
 	<!--<script>
 		window.onbeforeunload = function () {
