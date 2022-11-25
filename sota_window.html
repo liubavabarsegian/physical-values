@@ -42,10 +42,15 @@
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
 		<p class="modal__title">Заголовок окна 2</p>
 		<div id="form">
-			<span>M:</span><input type="number" id="M" min="-99" max="99"><br>
-			<span>L:</span><input type="number" id="L" min="-99" max="99"><br>
-			<span>T:</span><input type="number" id="T" min="-99" max="99"><br>
-			<span>I:</span><input type="number" id="I" min="-99" max="99"><br>
+			<span>L:</span><input type="number" id="LLT" min="-99" max="99" size="2">
+			<span>T:</span><input type="number" id="TLT" min="-99" max="99" size="2">
+			<span>G:</span><input type="number" id="GGK" min="-99" max="99" size="2">
+			<span>K:</span><input type="number" id="KGK" min="-99" max="99" size="2"><br>
+
+			<span>M:</span><input type="number" id="M" min="-99" max="99" size="2">
+			<span>L:</span><input type="number" id="L" min="-99" max="99" size="2">
+			<span>T:</span><input type="number" id="T" min="-99" max="99" size="2">
+			<span>I:</span><input type="number" id="I" min="-99" max="99" size="2"><br>
 			<span>Имя:</span><input type="text" id="name"><br>
 			<span>Усл. обозначение:</span><input type="text" id="symbol"><br>
 			<span>ед. измерения кратко:</span><input type="text" id="unit"><br>
@@ -99,10 +104,15 @@
 				<a class="context-menu__link" data-action="Edit">Все GK</a>
 			</li>
 			<li id="l1" class="context-menu__item">
-				<a href="#" class="context-menu__link js-open-modal" data-action="Edit" data-modal="2">Редактировать</a>
+				<a href="#" class="context-menu__link js-open-modal" data-action="Edit" data-modal="2" id="l1a">Редактировать</a>
 			</li>
 			<li id="l2" class="context-menu__item">
 				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
+			</li>
+		</ul>
+		<ul class="context-menu__items">
+			<li id="gk1" class="context-menu__item">
+				<a class="context-menu__link">G0K0</a>
 			</li>
 		</ul>
 	</nav>

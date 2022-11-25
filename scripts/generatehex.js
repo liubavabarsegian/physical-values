@@ -5,24 +5,13 @@ function sortGK(tableData) {
   for (let row in tableData) {
     for (let hex in tableData[row]) {
       if (findFirstNotEmptyNumber(tableData[row][hex]) != null) {
-        firstNonEmptyGK = getNGK(tableData[row][hex],findFirstNotEmptyNumber(tableData[row][hex]))
-        firstGK = getNGK(tableData[row][hex],0)
-        swapObjectParams(firstNonEmptyGK,firstGK)
+        firstNonEmptyGK = findFirstNotEmptyNumber(tableData[row][hex])
+        firstGK = 0
+        swap = tableData[row][hex][firstGK]
+        tableData[row][hex][firstGK] = tableData[row][hex][firstNonEmptyGK]
+        tableData[row][hex][firstNonEmptyGK] = swap
       }
     }
-  }
-}
-
-function swapObjectParams(gk1,gk2) {
-  gkSwap = {}
-  for (let par in gk1) {
-    gkSwap[par] = gk1[par]
-  }
-  for (let par in gk2) {
-    gk1[par] = gk2[par]
-  }
-  for (let par in gkSwap) {
-    gk2[par] = gkSwap[par]
   }
 }
 
@@ -62,21 +51,29 @@ function createHexagon(hexData,name) {
   newHex.setAttribute("data-level",hexData.color)
   newHex.setAttribute("id",name)
   newHex.classList.add("one-hexagon","menu")
-  if (hexData.name == "") {
-    newHex.classList.add("invisible")
-  }
+
   leftTriangle = document.createElement("div")
   leftTriangle.classList.add("triangleLeft",`hexagon-${hexData.color}`)
   rightTriangle = document.createElement("div")
   rightTriangle.classList.add("triangleRight",`hexagon-${hexData.color}`)
   hexText = document.createElement("div")
   hexText.classList.add("inside",hexData.color)
+
+  if (hexData.name == "") {
+    newHex.classList.add("invisible")
+  }
   label = document.createElement("p")
-  label.innerHTML = `${hexData.name}, ${hexData.ob_ed_izm}`
+  label.innerHTML = `${hexData.name}`
   mlt2 = document.createElement("p")
   mlt2.innerHTML = getMLT(hexData)
   hexText.appendChild(label)
   hexText.appendChild(mlt2)
+  if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {
+    symbolMeasure = document.createElement("p")
+    symbolMeasure.innerHTML = `${hexData.ob_ed_izm}, ${hexData.usl_ob}`
+    hexText.appendChild(symbolMeasure)
+  }
+
   newHex.appendChild(leftTriangle)
   newHex.appendChild(hexText)
   newHex.appendChild(rightTriangle)

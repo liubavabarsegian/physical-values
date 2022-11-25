@@ -103,6 +103,16 @@ function drawParallelogram() {
 
 function showRedactFormWithParams(gk) {
 	//document.getElementById("form").classList.remove("invisible")
+	console.log(gk)
+	ltPow = getPowFromLTGK(gk.LT)
+	gkPow = getPowFromLTGK(gk.GK)
+	writeIntoInput(ltPow[0],"LLT")
+	writeIntoInput(ltPow[2],"TLT")
+	writeIntoInput(gkPow[1],"GGK")
+	writeIntoInput(gkPow[3],"KGK")
+
+	writeIntoInputFromObject(gk,"LT","LT")
+	writeIntoInputFromObject(gk,"GK","GK")
 	writeIntoInputFromObject(gk,"name","name")
 	writeIntoInputFromObject(gk,"ed_izm","unit")
 	writeIntoInputFromObject(gk,"usl_ob","symbol")
@@ -114,7 +124,17 @@ function showRedactFormWithParams(gk) {
 }
 
 let ContextElement
-addEventListener('contextmenu', (event) => {ContextElement = event});
+addEventListener('contextmenu', (event) => {
+	ContextElement = event
+	hex = getMainHexFromSiblings(ContextElement.target)
+	if (hex.classList.contains("invisible")) {
+		document.getElementById("l1a").innerHTML = "Р”РѕР±Р°РІРёС‚СЊ"
+		document.getElementById("l2").style.display = "none"
+	}	else {
+		document.getElementById("l1a").innerHTML = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ"
+		document.getElementById("l2").style.display = ""
+	}
+});
 let redactHexElement
 
 document.getElementById("l1").onclick = function(){
@@ -125,8 +145,21 @@ document.getElementById("l1").onclick = function(){
 }
 
 function finRedact() {
+  ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
+	gkInput = replacePowNumbersBtoS(`G${getFromInput("GGK")}K${getFromInput("KGK")}`)
+	console.log(ltInput)
+	console.log(gkInput)
+	newRedactHexElement = findHex(ltInput)
+
+	arrayGK = findGK(newRedactHexElement,gkInput)
+	console.log(arrayGK)
 	gk = getHexData(redactHexElement)
+	//console.log(data["row5"]["LвЃ°TвЃ°"])
+	deleteHexGK(gk)
+	gk = arrayGK[Object.keys(arrayGK)]
 	writeFromForm(gk)
+	//console.log(data["row5"]["LвЃ°TвЃ°"])
+	createTable("newf",data)
 }
 
 function writeFromForm(gk)  {
@@ -139,18 +172,21 @@ function writeFromForm(gk)  {
 	writeIntoObjFromInput(gk,"L","L")
 	writeIntoObjFromInput(gk,"T","T")
 	writeIntoObjFromInput(gk,"I","I")
-	createTable("newf",data)
 }
 
 document.getElementById("l2").onclick = function(){
-	redactHexElement = getMainHexFromSiblings(ContextElement.target)
-	gk = getHexData(redactHexElement)
+	gkInput = getFromInput("GK")
+	ltInput = getFromInput("LT")
+	//newRedactHexElement = findHex(ltInput)
+	let delHexElement = getMainHexFromSiblings(ContextElement.target)
+	gk = getHexData(delHexElement)
 	deleteHexGK(gk)
+	sortGK(data)
+	createTable("newf",data)
 	menu.classList.remove("active")
 }
 
 function deleteHexGK(gk) {
-	console.log(gk)
 	gk.name = ""
 	gk.usl_ob = ""
 	gk.M = 0
@@ -159,20 +195,18 @@ function deleteHexGK(gk) {
 	gk.I = 0
 	gk.ob_ed_izm = ""
 	gk.ed_izm = ""
-	console.log(gk)
-	createTable("newf",data)
-
 }
 
 function download() {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
 	fileName = document.getElementById("sota_filenm").value
 	if (fileName == "") {
-		alert('Имя файла не может быть пустым\nЗаполните поле внизу страницы');
+		alert('пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ');
 		return
 		//fileName = "fviz"
 	}
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
+
   element.setAttribute('download', fileName + ".jsota")
 
   element.style.display = 'none'

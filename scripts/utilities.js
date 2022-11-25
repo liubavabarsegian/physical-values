@@ -1,3 +1,6 @@
+
+
+
 function getNGK(hex,number) {
   return hex[number][Object.keys(hex[number])[0]]
 }
@@ -6,6 +9,35 @@ function findGK(hex,reqGK) {
   return hex.find(gk => Object.keys(gk) == reqGK)
 }
 
+//function convert
+
+function findHex(lt) {
+
+  ltArray = getPowFromLTGK(lt)
+  console.log(lt)
+  rowNumber = 5-(ltArray[0]+ltArray[2])
+  console.log(rowNumber)
+  return data[`row${rowNumber}`][lt]
+}
+
+function getPowFromLTGK(ltgk) {
+  ltgkNum = replacePowNumbersStoB(ltgk)
+  ltgkArray = []
+  if (ltgkNum.match(/(L[\-\d]+)/mg) != null) {
+    ltgkArray.push(ltgkNum.match(/(L[\-\d]+)/mg)[0])
+  } else {ltgkArray.push("L0")}
+  if (ltgkNum.match(/(G[\-\d]+)/mg) != null) {
+    ltgkArray.push(ltgkNum.match(/(G[\-\d]+)/mg)[0])
+  } else {ltgkArray.push("G0")}
+  if (ltgkNum.match(/(T[\-\d]+)/mg) != null) {
+    ltgkArray.push(ltgkNum.match(/(T[\-\d]+)/mg)[0])
+  } else {ltgkArray.push("T0")}
+  if (ltgkNum.match(/(K[\-\d]+)/mg) != null) {
+    ltgkArray.push(ltgkNum.match(/(K[\-\d]+)/mg)[0])
+  } else {ltgkArray.push("K0")}
+  ltgkArray = ltgkArray.map(val => parseInt(val.slice(1)))
+  return ltgkArray
+}
 // ⁰,⁻¹,⁻²,⁻³,⁻⁴,⁻⁵,⁻⁶,⁻⁷,⁻⁸,⁻⁹ 
 
 function replacePowNumbersBtoS(string) {
@@ -82,20 +114,28 @@ function getMainHexFromSiblings(element) {
 }
 
 function writeIntoObjFromInput(object,field,id) {
-	input = document.getElementById(id)
-  val = input.value
-  if (input.getAttribute('type') != "number") {
-  val = replacePowNumbersBtoS(val)
-  }
+  val = getFromInput(id)
 	object[field] = val
 }
 
 function writeIntoInputFromObject(object,field,id) {
+  writeIntoInput(object[field],id)
+}
+
+function writeIntoInput(field,id) {
 	input = document.getElementById(id)
-  val = object[field]
+  val = field
   if (typeof val == "string") {
     val = replacePowNumbersStoB(val)
   }
 	input.value = val
 }
 
+function getFromInput(id) {
+  input = document.getElementById(id)
+  val = input.value
+  if (input.getAttribute('type') != "number") {
+    val = replacePowNumbersBtoS(val)
+    }
+  return val
+}

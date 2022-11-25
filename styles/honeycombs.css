@@ -69,7 +69,11 @@ h1, h2
 }
 
 .invisible {
-	visibility: hidden;
+	opacity: 0;
+}
+
+.invisible:hover {
+	opacity: 0.5;
 }
 
 p{
