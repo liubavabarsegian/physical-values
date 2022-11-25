@@ -169,7 +169,9 @@ function download() {
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
 	fileName = document.getElementById("sota_filenm").value
 	if (fileName == "") {
-		fileName = "fviz"
+		alert('Имя файла не может быть пустым\nЗаполните поле внизу страницы');
+		return
+		//fileName = "fviz"
 	}
   element.setAttribute('download', fileName + ".jsota")
 
@@ -184,13 +186,13 @@ function download() {
 fileSelector = document.getElementById('import')
 fileSelector.addEventListener('change', (event) => {
 	fileList = event.target.files
-
 	reader = new FileReader()
   reader.addEventListener('load', (event) => {
     data = JSON.parse(event.target.result)
 		createTable("newf",data)
   })
-  reader.readAsText(fileList[0])
+	reader.readAsText(fileList[0]);
+	document.getElementById('sota_filenm').value = fileList[0].name.replace('.jsota','');
 });
 
 
