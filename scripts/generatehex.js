@@ -64,16 +64,15 @@ function createHexagon(hexData,name) {
   }
   label = document.createElement("p")
   label.innerHTML = `${hexData.name}`
-  mlt2 = document.createElement("p")
-  mlt2.innerHTML = getMLT(hexData)
   hexText.appendChild(label)
-  hexText.appendChild(mlt2)
   if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {
     symbolMeasure = document.createElement("p")
-    symbolMeasure.innerHTML = `${hexData.ob_ed_izm}, ${hexData.usl_ob}`
+      symbolMeasure.innerHTML = `${hexData.usl_ob}, ${hexData.ob_ed_izm}`
     hexText.appendChild(symbolMeasure)
   }
-
+  mlt2 = document.createElement("p")
+  mlt2.innerHTML = getMLT(hexData)
+  hexText.appendChild(mlt2)
   newHex.appendChild(leftTriangle)
   newHex.appendChild(hexText)
   newHex.appendChild(rightTriangle)
