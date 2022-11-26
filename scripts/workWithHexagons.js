@@ -200,7 +200,7 @@ function deleteHexGK(gk) {
 function download() {
 	fileName = document.getElementById("sota_filenm").value
 	if (fileName == "") {
-		alert('��� ����� �� ����� ���� ������\n��������� ���� ����� ��������');
+		alert('Заполните название файла внизу страницы');
 		return
 		//fileName = "fviz"
 	}
