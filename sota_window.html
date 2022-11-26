@@ -39,22 +39,61 @@
 
 	<div class="modal" data-modal="2"> <!--Форма редактирования-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
-		<p class="modal__title">Заголовок окна 2</p>
+		<h3 class="modal__title">Редактирование элемента</h3>
 		<div id="form">
-			<span>L:</span><input type="number" id="LLT" min="-20" max="20" size="2">
+			<table style="background-image: url(/styles/img/sota.png); background-repeat: no-repeat; background-size: 100% 100%; display: inline-block; font: 20px verdana ">
+				<tr>
+					<td colspan="2">Наименование</td>
+					<td colspan="2"><input type="text" id="name" required></td>
+				</tr>
+				<tr>
+					<td colspan="2">LT ячейки</td>
+					<td>L<input type="number" id="LLT" min="-20" max="20" size="2"></td>
+					<td>T<input type="number" id="TLT" min="-20" max="20" size="2"></td>
+				</tr>
+				<tr>
+					<td colspan="2">GK слой</td>
+					<td>G<input type="number" id="GGK" min="-20" max="20" size="2"></td>
+					<td>K<input type="number" id="KGK" min="-20" max="20" size="2"></td>
+				</tr>
+				<tr>
+					<td colspan="2">Обозначение</td>
+					<td colspan="2"><input type="text" id="symbol"></td>
+				</tr>
+				<tr>
+					<td>M<input type="number" id="M" min="-20" max="20" size="2"></td>
+					<td>L<input type="number" id="L" min="-20" max="20" size="2"></td>
+					<td>T<input type="number" id="T" min="-20" max="20" size="2"></td>
+					<td>I<input type="number" id="I" min="-20" max="20" size="2"></td>
+				</tr>
+				<tr>
+					<td colspan="2">ед. измерения кратко:</td>
+					<td colspan="2"><input type="text" id="unit"></td>
+				</tr>
+				<tr>
+					<td colspan="2">ед. измерения полная:</td>
+					<td colspan="2"><input type="text" id="unit_full"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button class="js-modal-close" onclick="finRedact()" style="color:forestgreen">Отредактировать</button></td>
+					<td colspan="2"><button class="js-modal-close" style="color:crimson" >Отмена</button></td>
+				</tr>
+			</table>
+			<p id="grechalp">Справка<br />Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω<br /> α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ ς σ τ υ φ χ ψ ω </p>
+			<!--<span>L:</span><input type="number" id="LLT" min="-20" max="20" size="2">
 			<span>T:</span><input type="number" id="TLT" min="-20" max="20" size="2">
 			<span>G:</span><input type="number" id="GGK" min="-20" max="20" size="2">
 			<span>K:</span><input type="number" id="KGK" min="-20" max="20" size="2"><br>
-
 			<span>M:</span><input type="number" id="M" min="-20" max="20" size="2">
 			<span>L:</span><input type="number" id="L" min="-20" max="20" size="2">
 			<span>T:</span><input type="number" id="T" min="-20" max="20" size="2">
 			<span>I:</span><input type="number" id="I" min="-20" max="20" size="2"><br>
-			<span>Имя:</span><input type="text" id="name"><br>
+			<span>Имя:</span><input type="text" id="name" required><button onclick="shgrech()">Греческий алфавит</button><br>
 			<span>Усл. обозначение:</span><input type="text" id="symbol"><br>
 			<span>ед. измерения кратко:</span><input type="text" id="unit"><br>
 			<span>ед. измерения полная:</span><input type="text" id="unit_full"><br>
-			<button class="js-modal-close" onclick="finRedact()">Отредактировать</button>
+			<p id="grechalp" hidden>Справка<br />Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω<br /> α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ ς σ τ υ φ χ ψ ω </p>
+			<button class="js-modal-close" onclick="finRedact()">Отредактировать</button>-->
 		</div>
 	</div>
 

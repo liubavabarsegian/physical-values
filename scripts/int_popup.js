@@ -49,23 +49,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }); // end foreach
 
 
-    document.body.addEventListener('keyup', function (e) {
-        var key = e.keyCode;
+    //document.body.addEventListener('keyup', function (e) {
+    //    var key = e.keyCode;
 
-        if (key == 27) {
+    //    if (key == 27) {
 
-            document.querySelector('.modal.active').classList.remove('active');
-            document.querySelector('.overlay').classList.remove('active');
-        };
-    }, false);
+    //        document.querySelector('.modal.active').classList.remove('active');
+    //        document.querySelector('.overlay').classList.remove('active');
+    //    };
+    //}, false);
 
 
-    overlay.addEventListener('click', function () {
-        document.querySelector('.modal.active').classList.remove('active');
-        this.classList.remove('active');
-    });
+    //overlay.addEventListener('click', function () {
+    //    document.querySelector('.modal.active').classList.remove('active');
+    //    this.classList.remove('active');
+    //});
 
 
 
 
 }); // end ready
+
+
+
+
+function shgrech() {
+    document.getElementById("grechalp").hidden = false;
+    //document.getElementById("link").hidden = true;
+}
+
+

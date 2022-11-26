@@ -22,8 +22,8 @@
     opacity: 0;
     visibility: hidden;
     /*  Установаем ширину окна  */
-    width: 100%;
-    max-width: 900px;
+/*    width: 50%;
+    max-width: 900px;*/
     /*  Центрируем и задаем z-index */
     position: fixed;
     top: 50%;
