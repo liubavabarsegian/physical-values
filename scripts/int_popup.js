@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                подложке и окну чтобы показать их. */
             modalElem.classList.add('active');
             overlay.classList.add('active');
+            //document.getElementsByTagName("body")[0].style.overflow = 'hidden';
         }); // end click
 
     }); // end foreach
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             parentModal.classList.remove('active');
             overlay.classList.remove('active');
+            //document.getElementsByTagName("body")[0].style.overflow = 'scroll';
         });
 
     }); // end foreach
