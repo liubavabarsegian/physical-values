@@ -1,65 +1,129 @@
 .hexagon-yellow
 {
-	border: 30px solid rgb(223, 223, 145);
+	border: 30px solid rgb(218, 218, 139);
 }
 .active-triangle.hexagon-yellow {
-	border: 30px solid rgb(196, 196, 95);
+	border: 30px solid rgb(198, 198, 81);
+}
+.yellow
+{
+	background-color:  rgb(218, 218, 139);
+}
+.active-hexagon.yellow
+{
+	background-color: rgb(198, 198, 81);;
 }
 
 .hexagon-gray
 {
-	border: 30px solid rgb(184, 189, 194);
+	border: 30px solid rgb(194, 197, 200);
 }
 .active-triangle.hexagon-gray {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(168, 170, 171);
+}
+.gray
+{
+	background-color: rgb(194, 197, 200);
+}
+.active-hexagon.gray
+{
+	background-color:rgb(168, 170, 171);
 }
 
 .hexagon-grideperlevy
 {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(216, 220, 222);
 }
 .active-triangle.hexagon-grideperlevy {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(171, 172, 173);
+}
+.grideperlevy
+{
+	background-color: rgb(216, 220, 222);
+}
+.active-hexagon.grideperlevy
+{
+	background-color: rgb(171, 172, 173);
 }
 
 .hexagon-dark_gray
 {
-	border: 30px solid darkgray;
+	border: 30px solid rgb(171, 170, 170);
 }
 .active-triangle.hexagon-dark_gray {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(140, 140, 140);
+}
+.dark_gray
+{
+	background-color:rgb(171, 170, 170);
+}
+.active-hexagon.dark_gray
+{
+	background-color: rgb(140, 140, 140);
 }
 
 .hexagon-sky
 {
-	border: 30px solid skyblue;
+	border: 30px solid rgb(173, 207, 221);
 }
 .active-triangle.hexagon-sky {
-	border: 30px solid rgb(122, 139, 157);
+	border: 30px solid rgb(153, 178, 204);
 }
-
-.hexagon-light_green
+.sky
 {
-	border: 30px solid lightgreen;
+	background-color: rgb(173, 207, 221);
 }
-.active-triangle.hexagon-light_green {
-	border: 30px solid rgb(29, 161, 35);
+.active-hexagon.sky
+{
+	background-color: rgb(153, 178, 204);
 }
 
 .hexagon-vinous
 {
-	border: 30px solid rgb(184, 189, 194);
+	border: 30px solid rgb(247, 130, 134);
 }
 .active-triangle.hexagon-vinous {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(182, 79, 79);
+}
+.vinous
+{
+	background-color: rgb(247, 130, 134);
+}
+.active-hexagon.vinous
+{
+	background-color:  rgb(182, 79, 79);
 }
 
 .hexagon-dark_green
 {
-	border: 30px solid darkgreen;
+	border: 30px solid rgb(87, 174, 87);
 }
 .active-triangle.hexagon-dark_green {
-	border: 30px solid rgb(37, 69, 8);
+	border: 30px solid rgb(65, 120, 58);
+}
+.dark_green
+{
+	background-color: rgb(87, 174, 87);
+}
+.active-hexagon.dark_green
+{
+	background-color: rgb(65, 120, 58);
+}
+
+.hexagon-light_green
+{
+	border: 30px solid rgb(182, 238, 182);
+}
+.active-triangle.hexagon-light_green {
+	border: 30px solid rgb(138, 178, 140);
+}
+.light_green
+{
+	background-color: rgb(182, 238, 182);
+}
+.active-hexagon.light_green
+{
+	background-color: rgb(138, 178, 140);
 }
 
 .hexagon-blue
@@ -67,111 +131,92 @@
 	border: 30px solid rgb(111, 154, 233);
 }
 .active-triangle.hexagon-blue {
-	border: 30px solid rgb(56, 92, 128);
-}
-
-.hexagon-mint
-{
-	border: 30px solid rgb(184, 189, 194);
-}
-.active-triangle.hexagon-mint {
-	border: 30px solid rgb(112, 138, 163);
-}
-
-.hexagon-light_green
-{
-	border: 30px solid rgb(184, 189, 194);
-}
-.active-triangle.hexagon-light_green {
-	border: 30px solid rgb(146, 148, 150);
-}
-
-.hexagon-white_blue
-{
-	border: 30px solid rgb(184, 189, 194);
-}
-.active-triangle.hexagon-white_blue {
-	border: 30px solid rgb(146, 148, 150);
-}
-
-.hexagon-swamp
-{
-	border: 30px solid rgb(184, 189, 194);
-}
-.active-triangle.hexagon-swamp {
-	border: 30px solid rgb(146, 148, 150);
-}
-
-.hexagon-dark_blue
-{
-	border: 30px solid darkblue;
-}
-.active-triangle.hexagon-dark_blue {
-	border: 30px solid rgb(146, 148, 150);
-}
-
-.hexagon-purple
-{
-	border: 30px solid purple;
-}
-.active-triangle.hexagon-purple {
-	border: 30px solid rgb(146, 148, 150);
-}
-
-.yellow
-{
-	background-color: rgb(223, 223, 145);
-}
-.gray
-{
-	background-color: rgb(184, 189, 194);
-}
-.grideperlevy
-{
-	background-color: rgb(111, 154, 233);
-}
-.dark_gray
-{
-	background-color: rgb(111, 154, 233);
-}
-.sky
-{
-	background-color: rgb(111, 154, 233);
-}
-.light_green
-{
-	background-color: rgb(111, 154, 233);
-}
-.vinous
-{
-	background-color: rgb(111, 154, 233);
-}
-.dark_green
-{
-	background-color: rgb(111, 154, 233);
+	border: 30px solid rgb(93, 139, 185);
 }
 .blue
 {
 	background-color: rgb(111, 154, 233);
 }
+.active-hexagon.blue
+{
+	background-color: rgb(93, 139, 185);
+}
+
+.hexagon-mint
+{
+	border: 30px solid rgb(177, 203, 228);
+}
+.active-triangle.hexagon-mint {
+	border: 30px solid rgb(127, 168, 206);
+}
 .mint
 {
-	background-color: rgb(111, 154, 233);
+	background-color: rgb(177, 203, 228);
+}
+.active-hexagon.mint
+{
+	background-color: rgb(127, 168, 206);
+}
+
+.hexagon-white_blue
+{
+	border: 30px solid rgb(207, 223, 238);
+}
+.active-triangle.hexagon-white_blue {
+	border: 30px solid rgb(168, 184, 201);;
 }
 .white_blue
 {
-	background-color: rgb(111, 154, 233);
+	background-color: rgb(207, 223, 238);
+}
+.active-hexagon.white_blue
+{
+	background-color: rgb(168, 184, 201);;
+}
+
+.hexagon-swamp
+{
+	border: 30px solid rgb(39, 127, 56);
+}
+.active-triangle.hexagon-swamp {
+	border: 30px solid rgb(19, 107, 40);
 }
 .swamp
 {
-	background-color: rgb(111, 154, 233);
+	background-color: rgb(39, 127, 56);
+}
+.active-hexagon.swamp
+{
+	background-color: rgb(19, 107, 40);;
+}
+
+.hexagon-dark_blue
+{
+	border: 30px solid rgb(91, 91, 180);
+}
+.active-triangle.hexagon-dark_blue {
+	border: 30px solid rgb(68, 73, 159);
 }
 .dark_blue
 {
-	background-color: rgb(111, 154, 233);
+	background-color: rgb(91, 91, 180);
+}
+.active-hexagon.dark_blue
+{
+	background-color: rgb(68, 73, 159);
+}
+.hexagon-purple
+{
+	border: 30px solid  rgb(210, 166, 227);
+}
+.active-triangle.hexagon-purple {
+	border: 30px solid rgb(188, 141, 203);
 }
 .purple
 {
-	background-color: rgb(111, 154, 233);
+	background-color: rgb(210, 166, 227);
 }
-
+.active-hexagon.purple
+{
+	background-color: rgb(188, 141, 203);;
+}
