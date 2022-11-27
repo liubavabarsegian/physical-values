@@ -53,9 +53,9 @@ function createHexagon(hexData,name) {
   newHex.classList.add("one-hexagon","menu")
 
   leftTriangle = document.createElement("div")
-  leftTriangle.classList.add("triangleLeft",`hexagon-${hexData.color}`)
+  leftTriangle.classList.add("triangleLeft",`hexagon-${hexData.color}`,"hexagon_zero", "hexagon_triangle_left", "hexagon_triangle_left_large")
   rightTriangle = document.createElement("div")
-  rightTriangle.classList.add("triangleRight",`hexagon-${hexData.color}`)
+  rightTriangle.classList.add("triangleRight",`hexagon-${hexData.color}`, "hexagon_zero", "hexagon_triangle_right", "hexagon_triangle_right_large")
   hexText = document.createElement("div")
   hexText.classList.add("inside",hexData.color)
 

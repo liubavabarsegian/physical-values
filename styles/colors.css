@@ -35,7 +35,7 @@
 	border: 30px solid skyblue;
 }
 .active-triangle.hexagon-sky {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(122, 139, 157);
 }
 
 .hexagon-light_green
@@ -43,7 +43,7 @@
 	border: 30px solid lightgreen;
 }
 .active-triangle.hexagon-light_green {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(29, 161, 35);
 }
 
 .hexagon-vinous
@@ -59,7 +59,7 @@
 	border: 30px solid darkgreen;
 }
 .active-triangle.hexagon-dark_green {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(37, 69, 8);
 }
 
 .hexagon-blue
@@ -67,7 +67,7 @@
 	border: 30px solid rgb(111, 154, 233);
 }
 .active-triangle.hexagon-blue {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(56, 92, 128);
 }
 
 .hexagon-mint
@@ -75,7 +75,7 @@
 	border: 30px solid rgb(184, 189, 194);
 }
 .active-triangle.hexagon-mint {
-	border: 30px solid rgb(146, 148, 150);
+	border: 30px solid rgb(112, 138, 163);
 }
 
 .hexagon-light_green
