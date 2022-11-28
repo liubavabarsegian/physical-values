@@ -74,10 +74,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-function shgrech() {
-    document.getElementById("grechalp").hidden = false;
-    //document.getElementById("link").hidden = true;
-}
-
-

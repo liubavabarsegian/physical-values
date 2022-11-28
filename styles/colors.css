@@ -11,7 +11,7 @@
 }
 .active-hexagon.yellow
 {
-	background-color: rgb(198, 198, 81);;
+	background-color: rgb(198, 198, 81);
 }
 
 .hexagon-gray
@@ -163,7 +163,7 @@
 	border: 30px solid rgb(207, 223, 238);
 }
 .active-triangle.hexagon-white_blue {
-	border: 30px solid rgb(168, 184, 201);;
+	border: 30px solid rgb(168, 184, 201);
 }
 .white_blue
 {
@@ -171,7 +171,7 @@
 }
 .active-hexagon.white_blue
 {
-	background-color: rgb(168, 184, 201);;
+	background-color: rgb(168, 184, 201);
 }
 
 .hexagon-swamp
@@ -187,7 +187,7 @@
 }
 .active-hexagon.swamp
 {
-	background-color: rgb(19, 107, 40);;
+	background-color: rgb(19, 107, 40);
 }
 
 .hexagon-dark_blue
@@ -218,5 +218,5 @@
 }
 .active-hexagon.purple
 {
-	background-color: rgb(188, 141, 203);;
+	background-color: rgb(188, 141, 203);
 }
