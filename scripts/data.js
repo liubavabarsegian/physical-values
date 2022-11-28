@@ -1,4 +1,4 @@
-data = {row1: {
+dataMix = {row1: {
   "L⁰T⁴": [
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G¹K⁰"}},
@@ -1394,7 +1394,7 @@ data = {row1: {
   },
   }
 
-daraEmpty = {row1: {
+dataEmpty = {row1: {
   "L⁰T⁴": [
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G¹K⁰"}},
@@ -2788,4 +2788,7 @@ daraEmpty = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁵T⁻⁹", GK: "G⁻¹K⁻²"}},
   ],
   },
-  }
+};
+
+
+data = dataMix;
