@@ -104,20 +104,33 @@
 		</div>
 	</div>
 
-	<!--<div class="modal" data-modal="3">-->
-		<!--Уровни-->
-		<!--<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
-		<h3 class="modal__title">Уровни</h3>
-		<div id="levels"></div>
-	</div>-->
-
-	<div class="modal" data-modal="4">
+	<div class="modal" data-modal="3">
 		<!--Связь уровней-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
 		<h3 class="modal__title">Скриншот</h3>
 		<div class="wrapper exmpl">
 			<div id="output_screen"></div>
 		</div>
+	</div>
+
+	<div class="modal" data-modal="4">
+	<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
+		<h3 class="modal__title">Авторы</h3>
+		<b>Автор системы: Чуев А.С.</b>
+		<table width="300px">
+            <tr>
+                <td>Барсегян Люба</td>
+                <td>Воронин Александр</td>
+                <td>Шатский Артем</td>
+				<td>Варняга  Максим</td>
+            </tr>
+			<tr>
+				<td>ИУ6-35Б</td>
+				<td>ИУ6-32Б</td>
+				<td>ИУ6-32Б</td>
+				<td>ИУ6-33Б</td>
+			</tr>
+		</table>
 	</div>
 
 	<!-- Подложка под модальным окном -->
@@ -144,7 +157,8 @@
 			</ul>
 		</li>
 		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
-		<li><a href="#" class="js-open-modal" data-modal="4" onclick="takeshot()">Скриншот</a></li>
+		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
+		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
 	</ul>
 
 	<br />
@@ -162,7 +176,7 @@
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
 			<li id="l0" class="context-menu__item">
-				<a href="#" onclick="showMenuLevels();"class ="context-menu__link" data-action="Levels">Уровни</a>
+				<a href="#" onclick="showMenuLevels();" class="context-menu__link" data-action="Levels">Уровни</a>
 
 			</li>
 			<li id="l1" class="context-menu__item">
@@ -172,8 +186,9 @@
 				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
 			</li>
 		</ul>
-		<ul class="gkcontext-menu__items context-menu__items" id="moreLevels" hidden> <!--хм, думал скрывать по клику по кнопки уровни, функция сверху - но не работает-->
-			
+		<ul class="gkcontext-menu__items context-menu__items" id="moreLevels" hidden>
+			<!--хм, думал скрывать по клику по кнопки уровни, функция сверху - но не работает-->
+
 		</ul>
 	</nav>
 	<script src="scripts/utilities.js"></script>
