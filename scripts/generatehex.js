@@ -35,7 +35,7 @@ function addHexEventListeners() {
             gkLiMenu.classList.add("context-menu__item")
             let gkAMenu = document.createElement("a")
             gkAMenu.classList.add("context-menu__link")
-            gkAMenu.innerHTML = gk.GK
+            gkAMenu.innerHTML = gk.name
             gkLiMenu.appendChild(gkAMenu)
             gkLiMenu.addEventListener("click", function() {
 
