@@ -1,3 +1,5 @@
+// чистить комментарий?
+
 ////const html2canvas = require('window.html2canvas');
 ////import html2canvas from 'window.html2canvas';
 

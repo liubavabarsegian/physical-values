@@ -1,12 +1,13 @@
 sortGK(data)
 createTable("newf",data)
 
-Array.prototype.swap = function (x,y) {
-  var b = this[x];
-  this[x] = this[y];
-  this[y] = b;
-  return this;
-}
+// Array.prototype.swapsss = function (x,y) {
+//   var b = this[x];
+//   this[x] = this[y];
+//   this[y] = b;
+//   return this;
+// }
+// почему-то эта функция ломает проект
 
 let ContextElement
 function addHexEventListeners() {
@@ -39,7 +40,10 @@ function addHexEventListeners() {
             gkLiMenu.appendChild(gkAMenu)
             gkLiMenu.addEventListener("click", function() {
 
-              hexData.swap(findGKIndex(hexData,gk.GK),0)
+              swap = hexData[findGKIndex(hexData,gk.GK)]
+              hexData[findGKIndex(hexData,gk.GK)] = hexData[0]
+              hexData[0] = swap
+
               createTable("newf",data)
             })
             gkmenu.appendChild(gkLiMenu)
@@ -59,12 +63,19 @@ function addHexEventListeners() {
 				if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
 				Activate(this)
 				rememberHexagon(this);
-				} 
-
-	
-	
-				
+				} 			
 		});
+  
+    hex.addEventListener("mouseover", function() {
+
+      //не убирать
+      hexCoords = getHexCanvasCoords(getMainHexFromSiblings(hex))
+      //console.log(hexCoords)
+      futureClickedHexagons = clickedHexagons.slice()
+      futureClickedHexagons.push(hexCoords)
+
+      			
+    });
 	}
 }
 

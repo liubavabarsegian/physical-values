@@ -123,3 +123,31 @@ function getFromInput(id) {
     }
   return val
 }
+
+function getHexCanvasCoords(hex) {
+  let inside = hex.querySelector(".inside");
+	let headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
+	let position = inside.getBoundingClientRect();
+	xCenter = (position.left + position.right) / 2;
+	yCenter = (position.top + position.bottom) / 2 - headerHeight;
+	return {x: xCenter, y: yCenter}
+}
+
+let c = document.getElementById("my-canvas");
+let ctx = c.getContext("2d");
+function drawParallelogram(points) {
+	
+	ctx.canvas.width  = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+	ctx.beginPath();
+	ctx.strokeStyle = "red";
+	ctx.lineWidth = 5;
+	ctx.moveTo([0].x, points[0].y)
+	points.forEach(function (point) {
+		ctx.lineTo(point.x, point.y);
+	})
+	
+	ctx.lineTo(points[0].x, points[0].y);
+	ctx.stroke();
+	
+}

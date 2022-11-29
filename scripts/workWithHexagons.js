@@ -28,82 +28,26 @@ function Deactivate(hex) {
 	rightTriangle.classList.remove("active-triangle")
 }
 
-class hexagon {
-	constructor(name, level, coordinateX, coordinateY) {
-			this.name = name;
-	this.level = level;
-	this.x = coordinateX;
-	this.y = coordinateY;
-	}
-// constructor() {}
-setName(name) {
-	this.name = name;
-}
-setLevel(level) {
-	this.level = level;
-}
-setX(coordinateX) {
-	this.x = coordinateX;
-}
-setY(coordinateY) {
-	this.y = coordinateY;
-}
-	getName() {
-			return this.name;
-	}
-getLevel() {
-	return this.level;
-}
-getX() {
-	return this.x;
-}
-getY() {
-	return this.y;
-}
-}
-
-
-function rememberHexagon(hex) {
-	var inside = hex.querySelector(".inside");
-	var headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
-	var position = inside.getBoundingClientRect();
-	xCenter = (position.left + position.right) / 2;
-	yCenter = (position.top + position.bottom) / 2 - headerHeight;
-	if (clickedHexagons.length < 3) {
-		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
-		clickedHexagons.push(newHex);
-		console.log("cl1")
-	}
-	else {
-		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
-		clickedHexagons.push(newHex);
-		drawParallelogram();
-		console.log("cl2")
-	}
-}
-
+drawingParallelogram = false
 clickedHexagons = [];
-let c = document.getElementById("my-canvas");
-let ctx = c.getContext("2d");
-function drawParallelogram() {
-	ctx.canvas.width  = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
-	ctx.beginPath();
-	ctx.strokeStyle = "red";
-	ctx.lineWidth = 5;
-	ctx.moveTo(clickedHexagons[0].x, clickedHexagons[0].y)
-	for (var i = 1; i < 4; i++) {
-		ctx.lineTo(clickedHexagons[i].x, clickedHexagons[i].y);
-	}
-	ctx.lineTo(clickedHexagons[0].x, clickedHexagons[0].y);
-	ctx.stroke();
-	clickedHexagons = []
+function rememberHexagon(hex) {
 
+	hexCoords = getHexCanvasCoords(hex)
+
+	clickedHexagons.push(hexCoords);
+	console.log(clickedHexagons)
+	drawingParallelogram = true
+	//console.log(hex)
+	if (clickedHexagons.length == 4) {
+		console.log(clickedHexagons)
+		drawParallelogram(clickedHexagons);
+		clickedHexagons = []
+		drawingParallelogram = false
+	}
 }
 
 function showRedactFormWithParams(gk) {
 	//document.getElementById("form").classList.remove("invisible")
-	console.log(gk)
 	ltPow = getPowFromLTGK(gk.LT)
 	gkPow = getPowFromLTGK(gk.GK)
 	writeIntoInput(ltPow[0],"LLT")
@@ -136,12 +80,9 @@ document.getElementById("l1").onclick = function(){
 function finRedact() {
   ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
 	gkInput = replacePowNumbersBtoS(`G${getFromInput("GGK")}K${getFromInput("KGK")}`)
-	console.log(ltInput)
-	console.log(gkInput)
 	newRedactHexElement = findHex(ltInput)
 
 	arrayGK = findGK(newRedactHexElement,gkInput)
-	console.log(arrayGK)
 	gk = getHexData(redactHexElement)
 	//console.log(data["row5"]["L⁰T⁰"])
 	deleteHexGK(gk)
