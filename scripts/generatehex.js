@@ -39,7 +39,7 @@ function addHexEventListeners() {
             gkLiMenu.appendChild(gkAMenu)
             gkLiMenu.addEventListener("click", function() {
 
-              hexData.swap(findGKIndex(hexData,gkAMenu.innerHTML),0)
+              hexData.swap(findGKIndex(hexData,gk.GK),0)
               createTable("newf",data)
             })
             gkmenu.appendChild(gkLiMenu)
