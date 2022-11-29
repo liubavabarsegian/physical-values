@@ -135,19 +135,43 @@ function getHexCanvasCoords(hex) {
 
 let c = document.getElementById("my-canvas");
 let ctx = c.getContext("2d");
-function drawParallelogram(points) {
+ctx.canvas.width  = window.innerWidth;
+ctx.canvas.height = 1000;
+function drawParallelogram(points,color) {
 	
-	ctx.canvas.width  = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height) // очистить
+
 	ctx.beginPath();
-	ctx.strokeStyle = "red";
+	ctx.strokeStyle = color;
 	ctx.lineWidth = 5;
-	ctx.moveTo([0].x, points[0].y)
+	ctx.moveTo(points[0].x, points[0].y)
 	points.forEach(function (point) {
 		ctx.lineTo(point.x, point.y);
 	})
-	
-	ctx.lineTo(points[0].x, points[0].y);
+  if (points.length == 4) {
+    	ctx.lineTo(points[0].x, points[0].y);
+  }
+
 	ctx.stroke();
 	
+}
+
+function checkParallelogram(hexArray) {
+
+  
+  hexData = hexArray.map(hex => getHexData(hex))
+  console.log(hexData)
+  let mlti1 = {
+    M:hexData[0].M+hexData[2].M,
+    L:hexData[0].L+hexData[2].L,
+    T:hexData[0].T+hexData[2].T,
+    I:hexData[0].I+hexData[2].I,
+  }
+  let mlti2 = {
+    M:hexData[1].M+hexData[3].M,
+    L:hexData[1].L+hexData[3].L,
+    T:hexData[1].T+hexData[3].T,
+    I:hexData[1].I+hexData[3].I,
+  }
+  return JSON.stringify(mlti2) == JSON.stringify(mlti1) // такая проверка на то что объекты одинаковы
 }

@@ -34,13 +34,16 @@ function rememberHexagon(hex) {
 
 	hexCoords = getHexCanvasCoords(hex)
 
-	clickedHexagons.push(hexCoords);
+	clickedHexagons.push(hex);
+	
 	console.log(clickedHexagons)
 	drawingParallelogram = true
 	//console.log(hex)
 	if (clickedHexagons.length == 4) {
-		console.log(clickedHexagons)
-		drawParallelogram(clickedHexagons);
+		console.log(checkParallelogram(clickedHexagons))
+		clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+		drawParallelogram(clickedHexagonsCoords,"red");
+		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
 		clickedHexagons = []
 		drawingParallelogram = false
 	}

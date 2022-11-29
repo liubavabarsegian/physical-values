@@ -61,19 +61,26 @@ function addHexEventListeners() {
 	
 		hex.addEventListener("click", function() {
 				if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
-				Activate(this)
+				ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+        Activate(this)
 				rememberHexagon(this);
+        
 				} 			
 		});
   
-    hex.addEventListener("mouseover", function() {
+    hex.addEventListener("mouseover", function(event) {
 
       //не убирать
-      hexCoords = getHexCanvasCoords(getMainHexFromSiblings(hex))
-      //console.log(hexCoords)
-      futureClickedHexagons = clickedHexagons.slice()
-      futureClickedHexagons.push(hexCoords)
+      let hexElement = event.target
 
+      let futureClickedHexagons = clickedHexagons.slice()
+      futureClickedHexagons.push(getMainHexFromSiblings(hexElement))
+      futureClickedHexagonsCoords = futureClickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+
+      if (drawingParallelogram) {
+        drawParallelogram(futureClickedHexagonsCoords,"yellow")
+      }
+      
       			
     });
 	}
@@ -157,7 +164,6 @@ function createHexagon(hexData,name) {
 
   return newHex
 };
-
 
 
 
