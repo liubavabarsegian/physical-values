@@ -40,9 +40,11 @@ function rememberHexagon(hex) {
 	drawingParallelogram = true
 	//console.log(hex)
 	if (clickedHexagons.length == 4) {
-		console.log(checkParallelogram(clickedHexagons))
-		clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
-		drawParallelogram(clickedHexagonsCoords,"red");
+		if (checkParallelogram(clickedHexagons)) {
+			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+			drawParallelogram(clickedHexagonsCoords,"red");
+		} else (alert("неверный параллелограмм"))
+
 		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
 		clickedHexagons = []
 		drawingParallelogram = false
