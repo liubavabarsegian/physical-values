@@ -1,6 +1,73 @@
 sortGK(data)
 createTable("newf",data)
 
+Array.prototype.swap = function (x,y) {
+  var b = this[x];
+  this[x] = this[y];
+  this[y] = b;
+  return this;
+}
+
+let ContextElement
+function addHexEventListeners() {
+  menuArea = document.querySelectorAll(".one-hexagon");
+
+	for (hex of menuArea) {
+
+		hex.addEventListener("contextmenu", function(event) {
+				event.preventDefault();
+      	menu.style.top = `${event.clientY}px`;
+				menu.style.left = `${event.clientX}px`;
+				menu.classList.add("active");
+				gkmenu.classList.add("active");
+				gkmenu.style.top = `${event.clientY}px`;
+				gkmenu.style.left = `${event.clientX+175}px`;
+				ContextElement = event
+				hex = getMainHexFromSiblings(ContextElement.target)
+				if (hex == undefined) {return}
+
+        hexData = findHex(hex.id)
+        gkmenu.innerHTML = ""
+        hexData.forEach(function (gk,index) {
+          gk = getNGK(hexData,index)
+          if (gk.name != "" && gk.name != getNGK(hexData,0).name) {
+            let gkLiMenu = document.createElement("li")
+            gkLiMenu.classList.add("context-menu__item")
+            let gkAMenu = document.createElement("a")
+            gkAMenu.classList.add("context-menu__link")
+            gkAMenu.innerHTML = gk.GK
+            gkLiMenu.appendChild(gkAMenu)
+            gkLiMenu.addEventListener("click", function() {
+
+              hexData.swap(findGKIndex(hexData,gkAMenu.innerHTML),0)
+              createTable("newf",data)
+            })
+            gkmenu.appendChild(gkLiMenu)
+          }
+        })
+
+				if (hex.classList.contains("invisible")) {
+					document.getElementById("l1a").innerHTML = "Добавить"
+					document.getElementById("l2").style.display = "none"
+				}	else {
+					document.getElementById("l1a").innerHTML = "Редактировать"
+					document.getElementById("l2").style.display = ""
+				}
+		});
+	
+		hex.addEventListener("click", function() {
+				if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
+				Activate(this)
+				rememberHexagon(this);
+				} 
+
+	
+	
+				
+		});
+	}
+}
+
 function sortGK(tableData) {
   for (let row in tableData) {
     for (let hex in tableData[row]) {

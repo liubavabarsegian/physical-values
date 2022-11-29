@@ -9,6 +9,10 @@ function findGK(hex,reqGK) {
   return hex.find(gk => Object.keys(gk) == reqGK)
 }
 
+function findGKIndex(hex,reqGK) { 
+  return hex.indexOf(findGK(hex,reqGK))
+}
+
 //function convert
 
 function findHex(lt) {
@@ -76,38 +80,18 @@ function getMLT(hex) {
 }
 
 menu = document.querySelector(".context-menu__items");
+gkmenu = document.querySelector(".gkcontext-menu__items")
 
 function getHexData(hex) {
   return getNGK(data[hex.parentElement.id][hex.id],0)
 }
 
-function addHexEventListeners() {
-  menuArea = document.querySelectorAll(".one-hexagon");
-
-	for (hex of menuArea) {
-
-		hex.addEventListener("contextmenu", function(event) {
-			event.preventDefault();
-			menu.style.top = `${event.clientY}px`;
-					menu.style.left = `${event.clientX}px`;
-			menu.classList.add("active");
-		});
-	
-		hex.addEventListener("click", function() {
-				if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
-				Activate(this)
-				rememberHexagon(this);
-				} 
-
-	
-	
-				
-		});
-	}
-}
 
 function getMainHexFromSiblings(element) {
-  while (!element.classList.contains("one-hexagon")) {
+  while (!element.classList.contains("one-hexagon") ) {
+    if (element.parentElement == undefined) {
+      return undefined
+    }
     element = element.parentElement
   }
   return element

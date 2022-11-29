@@ -20,6 +20,8 @@
     background-color: #666;
     padding-left: 25px;
     min-width: 470px;
+    position: relative;
+    z-index: 10;
 }
 
 #navbar li {
@@ -35,6 +37,8 @@
     color: #fff;
     text-decoration: none;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 #navbar ul li {

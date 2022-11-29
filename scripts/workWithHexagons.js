@@ -1,6 +1,6 @@
 
 document.addEventListener("click", event => {
-	if (event.button !== 2) { menu.classList.remove("active"); }
+	if (event.button !== 2) { menu.classList.remove("active"); gkmenu.classList.remove("active")}
 }, false)
 
 menu.addEventListener("click", event => {
@@ -123,22 +123,11 @@ function showRedactFormWithParams(gk) {
 	writeIntoInputFromObject(gk,"I","I")
 }
 
-let ContextElement
-addEventListener('contextmenu', (event) => {
-	ContextElement = event
-	hex = getMainHexFromSiblings(ContextElement.target)
-	if (hex.classList.contains("invisible")) {
-		document.getElementById("l1a").innerHTML = "Добавить"
-		document.getElementById("l2").style.display = "none"
-	}	else {
-		document.getElementById("l1a").innerHTML = "Редактировать"
-		document.getElementById("l2").style.display = ""
-	}
-});
 let redactHexElement
 
 document.getElementById("l1").onclick = function(){
 	redactHexElement = getMainHexFromSiblings(ContextElement.target)
+	if (redactHexElement == undefined) {return}
 	gk = getHexData(redactHexElement)
 	showRedactFormWithParams(gk)
 	menu.classList.remove("active")
