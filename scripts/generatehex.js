@@ -150,7 +150,8 @@ function createHexagon(hexData,name) {
   label = document.createElement("p")
   label.innerHTML = `${hexData.name}`
   hexText.appendChild(label)
-  if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {
+/*    if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {*/
+if (hexData.usl_ob != "") {
     symbolMeasure = document.createElement("p")
       symbolMeasure.innerHTML = `${hexData.usl_ob}, ${hexData.ob_ed_izm}`
     hexText.appendChild(symbolMeasure)
