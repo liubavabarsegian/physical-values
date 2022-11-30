@@ -132,7 +132,7 @@ function deleteHexGK(gk) {
 	gk.ed_izm = ""
 }
 
-function download() {
+document.getElementById("export").onclick = function (e) {
 	fileName = document.getElementById("sota_filenm").value
 	if (fileName == "") {
 		alert('Заполните название файла внизу страницы');
