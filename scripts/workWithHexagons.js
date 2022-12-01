@@ -87,7 +87,7 @@ let c = document.getElementById("my-canvas");
 let ctx = c.getContext("2d");
 function drawParallelogram() {
 	ctx.canvas.width  = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+	ctx.canvas.height = window.innerHeight;
 	ctx.beginPath();
 	ctx.strokeStyle = "red";
 	ctx.lineWidth = 5;
@@ -145,7 +145,7 @@ document.getElementById("l1").onclick = function(){
 }
 
 function finRedact() {
-  ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
+	ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
 	gkInput = replacePowNumbersBtoS(`G${getFromInput("GGK")}K${getFromInput("KGK")}`)
 	console.log(ltInput)
 	console.log(gkInput)

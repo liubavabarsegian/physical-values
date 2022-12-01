@@ -17,20 +17,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
-	<style>
-		#footer {
-			position: fixed; /* Фиксированное положение */
-			left: 0;
-			bottom: 0; /* Левый нижний угол */
-			padding: 10px; /* Поля вокруг текста */
-			background: gray; /* Цвет фона */
-			width: 100%; /* Ширина слоя */
-		}
-
-		input[type="text"] {
-			font-size: 14px;
-		}
-	</style>
 </head>
 <body>
 	<!-- Несколько модальных окон -->
@@ -117,6 +103,7 @@
 	<div class="overlay js-overlay-modal"></div>
 
 	<ul id="navbar">
+		<div>
 		<li><a href="./main_page.html">Главная</a></li> <!--хочу в root-->
 		<li>
 			<a href="#">Файл</a>
@@ -130,6 +117,7 @@
 		</li>
 		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
 		<li><a href="#" class="js-open-modal" data-modal="4" onclick="takeshot()">Скриншот</a></li>
+		</div>
 	</ul>
 
 	<br />

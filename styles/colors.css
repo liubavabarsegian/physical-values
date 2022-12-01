@@ -35,7 +35,7 @@
 	border: 30px solid rgb(216, 220, 222);
 }
 .active-triangle.hexagon-grideperlevy {
-	border: 30px solid rgb(171, 172, 173);
+	border: 30px solid rgb(151, 151, 151);
 }
 .grideperlevy
 {
@@ -43,7 +43,7 @@
 }
 .active-hexagon.grideperlevy
 {
-	background-color: rgb(171, 172, 173);
+	background-color: rgb(151, 151, 151);
 }
 
 .hexagon-dark_gray
