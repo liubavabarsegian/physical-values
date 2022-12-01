@@ -47,6 +47,8 @@
     color: #fff;
     text-decoration: none;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 #navbar ul li {

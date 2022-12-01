@@ -1,6 +1,91 @@
 sortGK(data)
 createTable("newf",data)
 
+// Array.prototype.swapsss = function (x,y) {
+//   var b = this[x];
+//   this[x] = this[y];
+//   this[y] = b;
+//   return this;
+// }
+// почему-то эта функция ломает проект
+
+let ContextElement
+function addHexEventListeners() {
+  menuArea = document.querySelectorAll(".one-hexagon");
+
+	for (hex of menuArea) {
+
+		hex.addEventListener("contextmenu", function(event) {
+				event.preventDefault();
+      	menu.style.top = `${event.clientY}px`;
+				menu.style.left = `${event.clientX}px`;
+				menu.classList.add("active");
+				gkmenu.classList.add("active");
+				gkmenu.style.top = `${event.clientY}px`;
+				gkmenu.style.left = `${event.clientX+175}px`;
+				ContextElement = event
+				hex = getMainHexFromSiblings(ContextElement.target)
+				if (hex == undefined) {return}
+
+        hexData = findHex(hex.id)
+        gkmenu.innerHTML = ""
+        hexData.forEach(function (gk,index) {
+          gk = getNGK(hexData,index)
+          if (gk.name != "" && gk.name != getNGK(hexData,0).name) {
+            let gkLiMenu = document.createElement("li")
+            gkLiMenu.classList.add("context-menu__item")
+            let gkAMenu = document.createElement("a")
+            gkAMenu.classList.add("context-menu__link")
+            gkAMenu.innerHTML = gk.name
+            gkLiMenu.appendChild(gkAMenu)
+            gkLiMenu.addEventListener("click", function() {
+
+              swap = hexData[findGKIndex(hexData,gk.GK)]
+              hexData[findGKIndex(hexData,gk.GK)] = hexData[0]
+              hexData[0] = swap
+
+              createTable("newf",data)
+            })
+            gkmenu.appendChild(gkLiMenu)
+          }
+        })
+
+				if (hex.classList.contains("invisible")) {
+					document.getElementById("l1a").innerHTML = "Добавить"
+					document.getElementById("l2").style.display = "none"
+				}	else {
+					document.getElementById("l1a").innerHTML = "Редактировать"
+					document.getElementById("l2").style.display = ""
+				}
+		});
+	
+		hex.addEventListener("click", function() {
+				if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
+				ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+        Activate(this)
+				rememberHexagon(this);
+        
+				} 			
+		});
+  
+    hex.addEventListener("mouseover", function(event) {
+
+      //не убирать
+      let hexElement = event.target
+
+      let futureClickedHexagons = clickedHexagons.slice()
+      futureClickedHexagons.push(getMainHexFromSiblings(hexElement))
+      futureClickedHexagonsCoords = futureClickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+
+      if (drawingParallelogram) {
+        drawParallelogram(futureClickedHexagonsCoords,"yellow")
+      }
+      
+      			
+    });
+	}
+}
+
 function sortGK(tableData) {
   for (let row in tableData) {
     for (let hex in tableData[row]) {
@@ -65,7 +150,8 @@ function createHexagon(hexData,name) {
   label = document.createElement("p")
   label.innerHTML = `${hexData.name}`
   hexText.appendChild(label)
-  if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {
+/*    if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {*/
+if (hexData.usl_ob != "") {
     symbolMeasure = document.createElement("p")
       symbolMeasure.innerHTML = `${hexData.usl_ob}, ${hexData.ob_ed_izm}`
     hexText.appendChild(symbolMeasure)
@@ -79,7 +165,6 @@ function createHexagon(hexData,name) {
 
   return newHex
 };
-
 
 
 

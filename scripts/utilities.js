@@ -9,6 +9,10 @@ function findGK(hex,reqGK) {
   return hex.find(gk => Object.keys(gk) == reqGK)
 }
 
+function findGKIndex(hex,reqGK) { 
+  return hex.indexOf(findGK(hex,reqGK))
+}
+
 //function convert
 
 function findHex(lt) {
@@ -76,38 +80,18 @@ function getMLT(hex) {
 }
 
 menu = document.querySelector(".context-menu__items");
+gkmenu = document.querySelector(".gkcontext-menu__items")
 
 function getHexData(hex) {
   return getNGK(data[hex.parentElement.id][hex.id],0)
 }
 
-function addHexEventListeners() {
-  menuArea = document.querySelectorAll(".one-hexagon");
-
-	for (hex of menuArea) {
-
-		hex.addEventListener("contextmenu", function(event) {
-			event.preventDefault();
-			menu.style.top = `${event.clientY}px`;
-					menu.style.left = `${event.clientX}px`;
-			menu.classList.add("active");
-		});
-	
-		hex.addEventListener("click", function() {
-				if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
-				Activate(this)
-				rememberHexagon(this);
-				} 
-
-	
-	
-				
-		});
-	}
-}
 
 function getMainHexFromSiblings(element) {
-  while (!element.classList.contains("one-hexagon")) {
+  while (!element.classList.contains("one-hexagon") ) {
+    if (element.parentElement == undefined) {
+      return undefined
+    }
     element = element.parentElement
   }
   return element
@@ -138,4 +122,56 @@ function getFromInput(id) {
     val = replacePowNumbersBtoS(val)
     }
   return val
+}
+
+function getHexCanvasCoords(hex) {
+  let inside = hex.querySelector(".inside");
+	let headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
+	let position = inside.getBoundingClientRect();
+	xCenter = (position.left + position.right) / 2;
+	yCenter = (position.top + position.bottom) / 2 - headerHeight;
+	return {x: xCenter, y: yCenter}
+}
+
+let c = document.getElementById("my-canvas");
+let ctx = c.getContext("2d");
+ctx.canvas.width  = window.innerWidth;
+ctx.canvas.height = 1000;
+function drawParallelogram(points,color) {
+	
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height) // очистить
+
+	ctx.beginPath();
+	ctx.strokeStyle = color;
+	ctx.lineWidth = 5;
+	ctx.moveTo(points[0].x, points[0].y)
+	points.forEach(function (point) {
+		ctx.lineTo(point.x, point.y);
+	})
+  if (points.length == 4) {
+    	ctx.lineTo(points[0].x, points[0].y);
+  }
+
+	ctx.stroke();
+	
+}
+
+function checkParallelogram(hexArray) {
+
+  
+  hexData = hexArray.map(hex => getHexData(hex))
+  console.log(hexData)
+  let mlti1 = {
+    M:hexData[0].M+hexData[2].M,
+    L:hexData[0].L+hexData[2].L,
+    T:hexData[0].T+hexData[2].T,
+    I:hexData[0].I+hexData[2].I,
+  }
+  let mlti2 = {
+    M:hexData[1].M+hexData[3].M,
+    L:hexData[1].L+hexData[3].L,
+    T:hexData[1].T+hexData[3].T,
+    I:hexData[1].I+hexData[3].I,
+  }
+  return JSON.stringify(mlti2) == JSON.stringify(mlti1) // такая проверка на то что объекты одинаковы
 }

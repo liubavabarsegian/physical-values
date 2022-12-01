@@ -1,4 +1,4 @@
-data = {row1: {
+dataMix = {row1: {
   "L⁰T⁴": [
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G¹K⁰"}},
@@ -648,7 +648,7 @@ data = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T¹", GK: "G⁻¹K⁻²"}},
   ],
   "L⁰T⁰": [
-  {"G⁰K⁰":{name: "Безразмерная постоянная", color: "yellow", usl_ob: "1", M: 0, L: 1, T: 1, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁰", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Безразмерная постоянная", color: "yellow", usl_ob: "1", M: 0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁰", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "(Гравит. пост.)⁻¹", color: "gray", usl_ob: "G⁻¹", M: 1, L: -3, T: 2, I: 0, ed_izm: "Ньютон⁻¹*метр⁻²/килограмм⁻²", ob_ed_izm: "Н⁻¹*м⁻²/кг⁻²", LT: "L⁰T⁰", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "Гравитац. постоянная", color: "grideperlevy", usl_ob: "G", M: -1, L: 3, T: -2, I: 0, ed_izm: "Ньютон*метр²/килограмм²", ob_ed_izm: "Н*м²/кг²", LT: "L⁰T⁰", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁰", GK: "G²K⁰"}},
@@ -1394,7 +1394,7 @@ data = {row1: {
   },
   }
 
-daraEmpty = {row1: {
+dataEmpty = {row1: {
   "L⁰T⁴": [
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁴", GK: "G¹K⁰"}},
@@ -2788,4 +2788,7 @@ daraEmpty = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁵T⁻⁹", GK: "G⁻¹K⁻²"}},
   ],
   },
-  }
+};
+
+
+data = dataMix;

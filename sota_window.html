@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
 	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 	<title>ФВиЗ - рабочее простанство</title>
@@ -17,6 +20,34 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+	<script>
+		function ChangetoMix() {
+			data = dataMix;
+			createTable("newf", data);
+		}
+
+		function ChangetoEmpty() {
+			data = dataEmpty;
+			createTable("newf", data);
+		} //уберу
+		function showMenuLevels() {
+			document.getElementById("moreLevels").hidden = false;
+		}
+	</script>
+	<style>
+		#footer {
+			position: fixed; /* Фиксированное положение */
+			left: 0;
+			bottom: 0; /* Левый нижний угол */
+			padding: 10px; /* Поля вокруг текста */
+			background: gray; /* Цвет фона */
+			width: 100%; /* Ширина слоя */
+		}
+
+		input {
+			font-size: 16px;
+		}
+	</style>
 </head>
 <body>
 	<!-- Несколько модальных окон -->
@@ -34,7 +65,7 @@
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
 		<h3 class="modal__title">Редактирование элемента</h3>
 		<div id="form">
-			<table style="background-image: url(styles/img/sota.png); background-repeat: no-repeat; background-size: 100% 100%; display: inline-block; font: 20px verdana ">
+			<table style="background-image: url(styles/img/sota.png); background-repeat: no-repeat; background-size: 100% 100%; display: inline-block; font: 20px verdana">
 				<tr>
 					<td colspan="2">Наименование</td>
 					<td colspan="2"><input type="text" id="name" required></td>
@@ -72,33 +103,59 @@
 					<td colspan="2"><button class="js-modal-close" style="color:crimson">Отмена</button></td>
 				</tr>
 			</table>
-			<p id="grechalp">Справка<br />Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω<br /> α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ ς σ τ υ φ χ ψ ω </p>
-			<!--<span>L:</span><input type="number" id="LLT" min="-20" max="20" size="2">
-			<span>T:</span><input type="number" id="TLT" min="-20" max="20" size="2">
-			<span>G:</span><input type="number" id="GGK" min="-20" max="20" size="2">
-			<span>K:</span><input type="number" id="KGK" min="-20" max="20" size="2"><br>
-			<span>M:</span><input type="number" id="M" min="-20" max="20" size="2">
-			<span>L:</span><input type="number" id="L" min="-20" max="20" size="2">
-			<span>T:</span><input type="number" id="T" min="-20" max="20" size="2">
-			<span>I:</span><input type="number" id="I" min="-20" max="20" size="2"><br>
-			<span>Имя:</span><input type="text" id="name" required><button onclick="shgrech()">Греческий алфавит</button><br>
-			<span>Усл. обозначение:</span><input type="text" id="symbol"><br>
-			<span>ед. измерения кратко:</span><input type="text" id="unit"><br>
-			<span>ед. измерения полная:</span><input type="text" id="unit_full"><br>
-			<p id="grechalp" hidden>Справка<br />Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω<br /> α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ ς σ τ υ φ χ ψ ω </p>
-			<button class="js-modal-close" onclick="finRedact()">Отредактировать</button>-->
+			<p id="grechalp">Справка (греческий алфавит):<br />Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω<br /> α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ ς σ τ υ φ χ ψ ω </p>
+			<p>Скопируйте отсюда и вставьте в редактируемый текст</p>
 		</div>
 	</div>
 
-	<div class="modal" data-modal="4">
+	<div class="modal" data-modal="3">
 		<!--Связь уровней-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
 		<h3 class="modal__title">Скриншот</h3>
 		<div class="wrapper exmpl">
 			<div id="output_screen"></div>
 		</div>
+		<b>Правая кнопка мыши -> сохранить изображение как</b>
+		<p>Примечание: загружается полное изображения, несмотря на предпросмотр</p>
 	</div>
 
+	<div class="modal" data-modal="4">
+		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
+			<h3 class="modal__title">Авторы</h3>
+			<b>Автор системы: Чуев А.С.</b>
+			<table width="300px" style="border:dotted" border="1">
+				<tr>
+					<td>Воронин Александр</td>
+					<td>Шатский Артем</td>
+					<td>Барсегян Люба</td>
+					<td>Варняга  Максим</td>
+				</tr>
+				<tr>
+					<td>ИУ6-32Б</td>
+					<td>ИУ6-32Б</td>
+					<td>ИУ6-35Б</td>
+					<td>ИУ6-33Б</td>
+				</tr>
+				<tr>
+					<td><b>Backend</b></td>
+					<td><b>Backend-Refactoring</b></td>
+					<td><b>Frontend</b></td>
+					<td><b>Frontend</b></td>
+				</tr>
+				<tr>
+					<td>Создание механизма представления данных</td>
+					<td>Разработка алгоритма взаимодействия с пользователем</td>
+					<td>Реализация создания закономерностей</td>
+					<td>Разработка главной страницы сайта</td>
+				</tr>
+				<tr>
+					<td>Реализация наполнения БД для обработки</td>
+					<td>Работа с файлами</td>
+					<td>Графическое оформление сот</td>
+					<td>Создание контекстного меню</td>
+				</tr>
+			</table>
+		</div>
 	<!-- Подложка под модальным окном -->
 	<div class="overlay js-overlay-modal"></div>
 
@@ -108,16 +165,24 @@
 		<li>
 			<a href="#">Файл</a>
 			<ul>
-				<li><a href="#">Экспорт</a></li>
+				<li><a href="#" id="export">Экспорт</a></li>
 				<li>
 					<a href="#">Импорт</a>
-					<input type="file" title="&nbsp;" id="user_sota" name="user_sota" accept=".jsota">
+					<input id="import" type="file" accept=".jsota">
 				</li>
 			</ul>
 		</li>
+		<li>
+			<a href="#">Законом-ти</a>
+			<ul>
+				<li><a href="#" onclick="ChangetoMix();">Смешанное</a></li>
+				<!--<li><a href="#" onclick="ChangetoMech();">Механика</a></li>-->
+				<li><a href="#" onclick="ChangetoEmpty();">Пустой</a></li>
+			</ul>
+		</li>
 		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
-		<li><a href="#" class="js-open-modal" data-modal="4" onclick="takeshot()">Скриншот</a></li>
-		</div>
+		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
+		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
 	</ul>
 
 	<br />
@@ -127,27 +192,16 @@
 
 		</div>
 	</div>
-	<!--<div id="output_screen"></div>-->
-	<button id="export" onclick="download()">Скачать ФВиЗ</button>
-	<input id="import" type="file" accept=".jsota">Импортировать>
+	<!--<button id="export" onclick="download()">Скачать ФВиЗ</button>
+	<input id="import" type="file" accept=".jsota">Импортировать>-->
 	<div id="showGK"></div>
 	<br><br><br><br><br><br>
-	<!--<div id="form" class="invisible">
-		<span>M:</span><input type="number" id="M" min="-99" max="99"><br>
-		<span>L:</span><input type="number" id="L" min="-99" max="99"><br>
-		<span>T:</span><input type="number" id="T" min="-99" max="99"><br>
-		<span>I:</span><input type="number" id="I" min="-99" max="99"><br>
-		<span>Имя:</span><input type="text" id="name"><br>
-		<span>Усл. обозначение:</span><input type="text" id="symbol"><br>
-		<span>ед. измерения кратко:</span><input type="text" id="unit"><br>
-		<span>ед. измерения полная:</span><input type="text" id="unit_full"><br>
-		<button onclick="finRedact()">Отредактировать</button>
-	</div>-->
 
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
 			<li id="l0" class="context-menu__item">
-				<a class="context-menu__link" data-action="Edit">Все GK</a>
+				<a href="#" onclick="showMenuLevels();"class ="context-menu__link" data-action="Levels">Уровни ></a>
+
 			</li>
 			<li id="l1" class="context-menu__item">
 				<a href="#" class="context-menu__link js-open-modal" data-action="Edit" data-modal="2" id="l1a">Редактировать</a>
@@ -156,10 +210,8 @@
 				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
 			</li>
 		</ul>
-		<ul class="context-menu__items">
-			<li id="gk1" class="context-menu__item">
-				<a class="context-menu__link">G0K0</a>
-			</li>
+		<ul class="gkcontext-menu__items context-menu__items" id="moreLevels" hidden> <!--хм, думал скрывать по клику по кнопки уровни, функция сверху - но не работает-->
+			
 		</ul>
 	</nav>
 	<script src="scripts/utilities.js"></script>
@@ -172,10 +224,10 @@
 		<center>Название файла: <input type="text" id="sota_filenm" placeholder="Название открытого файла" value="" /></center>
 	</div>
 
-	<!--<script>
+	<script>
 		window.onbeforeunload = function () {
 			return true;
 		};
-	</script>-->
+	</script>
 </body>
 </html>

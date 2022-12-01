@@ -1,6 +1,6 @@
 
 document.addEventListener("click", event => {
-	if (event.button !== 2) { menu.classList.remove("active"); }
+	if (event.button !== 2) { menu.classList.remove("active"); gkmenu.classList.remove("active")}
 }, false)
 
 menu.addEventListener("click", event => {
@@ -28,59 +28,9 @@ function Deactivate(hex) {
 	rightTriangle.classList.remove("active-triangle")
 }
 
-class hexagon {
-	constructor(name, level, coordinateX, coordinateY) {
-			this.name = name;
-	this.level = level;
-	this.x = coordinateX;
-	this.y = coordinateY;
-	}
-// constructor() {}
-setName(name) {
-	this.name = name;
-}
-setLevel(level) {
-	this.level = level;
-}
-setX(coordinateX) {
-	this.x = coordinateX;
-}
-setY(coordinateY) {
-	this.y = coordinateY;
-}
-	getName() {
-			return this.name;
-	}
-getLevel() {
-	return this.level;
-}
-getX() {
-	return this.x;
-}
-getY() {
-	return this.y;
-}
-}
-
-
+drawingParallelogram = false
+clickedHexagons = [];
 function rememberHexagon(hex) {
-	var inside = hex.querySelector(".inside");
-	var headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
-	var position = inside.getBoundingClientRect();
-	xCenter = (position.left + position.right) / 2;
-	yCenter = (position.top + position.bottom) / 2 - headerHeight;
-	if (clickedHexagons.length < 3) {
-		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
-		clickedHexagons.push(newHex);
-		console.log("cl1")
-	}
-	else {
-		newHex = new hexagon("name", hex.dataset.level, xCenter, yCenter)
-		clickedHexagons.push(newHex);
-		drawParallelogram();
-		console.log("cl2")
-	}
-}
 
 clickedHexagons = [];
 let c = document.getElementById("my-canvas");
@@ -94,16 +44,27 @@ function drawParallelogram() {
 	ctx.moveTo(clickedHexagons[0].x, clickedHexagons[0].y)
 	for (var i = 1; i < 4; i++) {
 		ctx.lineTo(clickedHexagons[i].x, clickedHexagons[i].y);
-	}
-	ctx.lineTo(clickedHexagons[0].x, clickedHexagons[0].y);
-	ctx.stroke();
-	clickedHexagons = []
+	hexCoords = getHexCanvasCoords(hex)
 
+	clickedHexagons.push(hex);
+	
+	console.log(clickedHexagons)
+	drawingParallelogram = true
+	//console.log(hex)
+	if (clickedHexagons.length == 4) {
+		if (checkParallelogram(clickedHexagons)) {
+			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+			drawParallelogram(clickedHexagonsCoords,"red");
+		} else (alert("неверный параллелограмм"))
+
+		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
+		clickedHexagons = []
+		drawingParallelogram = false
+	}
 }
 
 function showRedactFormWithParams(gk) {
 	//document.getElementById("form").classList.remove("invisible")
-	console.log(gk)
 	ltPow = getPowFromLTGK(gk.LT)
 	gkPow = getPowFromLTGK(gk.GK)
 	writeIntoInput(ltPow[0],"LLT")
@@ -123,22 +84,11 @@ function showRedactFormWithParams(gk) {
 	writeIntoInputFromObject(gk,"I","I")
 }
 
-let ContextElement
-addEventListener('contextmenu', (event) => {
-	ContextElement = event
-	hex = getMainHexFromSiblings(ContextElement.target)
-	if (hex.classList.contains("invisible")) {
-		document.getElementById("l1a").innerHTML = "Добавить"
-		document.getElementById("l2").style.display = "none"
-	}	else {
-		document.getElementById("l1a").innerHTML = "Редактировать"
-		document.getElementById("l2").style.display = ""
-	}
-});
 let redactHexElement
 
 document.getElementById("l1").onclick = function(){
 	redactHexElement = getMainHexFromSiblings(ContextElement.target)
+	if (redactHexElement == undefined) {return}
 	gk = getHexData(redactHexElement)
 	showRedactFormWithParams(gk)
 	menu.classList.remove("active")
@@ -147,12 +97,9 @@ document.getElementById("l1").onclick = function(){
 function finRedact() {
 	ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
 	gkInput = replacePowNumbersBtoS(`G${getFromInput("GGK")}K${getFromInput("KGK")}`)
-	console.log(ltInput)
-	console.log(gkInput)
 	newRedactHexElement = findHex(ltInput)
 
 	arrayGK = findGK(newRedactHexElement,gkInput)
-	console.log(arrayGK)
 	gk = getHexData(redactHexElement)
 	//console.log(data["row5"]["L⁰T⁰"])
 	deleteHexGK(gk)
@@ -197,7 +144,7 @@ function deleteHexGK(gk) {
 	gk.ed_izm = ""
 }
 
-function download() {
+document.getElementById("export").onclick = function (e) {
 	fileName = document.getElementById("sota_filenm").value
 	if (fileName == "") {
 		alert('Заполните название файла внизу страницы');
@@ -217,7 +164,7 @@ function download() {
   document.body.removeChild(element)
 }
 
-fileSelector = document.getElementById('import')
+fileSelector = document.getElementById('import');
 fileSelector.addEventListener('change', (event) => {
 	fileList = event.target.files
 	reader = new FileReader()
@@ -228,8 +175,3 @@ fileSelector.addEventListener('change', (event) => {
 	reader.readAsText(fileList[0]);
 	document.getElementById('sota_filenm').value = fileList[0].name.replace('.jsota','');
 });
-
-
-
-
-
