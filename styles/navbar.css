@@ -25,11 +25,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 25px;
+    font-size: 23px;
 }
 #navbar div
 {
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: space-around;
 }
@@ -37,13 +37,13 @@
 #navbar li {
     float: left;
     position: relative;
-    height: 100%;
+    height: 110%;
+    border-radius: 5px;
 }
 
 #navbar li a {
     display: block;
     padding: 6px;
-    /* width: 100px; */
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -64,16 +64,19 @@
 }
 
 #navbar ul li:hover {
-    background-color: #666;
+    background-color: rgb(9, 37, 69);
 }
 
-#footer {
+/* footer */
+footer {
     position: fixed; /* Фиксированное положение */
     left: 0;
-    bottom: 0; /* Левый нижний угол */
-    padding: 10px; /* Поля вокруг текста */
-    background: gray; /* Цвет фона */
-    width: 100%; /* Ширина слоя */
+    padding: 10px;
+    background: rgb(9, 37, 69); /* Цвет фона */
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    margin-top: auto;
 }
 
 input[type="text"] {
