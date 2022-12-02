@@ -423,7 +423,7 @@ dataMix = {row1: {
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁶T⁻⁴", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "Силовой поток", color: "gray", usl_ob: "FS", M: 1, L: 3, T: -2, I: 0, ed_izm: "Н*метр²", ob_ed_izm: "Н*м²", LT: "L⁶T⁻⁴", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁶T⁻⁴", GK: "G⁻¹K⁰"}},
-  {"G²K⁰":{name: "Масса²", color: "dark_grey", usl_ob: "M²", M: 2, L: 0, T: 0, I: 0, ed_izm: "Килограмм²", ob_ed_izm: "кг²", LT: "L⁶T⁻⁴", GK: "G²K⁰"}},
+  {"G²K⁰":{name: "Масса²", color: "dark_gray", usl_ob: "M²", M: 2, L: 0, T: 0, I: 0, ed_izm: "Килограмм²", ob_ed_izm: "кг²", LT: "L⁶T⁻⁴", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁶T⁻⁴", GK: "G⁰K¹"}},
   {"G¹K¹":{name: "", color: "light_green", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁶T⁻⁴", GK: "G¹K¹"}},
   {"G¹K²":{name: "", color: "vinous", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁶T⁻⁴", GK: "G¹K²"}},
