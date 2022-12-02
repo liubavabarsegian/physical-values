@@ -164,9 +164,12 @@
 		<li>
 			<a href="#">Файл</a>
 			<ul>
-				<li><a href="#" id="export">Экспорт</a></li>
 				<li>
-					<a href="#">Импорт</a>
+					<a href="#" id="export">Скачать файл</a>
+					<input type="text" id="sota_filenm" placeholder="Название файла" value="" />
+				</li>
+				<li>
+					<a>Открыть файл</a>
 					<input id="import" type="file" accept=".jsota">
 				</li>
 			</ul>
@@ -194,7 +197,7 @@
 	<!--<button id="export" onclick="download()">Скачать ФВиЗ</button>
 	<input id="import" type="file" accept=".jsota">Импортировать>-->
 	<div id="showGK"></div>
-	<br><br><br><br><br><br>
+	<br><br><br><br><br>
 
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
@@ -220,7 +223,6 @@
 	<div id="footer">
 		<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
 		<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
-		<center>Название файла: <input type="text" id="sota_filenm" placeholder="Название открытого файла" value="" /></center>
 	</div>
 
 	<script>

@@ -135,7 +135,7 @@ function deleteHexGK(gk) {
 document.getElementById("export").onclick = function (e) {
 	fileName = document.getElementById("sota_filenm").value
 	if (fileName == "") {
-		alert('Заполните название файла внизу страницы');
+		alert('Заполните название файла около кнопки');
 		return
 		//fileName = "fviz"
 	}
