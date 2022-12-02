@@ -32,18 +32,6 @@ drawingParallelogram = false
 clickedHexagons = [];
 function rememberHexagon(hex) {
 
-clickedHexagons = [];
-let c = document.getElementById("my-canvas");
-let ctx = c.getContext("2d");
-function drawParallelogram() {
-	ctx.canvas.width  = window.innerWidth;
-	ctx.canvas.height = window.innerHeight;
-	ctx.beginPath();
-	ctx.strokeStyle = "red";
-	ctx.lineWidth = 5;
-	ctx.moveTo(clickedHexagons[0].x, clickedHexagons[0].y)
-	for (var i = 1; i < 4; i++) {
-		ctx.lineTo(clickedHexagons[i].x, clickedHexagons[i].y);
 	hexCoords = getHexCanvasCoords(hex)
 
 	clickedHexagons.push(hex);
@@ -95,7 +83,7 @@ document.getElementById("l1").onclick = function(){
 }
 
 function finRedact() {
-	ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
+  ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
 	gkInput = replacePowNumbersBtoS(`G${getFromInput("GGK")}K${getFromInput("KGK")}`)
 	newRedactHexElement = findHex(ltInput)
 
@@ -164,7 +152,7 @@ document.getElementById("export").onclick = function (e) {
   document.body.removeChild(element)
 }
 
-fileSelector = document.getElementById('import');
+fileSelector = document.getElementById('import')
 fileSelector.addEventListener('change', (event) => {
 	fileList = event.target.files
 	reader = new FileReader()
@@ -175,3 +163,8 @@ fileSelector.addEventListener('change', (event) => {
 	reader.readAsText(fileList[0]);
 	document.getElementById('sota_filenm').value = fileList[0].name.replace('.jsota','');
 });
+
+
+
+
+
