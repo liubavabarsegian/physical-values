@@ -55,28 +55,31 @@ function replacePowNumbersStoB(string) {
 }
 
 function getMLT(hex) {
-  mlti = ""
-  if (hex.M == 1) {
-    mlti += `M`
-  } else if (hex.M != 0) {
-    mlti += `M${hex.M}`
-  }
-  if (hex.L == 1) {
-    mlti += `L`
-  } else if (hex.L != 0) {
-    mlti += `L${hex.L}`
-  }  
-  if (hex.T == 1) {
-    mlti += `T`
-  } else if (hex.T != 0) {
-    mlti += `T${hex.T}`
-  }  
-  if (hex.I == 1) {
-    mlti += `I`
-  } else if (hex.I != 0) {
-    mlti += `I${hex.I}`
-  }
-  return replacePowNumbersBtoS(mlti)
+    mlti = "";
+    if (hex.LT == "L⁰T⁰") { mlti = 'L0T0'; }
+    else {
+        if (hex.M == 1) {
+            mlti += `M`
+        } else if (hex.M != 0) {
+            mlti += `M${hex.M}`
+        }
+        if (hex.L == 1) {
+            mlti += `L`
+        } else if (hex.L != 0) {
+            mlti += `L${hex.L}`
+        }
+        if (hex.T == 1) {
+            mlti += `T`
+        } else if (hex.T != 0) {
+            mlti += `T${hex.T}`
+        }
+        if (hex.I == 1) {
+            mlti += `I`
+        } else if (hex.I != 0) {
+            mlti += `I${hex.I}`
+        }
+    }
+    return replacePowNumbersBtoS(mlti)
 }
 
 menu = document.querySelector(".context-menu__items");
