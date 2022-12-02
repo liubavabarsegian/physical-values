@@ -40,8 +40,8 @@
             if (tar.id != 'myfoto') return;
             tar.style.position = 'absolute';
             document.onmousemove = function (event) {
-                tar.style.left = event.pageX - 200 + 'px';
-                tar.style.top = event.pageY - 200 + 'px';
+                tar.style.left = event.pageX - 150 + 'px';
+                tar.style.top = event.pageY - 150 + 'px';
                 //return false;
             }
             tar.onmouseup = function () {
@@ -74,7 +74,7 @@
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
 		<h3 class="modal__title">Связь уровней</h3>
 		<div class="wrapper exmpl">
-			<img src="styles/img/connect.png" style="text-align: center;">
+			<img src="styles/img/connect_full.png" style="text-align: center;">
 		</div>
 	</div>
 
@@ -212,10 +212,9 @@
 
 		</div>
 	</div>
-	<!--<button id="export" onclick="download()">Скачать ФВиЗ</button>
-	<input id="import" type="file" accept=".jsota">Импортировать>-->
+
 	<div id="showGK"></div>
-	<br><br><br><br><br>
+    <img src="styles/img/connect.png" style="z-index:9" id="myfoto">
 
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
@@ -239,7 +238,6 @@
 	<script src="scripts/data.js"></script>
 	<script src="scripts/generatehex.js"></script>
 	<script src="scripts/workWithHexagons.js"></script>
-	<img src="styles/img/connect.png" style="z-index:11" id="myfoto">
 	<div id="footer">
 		<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
 		<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
