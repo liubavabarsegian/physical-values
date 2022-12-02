@@ -32,36 +32,36 @@ drawingParallelogram = false
 clickedHexagons = [];
 function rememberHexagon(hex) {
 
-	clickedHexagons = [];
-	let c = document.getElementById("my-canvas");
-	let ctx = c.getContext("2d");
-	function drawParallelogram() {
-		ctx.canvas.width  = window.innerWidth;
-		ctx.canvas.height = window.innerHeight;
-		ctx.beginPath();
-		ctx.strokeStyle = "red";
-		ctx.lineWidth = 5;
-		ctx.moveTo(clickedHexagons[0].x, clickedHexagons[0].y)
-		for (var i = 1; i < 4; i++) {
-			ctx.lineTo(clickedHexagons[i].x, clickedHexagons[i].y);
-		hexCoords = getHexCanvasCoords(hex)
+clickedHexagons = [];
+let c = document.getElementById("my-canvas");
+let ctx = c.getContext("2d");
+function drawParallelogram() {
+	ctx.canvas.width  = window.innerWidth;
+	ctx.canvas.height = window.innerHeight;
+	ctx.beginPath();
+	ctx.strokeStyle = "red";
+	ctx.lineWidth = 5;
+	ctx.moveTo(clickedHexagons[0].x, clickedHexagons[0].y)
+	for (var i = 1; i < 4; i++) {
+		ctx.lineTo(clickedHexagons[i].x, clickedHexagons[i].y);
+	hexCoords = getHexCanvasCoords(hex)
+
+	clickedHexagons.push(hex);
 	
-		clickedHexagons.push(hex);
-		
-		console.log(clickedHexagons)
-		drawingParallelogram = true
-		//console.log(hex)
-		if (clickedHexagons.length == 4) {
-			if (checkParallelogram(clickedHexagons)) {
-				clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
-				drawParallelogram(clickedHexagonsCoords,"red");
-			} else (alert("неверный параллелограмм"))
-	
-			clickedHexagons.forEach(hexElement => Deactivate(hexElement))
-			clickedHexagons = []
-			drawingParallelogram = false
-		}
+	console.log(clickedHexagons)
+	drawingParallelogram = true
+	//console.log(hex)
+	if (clickedHexagons.length == 4) {
+		if (checkParallelogram(clickedHexagons)) {
+			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+			drawParallelogram(clickedHexagonsCoords,"red");
+		} else (alert("неверный параллелограмм"))
+
+		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
+		clickedHexagons = []
+		drawingParallelogram = false
 	}
+}
 
 function showRedactFormWithParams(gk) {
 	//document.getElementById("form").classList.remove("invisible")
@@ -175,4 +175,3 @@ fileSelector.addEventListener('change', (event) => {
 	reader.readAsText(fileList[0]);
 	document.getElementById('sota_filenm').value = fileList[0].name.replace('.jsota','');
 });
-

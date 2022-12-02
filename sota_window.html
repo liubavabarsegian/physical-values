@@ -34,9 +34,22 @@
 			document.getElementById("moreLevels").hidden = false;
 		}
 	</script>
+	<style>
+		#footer {
+			position: fixed; /* Фиксированное положение */
+			left: 0;
+			bottom: 0; /* Левый нижний угол */
+			padding: 10px; /* Поля вокруг текста */
+			background: gray; /* Цвет фона */
+			width: 100%; /* Ширина слоя */
+		}
+
+		input {
+			font-size: 16px;
+		}
+	</style>
 </head>
 <body>
-	<main>
 	<!-- Несколько модальных окон -->
 	<div class="modal" data-modal="1">
 		<!--Связь уровней-->
@@ -201,22 +214,20 @@
 			
 		</ul>
 	</nav>
-	<div class="push"></div>
-	</main>
-	<footer>
+	<script src="scripts/utilities.js"></script>
+	<script src="scripts/data.js"></script>
+	<script src="scripts/generatehex.js"></script>
+	<script src="scripts/workWithHexagons.js"></script>
+	<div id="footer">
 		<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
 		<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
-		<center>Название файла: <input type="text" id="sota_filenm" placeholder="Название открытого файла" value=""></center>
-	</footer>
+		<center>Название файла: <input type="text" id="sota_filenm" placeholder="Название открытого файла" value="" /></center>
+	</div>
 
 	<script>
 		window.onbeforeunload = function () {
 			return true;
 		};
 	</script>
-	<script src="scripts/utilities.js"></script>
-	<script src="scripts/data.js"></script>
-	<script src="scripts/generatehex.js"></script>
-	<script src="scripts/workWithHexagons.js"></script>
 </body>
 </html>
