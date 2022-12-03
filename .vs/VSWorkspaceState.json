@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\scripts",
-    "\\styles"
+    "\\styles",
+    "\\styles\\img"
   ],
-  "SelectedNode": "\\scripts\\int_popup.js",
+  "SelectedNode": "\\scripts\\data.js",
   "PreviewInSolutionExplorer": false
 }

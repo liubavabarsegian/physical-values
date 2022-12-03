@@ -50,7 +50,7 @@
             tar.ondragstart = function () {
                 return false;
             }
-        }
+		}
 	</script>
 	<style>
 		#footer {
@@ -213,8 +213,7 @@
 		</div>
 	</div>
 
-	<div id="showGK"></div>
-    <img src="styles/img/connect.png" style="z-index:9" id="myfoto">
+	<img src="styles/img/connect.png" style="z-index:9" id="myfoto" width="0" height="0">
 
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
@@ -241,7 +240,40 @@
 	<div id="footer">
 		<input type="text" id="LT" placeholder="Здесть будет LT размерность" disabled />
 		<input type="text" id="GK" placeholder="Здесть будет GK размерность" disabled />
+		<button name="sizer" data-size="1">Показать</button>
+		<button name="sizer" data-size="0">Спрятать</button>
+		<!--<button name="sizer" data-size="0">0 size</button>-->
 	</div>
+	<script type="text/javascript">
+		var img = document.getElementById('myfoto');
+		img.naturalWidth = img.width;
+		img.naturalHeight = img.height;
+
+		var buttons = document.getElementsByName('sizer');
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].onclick = function () {
+				var size = this.getAttribute('data-size');
+				img.width = img.naturalWidth * size;
+				img.height = img.naturalHeight * size;
+			}
+		}
+		//var fl = true;
+		//document.getElementsByName('sizer').onclick = function (e) {
+		//	console.log(fl);
+		//	if (fl) {
+		//		img.width = img.naturalWidth;
+		//		img.height = img.naturalHeight;
+		//		fl = false;
+  //              console.log(img.width)
+		//	}
+		//	else {
+  //              img.width = 0
+  //              img.height = 0
+		//		fl = true;
+  //              console.log(img.width)
+  //          }
+  //      }
+	</script>
 
 	<script>
 		window.onbeforeunload = function () {
