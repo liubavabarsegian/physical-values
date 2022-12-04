@@ -41,9 +41,16 @@ function rememberHexagon(hex) {
 	//console.log(hex)
 	if (clickedHexagons.length == 4) {
 		if (checkParallelogram(clickedHexagons)) {
-			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
-			drawParallelogram(clickedHexagonsCoords,"red");
-		} else (alert("неверный параллелограмм"))
+			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
+			document.getElementById("lowOpen").click();
+			hexDataLow = clickedHexagons.map(hex => getHexData(hex));
+			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name} * ${hexDataLow[3].name}`;
+			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = ${hexDataLow[1].usl_ob} * ${hexDataLow[3].usl_ob}`;
+			drawParallelogram(clickedHexagonsCoords, "red");
+		} else {
+			hexDataLow = clickedHexagons.map(hex => getHexData(hex));
+			alert(`Закономерности\n${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name} * ${hexDataLow[3].name}\nне существует!`);
+		}
 
 		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
 		clickedHexagons = []
