@@ -263,7 +263,6 @@
 		<button name="sizer" data-size="1">Показать</button>
 		<button name="sizer" data-size="0">Спрятать</button>
 		<button class="js-open-modal" data-modal="5" hidden id="lowOpen">Связь уровней</button>
-		<!--<button name="sizer" data-size="0">0 size</button>-->
 	</div>
 	<script type="text/javascript">
 		var img = document.getElementById('myfoto');
@@ -278,28 +277,15 @@
 				img.height = img.naturalHeight * size;
 			}
 		}
-		//var fl = true;
-		//document.getElementsByName('sizer').onclick = function (e) {
-		//	console.log(fl);
-		//	if (fl) {
-		//		img.width = img.naturalWidth;
-		//		img.height = img.naturalHeight;
-		//		fl = false;
-		//              console.log(img.width)
-		//	}
-		//	else {
-		//              img.width = 0
-		//              img.height = 0
-		//		fl = true;
-		//              console.log(img.width)
-		//          }
-		//      }
 	</script>
 
+
 	<script>
+/*		window.onload = function () { localStorage.setItem('testObject', JSON.stringify(data)); }*/
 		window.onbeforeunload = function () {
 			return true;
 		};
+
 	</script>
 </body>
 </html>

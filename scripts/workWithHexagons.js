@@ -114,7 +114,9 @@ function finRedact() {
 	gk = arrayGK[Object.keys(arrayGK)]
 	writeFromForm(gk)
 	//console.log(data["row5"]["L⁰T⁰"])
-	createTable("newf",data)
+	sortGK(data);
+	createTable("newf", data);
+/*	localStorage.setItem('testObject', JSON.stringify(data));*/
 }
 
 function writeFromForm(gk)  {
@@ -151,6 +153,10 @@ function deleteHexGK(gk) {
 	gk.ob_ed_izm = ""
 	gk.ed_izm = ""
 }
+//не работает
+//function showMenuLevels() {
+//	document.getElementById('moreLevels').removeAttribute("hidden");
+//}
 
 document.getElementById("export").onclick = function (e) {
 	fileName = document.getElementById("sota_filenm").value

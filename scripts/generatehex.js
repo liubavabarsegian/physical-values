@@ -50,10 +50,12 @@ function addHexEventListeners() {
           }
         })
 
-				if (hex.classList.contains("invisible")) {
+            if (hex.classList.contains("invisible")) {
+                document.getElementById("l0").style.display = "none"
 					document.getElementById("l1a").innerHTML = "Добавить"
 					document.getElementById("l2").style.display = "none"
-				}	else {
+            } else {
+                document.getElementById("l0").style.display = ""
 					document.getElementById("l1a").innerHTML = "Редактировать"
 					document.getElementById("l2").style.display = ""
 				}
