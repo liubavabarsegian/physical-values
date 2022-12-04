@@ -28,6 +28,12 @@ function Deactivate(hex) {
 	rightTriangle.classList.remove("active-triangle")
 }
 
+document.addEventListener("keyup", (event) => {
+	if (event.keyCode == 27) {
+		clickedHexagons = []
+	}
+})
+
 drawingParallelogram = false
 clickedHexagons = [];
 function rememberHexagon(hex) {
