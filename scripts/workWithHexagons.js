@@ -48,14 +48,10 @@ function rememberHexagon(hex) {
 			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name}^2`;
 			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = ${hexDataLow[1].usl_ob}^2`;
 			drawParallelogram(clickedHexagonsCoords, "red");
-		} else {
-			hexDataLow = tempclickedHexagons.map(hex => getHexData(hex));
-			alert(`Закономерности\n${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name}^2\nне существует!`);
+			clickedHexagons.forEach(hexElement => Deactivate(hexElement))
+			clickedHexagons = []
+			drawingParallelogram = false
 		}
-
-		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
-		clickedHexagons = []
-		drawingParallelogram = false
 	}
 	if (clickedHexagons.length == 4) {
 		if (checkParallelogram(clickedHexagons)) {
