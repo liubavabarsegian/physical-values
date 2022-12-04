@@ -59,30 +59,37 @@ function addHexEventListeners() {
 				}
 		});
 	
-		hex.addEventListener("click", function() {
-				if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
-				ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-        Activate(this)
-				rememberHexagon(this);
+	hex.addEventListener("click", function() {
+			if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
+			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+    Activate(this)
+			rememberHexagon(this);
         
-				} 			
-		});
+			} 			
+	});
   
     hex.addEventListener("mouseover", function(event) {
 
-      //не убирать
-      let hexElement = event.target
+        //не убирать
+        let hexElement = event.target
 
-      let futureClickedHexagons = clickedHexagons.slice()
-      futureClickedHexagons.push(getMainHexFromSiblings(hexElement))
-      futureClickedHexagonsCoords = futureClickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+        //вывод в нижние окна
+        document.getElementById("outLT").value = getNGK(findHex(getMainHexFromSiblings(hexElement).id), 0).LT;
+        document.getElementById("outGK").value = getNGK(findHex(getMainHexFromSiblings(hexElement).id), 0).GK;
+        //--------------------------
 
-      if (drawingParallelogram) {
+        let futureClickedHexagons = clickedHexagons.slice()
+        futureClickedHexagons.push(getMainHexFromSiblings(hexElement))
+        futureClickedHexagonsCoords = futureClickedHexagons.map(hexagon => getHexCanvasCoords(hexagon))
+
+        if (drawingParallelogram) {
         drawParallelogram(futureClickedHexagonsCoords,"yellow")
-      }
+        }
       
       			
     });
+
+
 	}
 }
 

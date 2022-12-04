@@ -81,8 +81,7 @@ function showRedactFormWithParams(gk) {
 	writeIntoInput(gkPow[1],"GGK")
 	writeIntoInput(gkPow[3],"KGK")
 
-	writeIntoInputFromObject(gk,"LT","LT")
-	writeIntoInputFromObject(gk,"GK","GK")
+
 	writeIntoInputFromObject(gk,"name","name")
 	writeIntoInputFromObject(gk,"ed_izm","unit_full")
 	writeIntoInputFromObject(gk,"usl_ob","symbol")
