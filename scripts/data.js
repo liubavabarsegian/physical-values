@@ -2791,4 +2791,4 @@ dataEmpty = {row1: {
 };
 
 
-data = dataMix;
+data = localStorage.getItem('testObject');
