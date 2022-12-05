@@ -48,13 +48,13 @@ function rememberHexagon(hex) {
 	drawingParallelogram = true
 	//console.log(hex)
 	if (clickedHexagons.length == 3) {
-		tempclickedHexagons = [clickedHexagons[0], clickedHexagons[2], clickedHexagons[1], clickedHexagons[2]];
+		tempclickedHexagons = [clickedHexagons[0], clickedHexagons[1], clickedHexagons[2], clickedHexagons[1]];
 		if (checkParallelogram(tempclickedHexagons)) {
 			clickedHexagonsCoords = tempclickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
 			document.getElementById("lowOpen").click();
 			hexDataLow = tempclickedHexagons.map(hex => getHexData(hex));
-			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name}^2`;
-			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = ${hexDataLow[1].usl_ob}^2`;
+			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = (${hexDataLow[1].name})^2`;
+			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = (${hexDataLow[1].usl_ob})^2`;
 			drawParallelogram(clickedHexagonsCoords, "red");
 			clickedHexagons.forEach(hexElement => Deactivate(hexElement))
 			clickedHexagons = []
