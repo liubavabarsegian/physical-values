@@ -28,9 +28,11 @@ function Deactivate(hex) {
 	rightTriangle.classList.remove("active-triangle")
 }
 
-document.addEventListener("keyup", (event) => {
+document.addEventListener("keydown", (event) => {
 	if (event.keyCode == 27) {
-		clickedHexagons = []
+		clickedHexagons.forEach(hexElement => Deactivate(hexElement));
+		clickedHexagons = [];
+		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 	}
 })
 
