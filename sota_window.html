@@ -190,9 +190,17 @@
 		</select>
 		<h4 id="lawConfig"></h4>
 		<h4 id="lawFormula"></h4>
-		<h3 id="lawMLTI"></h3>
+		<h3 id="lawMLTI" hidden></h3>
 		<button class="js-modal-close" onclick="addLaw();" style="color:forestgreen">Добавить</button>
 		<button class="js-modal-close" style="color:crimson">Отмена</button>
+	</div>
+
+	<div class="modal" data-modal="6">
+		<!--Связь уровней-->
+		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
+		<h3 class="modal__title">Добавленные законы</h3>
+		<select id="locality-dropdown" name="locality"><!--?????-->
+		</select>
 	</div>
 
 	<!-- Подложка под модальным окном -->
@@ -222,6 +230,7 @@
 			</ul>
 		</li>
 		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
+		<li><a href="#" class="js-open-modal" data-modal="6">Законы</a></li>
 		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
 		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
 		<!--<li>
@@ -289,7 +298,7 @@
 
 
 	<script>
-/*		window.onload = function () { localStorage.setItem('testObject', JSON.stringify(data)); }*/
+		/*		window.onload = function () { localStorage.setItem('testObject', JSON.stringify(data)); }*/
 		window.onbeforeunload = function () {
 			return true;
 		};
