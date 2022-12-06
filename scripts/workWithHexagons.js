@@ -51,11 +51,14 @@ function rememberHexagon(hex) {
 		tempclickedHexagons = [clickedHexagons[0], clickedHexagons[1], clickedHexagons[2], clickedHexagons[1]];
 		if (checkParallelogram(tempclickedHexagons)) {
 			clickedHexagonsCoords = tempclickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
-			document.getElementById("lowOpen").click();
-			hexDataLow = tempclickedHexagons.map(hex => getHexData(hex));
-			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = (${hexDataLow[1].name})^2`;
-			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = (${hexDataLow[1].usl_ob})^2`;
+			document.getElementById("lawOpen").click();
+			hexDataLaw = tempclickedHexagons.map(hex => getHexData(hex));
+			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = (${hexDataLaw[1].name})^2`;
+			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})^2`;
+			document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = (${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`;
 			drawParallelogram(clickedHexagonsCoords, "red");
+			document.getElementById("lawName").value = "";
+			document.getElementById("lawType").value = "";
 			clickedHexagons.forEach(hexElement => Deactivate(hexElement))
 			clickedHexagons = []
 			drawingParallelogram = false
@@ -64,14 +67,17 @@ function rememberHexagon(hex) {
 	if (clickedHexagons.length == 4) {
 		if (checkParallelogram(clickedHexagons)) {
 			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
-			document.getElementById("lowOpen").click();
-			hexDataLow = clickedHexagons.map(hex => getHexData(hex));
-			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name} * ${hexDataLow[3].name}`;
-			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = ${hexDataLow[1].usl_ob} * ${hexDataLow[3].usl_ob}`;
+			document.getElementById("lawOpen").click();
+			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
+			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}`;
+			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = ${hexDataLaw[1].usl_ob} * ${hexDataLaw[3].usl_ob}`;
+			document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = ${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I} * ${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`;
 			drawParallelogram(clickedHexagonsCoords, "red");
+			document.getElementById("lawName").value = "";
+			document.getElementById("lawType").value = "";
 		} else {
-			hexDataLow = clickedHexagons.map(hex => getHexData(hex));
-			alert(`Закономерности\n${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name} * ${hexDataLow[3].name}\nне существует!`);
+			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
+			alert(`Закономерности\n${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}\nне существует!`);
 		}
 
 		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
@@ -126,6 +132,23 @@ function finRedact() {
 	createTable("newf", data);
 /*	localStorage.setItem('testObject', JSON.stringify(data));*/
 }
+
+function addLaw() {
+	let element = {
+		name: document.getElementById("lawName").value,
+		config: document.getElementById("lawConfig").innerHTML,
+		formula: document.getElementById("lawFormula").innerHTML
+	}
+	key = document.getElementById("lawMLTI").innerHTML;
+	let chselect = document.getElementById("lawType").value;
+	if (data.laws[chselect][key] === undefined) {
+		data.laws[chselect][key] = element;
+		alert("Закон сохранен");
+	}
+	else {alert('Данный закон уже существует') }
+	/*	localStorage.setItem('testObject', JSON.stringify(data));*/
+}
+
 
 function writeFromForm(gk)  {
 	//document.getElementById("form").classList.add("invisible")
