@@ -56,7 +56,7 @@ function replacePowNumbersStoB(string) {
 
 function getMLT(hex) {
     mlti = "";
-    if (hex.M == 0 & hex.L == 0 & hex.T == 0 & hex.I == 0 & hex.name != "") { mlti = 'L0T0'; }
+    if (hex.M == 0 & hex.L == 0 & hex.T == 0 & hex.I == 0 & hex.name != "" & hex.LT == 'L⁰T⁰') { mlti = 'L0T0'; }
     else {
         if (hex.M == 1) {
             mlti += `M`
