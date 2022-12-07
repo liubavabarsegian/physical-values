@@ -158,7 +158,7 @@ function showLaws() {
 		for (let law in data.laws[type]) {
 			let li = document.createElement('li');
 			console.log(law, data.laws[type][law].config);
-			li.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].config}`;
+			li.innerHTML = `${data.laws[type][law].name} -> ${data.laws[type][law].config} -> ${data.laws[type][law].formula}`;
 			ul.appendChild(li);
 		}
 		document.getElementById('laws').appendChild(h);
