@@ -149,6 +149,23 @@ function addLaw() {
 	/*	localStorage.setItem('testObject', JSON.stringify(data));*/
 }
 
+function showLaws() {
+	document.getElementById('laws').innerHTML = '';
+	for (let type in data.laws) {
+		let h = document.createElement('h4');
+		h.innerHTML = type;
+		let ul = document.createElement("ul");
+		for (let law in data.laws[type]) {
+			let li = document.createElement('li');
+			console.log(law, data.laws[type][law].config);
+			li.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].config}`;
+			ul.appendChild(li);
+		}
+		document.getElementById('laws').appendChild(h);
+		document.getElementById('laws').appendChild(ul);
+	}
+}
+
 
 function writeFromForm(gk)  {
 	//document.getElementById("form").classList.add("invisible")
