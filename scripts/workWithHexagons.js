@@ -55,7 +55,9 @@ function rememberHexagon(hex) {
 			hexDataLaw = tempclickedHexagons.map(hex => getHexData(hex));
 			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = (${hexDataLaw[1].name})^2`;
 			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})^2`;
-			document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = (${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`;
+			let keyArray = [`${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I}`, `${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I}`, `(${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`];
+			//document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = (${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`;
+			document.getElementById("lawMLTI").innerHTML = keyArray.sort();
 			drawParallelogram(clickedHexagonsCoords, "red");
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
@@ -71,7 +73,9 @@ function rememberHexagon(hex) {
 			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
 			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}`;
 			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = ${hexDataLaw[1].usl_ob} * ${hexDataLaw[3].usl_ob}`;
-			document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = ${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I} * ${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`;
+			let keyArray = [`${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I}`, `${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I}`, `${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I}`, `${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`];
+			//document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = ${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I} * ${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`;
+			document.getElementById("lawMLTI").innerHTML = keyArray.sort();
 			drawParallelogram(clickedHexagonsCoords, "red");
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
@@ -151,14 +155,17 @@ function addLaw() {
 
 function showLaws() {
 	document.getElementById('laws').innerHTML = '';
+	change = { 'force': 'Силовые соотношения', 'magn': 'Магнитное поле', 'gravity': 'Гравитационные законы', 'electro': 'Электромагнитные закономерности', 'kkv': 'Соотношения ККВ' };
 	for (let type in data.laws) {
-		let h = document.createElement('h4');
-		h.innerHTML = type;
+		let h = document.createElement('h3');
+		h.innerHTML = change[type];
 		let ul = document.createElement("ul");
 		for (let law in data.laws[type]) {
 			let li = document.createElement('li');
-			console.log(law, data.laws[type][law].config);
-			li.innerHTML = `${data.laws[type][law].name} -> ${data.laws[type][law].config} -> ${data.laws[type][law].formula}`;
+			let pre = document.createElement('pre');
+			pre.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].config}\n${data.laws[type][law].formula}`;
+			li.appendChild(pre);
+			//li.innerHTML = `${data.laws[type][law].name} -> ${data.laws[type][law].config} -> ${data.laws[type][law].formula}`;
 			ul.appendChild(li);
 		}
 		document.getElementById('laws').appendChild(h);
