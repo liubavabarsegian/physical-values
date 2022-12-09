@@ -177,9 +177,9 @@ function showLaws() {
 function writeFromForm(gk)  {
 	//document.getElementById("form").classList.add("invisible")
 	writeIntoObjFromInput(gk,"name","name")
-	writeIntoObjFromInput(gk,"ed_izm","unit")
+	writeIntoObjFromInput(gk,"ed_izm","unit_full")
 	writeIntoObjFromInput(gk,"usl_ob","symbol")
-	writeIntoObjFromInput(gk,"ob_ed_izm","unit_full")
+	writeIntoObjFromInput(gk,"ob_ed_izm","unit")
 	writeIntoObjFromInput(gk,"M","M")
 	writeIntoObjFromInput(gk,"L","L")
 	writeIntoObjFromInput(gk,"T","T")
@@ -187,8 +187,10 @@ function writeFromForm(gk)  {
 }
 
 document.getElementById("l2").onclick = function(){
-	gkInput = getFromInput("GK")
-	ltInput = getFromInput("LT")
+	//удалить 2 строки ниже
+	//gkInput = getFromInput("GK")
+	//ltInput = getFromInput("LT")
+
 	//newRedactHexElement = findHex(ltInput)
 	let delHexElement = getMainHexFromSiblings(ContextElement.target)
 	gk = getHexData(delHexElement)

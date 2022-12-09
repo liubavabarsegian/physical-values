@@ -18,9 +18,9 @@ function findGKIndex(hex,reqGK) {
 function findHex(lt) {
 
   ltArray = getPowFromLTGK(lt)
-  console.log(lt)
+  //console.log(lt)
   rowNumber = 5-(ltArray[0]+ltArray[2])
-  console.log(rowNumber)
+  //console.log(rowNumber)
   return data[`row${rowNumber}`][lt]
 }
 
@@ -120,9 +120,14 @@ function writeIntoInput(field,id) {
 
 function getFromInput(id) {
   input = document.getElementById(id)
-  val = input.value
-  if (input.getAttribute('type') != "number") {
-    val = replacePowNumbersBtoS(val)
+    val = input.value;
+    //console.log(id);
+    if (id == "M" || id == "L" || id == "T" || id == "I") {
+        val = parseInt(val, 10);
+        //console.log(val);
+    }
+    else {
+        val = replacePowNumbersBtoS(val)
     }
   return val
 }
