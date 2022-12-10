@@ -1119,7 +1119,7 @@ dataMix = {row1: {
   ],
   "L⁻¹T⁻²": [
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁰K⁰"}},
-  {"G¹K⁰":{name: "Градиент плотности массы", color: "gray", usl_ob: "grad \rho_m", M: 1, L: -4, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G¹K⁰"}},
+  {"G¹K⁰":{name: "Градиент плотности массы", color: "gray", usl_ob: "gradρ_m", M: 1, L: -4, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁰K¹"}},
@@ -1135,7 +1135,7 @@ dataMix = {row1: {
   ],
   "L⁰T⁻³": [
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G⁰K⁰"}},
-  {"G¹K⁰":{name: "Объемн плотность массы", color: "gray", usl_ob: "", M: 0, L: 0, T: 0, I: 0, ed_izm: "килограмм/метр³", ob_ed_izm: "кг/м³", LT: "L⁰T⁻³", GK: "G¹K⁰"}},
+  {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M: 0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G⁰K¹"}},
@@ -1391,8 +1391,28 @@ dataMix = {row1: {
   {"G⁰K⁻²":{name: "", color: "dark_blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁵T⁻⁹", GK: "G⁰K⁻²"}},
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁵T⁻⁹", GK: "G⁻¹K⁻²"}},
   ],
-  },
-  }
+    },
+	laws: {
+		force: {},
+		magn: {},
+		gravity: {},
+		electro: {},
+		kkv: {}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 dataEmpty = {row1: {
   "L⁰T⁴": [
@@ -2787,7 +2807,14 @@ dataEmpty = {row1: {
   {"G⁰K⁻²":{name: "", color: "dark_blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁵T⁻⁹", GK: "G⁰K⁻²"}},
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁵T⁻⁹", GK: "G⁻¹K⁻²"}},
   ],
-  },
+	},
+	laws: {
+		force: {},
+		magn: {},
+		gravity: {},
+		electro: {},
+		kkv: {}
+	}
 };
 
 

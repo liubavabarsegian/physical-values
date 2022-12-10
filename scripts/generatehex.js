@@ -96,17 +96,19 @@ function addHexEventListeners() {
 }
 
 function sortGK(tableData) {
-  for (let row in tableData) {
-    for (let hex in tableData[row]) {
-      if (findFirstNotEmptyNumber(tableData[row][hex]) != null) {
-        firstNonEmptyGK = findFirstNotEmptyNumber(tableData[row][hex])
-        firstGK = 0
-        swap = tableData[row][hex][firstGK]
-        tableData[row][hex][firstGK] = tableData[row][hex][firstNonEmptyGK]
-        tableData[row][hex][firstNonEmptyGK] = swap
-      }
+    for (let row in tableData) {
+        if (row != 'laws') {
+            for (let hex in tableData[row]) {
+                if (findFirstNotEmptyNumber(tableData[row][hex]) != null) {
+                    firstNonEmptyGK = findFirstNotEmptyNumber(tableData[row][hex])
+                    firstGK = 0
+                    swap = tableData[row][hex][firstGK]
+                    tableData[row][hex][firstGK] = tableData[row][hex][firstNonEmptyGK]
+                    tableData[row][hex][firstNonEmptyGK] = swap
+                }
+            }
+        }
     }
-  }
 }
 
 function findFirstNotEmptyNumber(hex) {
@@ -121,9 +123,11 @@ function findFirstNotEmptyNumber(hex) {
 function createTable(id,tableData) {
   Ntable = document.getElementById(id)
   Ntable.innerHTML = ""
-  for (let row in tableData) {
-    Ntable.appendChild(createRow(tableData[row],row))
-  }
+    for (let row in tableData) {
+        if (row != 'laws') {
+            Ntable.appendChild(createRow(tableData[row], row))
+        }
+    }
   addHexEventListeners()
 }
 

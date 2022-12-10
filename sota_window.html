@@ -65,6 +65,12 @@
 		input {
 			font-size: 16px;
 		}
+        pre {
+            border: dashed 2px;
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 300;
+        }
 	</style>
 </head>
 <body>
@@ -72,7 +78,7 @@
 	<div class="modal" data-modal="1">
 		<!--Связь уровней-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
-		<h3 class="modal__title">Связь уровней</h3>
+		<h2 class="modal__title">Связь уровней</h2>
 		<div class="wrapper exmpl">
 			<img src="styles/img/connect_full.png" style="text-align: center;">
 		</div>
@@ -81,7 +87,7 @@
 	<div class="modal" data-modal="2">
 		<!--Форма редактирования-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
-		<h3 class="modal__title">Редактирование элемента</h3>
+		<h2 class="modal__title">Редактирование элемента</h2>
 		<div id="form">
 			<table style="background-image: url(styles/img/sota.png); background-repeat: no-repeat; background-size: 100% 100%; display: inline-block; font: 20px verdana">
 				<tr>
@@ -129,7 +135,7 @@
 	<div class="modal" data-modal="3">
 		<!--Связь уровней-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
-		<h3 class="modal__title">Скриншот</h3>
+		<h2 class="modal__title">Скриншот</h2>
 		<div class="wrapper exmpl">
 			<div id="output_screen"></div>
 		</div>
@@ -139,7 +145,7 @@
 
 	<div class="modal" data-modal="4">
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
-		<h3 class="modal__title">Авторы</h3>
+		<h2 class="modal__title">Авторы</h2>
 		<b>Автор системы: Чуев А.С.</b>
 		<table width="300px" style="border:dotted" border="1">
 			<tr>
@@ -178,9 +184,9 @@
 	<div class="modal" data-modal="5">
 		<!--Связь уровней-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
-		<h3 class="modal__title">Закон</h3>
-		<input type="text" id="lowName" placeholder="Название закона" /><br />
-		<select id="lowType">
+		<h2 class="modal__title">Закон</h2>
+		<input type="text" id="lawName" placeholder="Название закона" /><br />
+		<select id="lawType">
 			<option value="">-- Выберите группу закона --</option>
 			<option value="force">Силовые соотношения</option>
 			<option value="magn">Магнитное поле</option>
@@ -188,10 +194,18 @@
 			<option value="electro">Электромагнитные закономерности</option>
 			<option value="kkv">Соотношения ККВ</option>
 		</select>
-		<h4 id="lowConfig"></h4>
-		<h4 id="lowFormula"></h4>
-		<button class="js-modal-close" onclick="addLow" style="color:forestgreen">Добавить</button>
+		<h4 id="lawConfig"></h4>
+		<h4 id="lawFormula"></h4>
+		<h3 id="lawMLTI" hidden></h3>
+		<button class="js-modal-close" onclick="addLaw();" style="color:forestgreen">Добавить</button>
 		<button class="js-modal-close" style="color:crimson">Отмена</button>
+	</div>
+
+	<div class="modal" data-modal="6">
+		<!--Связь уровней-->
+		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
+		<h2 class="modal__title">Добавленные законы</h2>
+		<div id="laws" style="max-height:500px; overflow-y:scroll" ></div>
 	</div>
 
 	<!-- Подложка под модальным окном -->
@@ -213,7 +227,7 @@
 			</ul>
 		</li>
 		<li>
-			<a href="#">Законом-ти</a>
+			<a href="#">Представления</a>
 			<ul>
 				<li><a href="#" onclick="ChangetoMix();">Смешанное</a></li>
 				<!--<li><a href="#" onclick="ChangetoMech();">Механика</a></li>-->
@@ -221,15 +235,16 @@
 			</ul>
 		</li>
 		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
+		<li><a href="#" onclick="showLaws();" class="js-open-modal" data-modal="6">Законы</a></li>
 		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
-		<li>
+		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
+		<!--<li>
 			<a href="#" class="js-open-modal" data-modal="6">Правка</a>
 			<ul>
-				<li><a href = "#" onlclick = "dataRollback()">Назад</a></li>
-				<li><a href = "#" onlick = "dataReturnForward()">Вперед</a></li>
+				<li><a href="#">Назад</a></li>
+				<li><a>Вперед</a></li>
 			</ul>
-		</li>
-		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
+		</li>-->
 	</ul>
 
 	<br />
@@ -269,7 +284,7 @@
 		<input type="text" id="outGK" placeholder="Здесть будет GK размерность" disabled />
 		<button name="sizer" data-size="1">Показать</button>
 		<button name="sizer" data-size="0">Спрятать</button>
-		<button class="js-open-modal" data-modal="5" hidden id="lowOpen">Связь уровней</button>
+		<button class="js-open-modal" data-modal="5" hidden id="lawOpen">Связь уровней</button>
 	</div>
 	<script type="text/javascript">
 		var img = document.getElementById('myfoto');
@@ -288,7 +303,7 @@
 
 
 	<script>
-/*		window.onload = function () { localStorage.setItem('testObject', JSON.stringify(data)); }*/
+		/*		window.onload = function () { localStorage.setItem('testObject', JSON.stringify(data)); }*/
 		window.onbeforeunload = function () {
 			return true;
 		};

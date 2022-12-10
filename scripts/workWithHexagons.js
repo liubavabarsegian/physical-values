@@ -28,9 +28,11 @@ function Deactivate(hex) {
 	rightTriangle.classList.remove("active-triangle")
 }
 
-document.addEventListener("keyup", (event) => {
+document.addEventListener("keydown", (event) => {
 	if (event.keyCode == 27) {
-		clickedHexagons = []
+		clickedHexagons.forEach(hexElement => Deactivate(hexElement));
+		clickedHexagons = [];
+		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 	}
 })
 
@@ -46,14 +48,19 @@ function rememberHexagon(hex) {
 	drawingParallelogram = true
 	//console.log(hex)
 	if (clickedHexagons.length == 3) {
-		tempclickedHexagons = [clickedHexagons[0], clickedHexagons[2], clickedHexagons[1], clickedHexagons[2]];
+		tempclickedHexagons = [clickedHexagons[0], clickedHexagons[1], clickedHexagons[2], clickedHexagons[1]];
 		if (checkParallelogram(tempclickedHexagons)) {
 			clickedHexagonsCoords = tempclickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
-			document.getElementById("lowOpen").click();
-			hexDataLow = tempclickedHexagons.map(hex => getHexData(hex));
-			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name}^2`;
-			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = ${hexDataLow[1].usl_ob}^2`;
+			document.getElementById("lawOpen").click();
+			hexDataLaw = tempclickedHexagons.map(hex => getHexData(hex));
+			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = (${hexDataLaw[1].name})^2`;
+			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})^2`;
+			let keyArray = [`${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I}`, `${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I}`, `(${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`];
+			//document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = (${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`;
+			document.getElementById("lawMLTI").innerHTML = keyArray.sort();
 			drawParallelogram(clickedHexagonsCoords, "red");
+			document.getElementById("lawName").value = "";
+			document.getElementById("lawType").value = "";
 			clickedHexagons.forEach(hexElement => Deactivate(hexElement))
 			clickedHexagons = []
 			drawingParallelogram = false
@@ -62,14 +69,19 @@ function rememberHexagon(hex) {
 	if (clickedHexagons.length == 4) {
 		if (checkParallelogram(clickedHexagons)) {
 			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
-			document.getElementById("lowOpen").click();
-			hexDataLow = clickedHexagons.map(hex => getHexData(hex));
-			document.getElementById("lowConfig").innerHTML = `${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name} * ${hexDataLow[3].name}`;
-			document.getElementById("lowFormula").innerHTML = `${hexDataLow[0].usl_ob} * ${hexDataLow[2].usl_ob} = ${hexDataLow[1].usl_ob} * ${hexDataLow[3].usl_ob}`;
+			document.getElementById("lawOpen").click();
+			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
+			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}`;
+			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = ${hexDataLaw[1].usl_ob} * ${hexDataLaw[3].usl_ob}`;
+			let keyArray = [`${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I}`, `${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I}`, `${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I}`, `${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`];
+			//document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = ${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I} * ${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`;
+			document.getElementById("lawMLTI").innerHTML = keyArray.sort();
 			drawParallelogram(clickedHexagonsCoords, "red");
+			document.getElementById("lawName").value = "";
+			document.getElementById("lawType").value = "";
 		} else {
-			hexDataLow = clickedHexagons.map(hex => getHexData(hex));
-			alert(`Закономерности\n${hexDataLow[0].name} * ${hexDataLow[2].name} = ${hexDataLow[1].name} * ${hexDataLow[3].name}\nне существует!`);
+			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
+			alert(`Закономерности\n${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}\nне существует!`);
 		}
 
 		clickedHexagons.forEach(hexElement => Deactivate(hexElement))
@@ -125,12 +137,49 @@ function finRedact() {
 /*	localStorage.setItem('testObject', JSON.stringify(data));*/
 }
 
+function addLaw() {
+	let element = {
+		name: document.getElementById("lawName").value,
+		config: document.getElementById("lawConfig").innerHTML,
+		formula: document.getElementById("lawFormula").innerHTML
+	}
+	key = document.getElementById("lawMLTI").innerHTML;
+	let chselect = document.getElementById("lawType").value;
+	if (data.laws[chselect][key] === undefined) {
+		data.laws[chselect][key] = element;
+		alert("Закон сохранен");
+	}
+	else {alert('Данный закон уже существует') }
+	/*	localStorage.setItem('testObject', JSON.stringify(data));*/
+}
+
+function showLaws() {
+	document.getElementById('laws').innerHTML = '';
+	change = { 'force': 'Силовые соотношения', 'magn': 'Магнитное поле', 'gravity': 'Гравитационные законы', 'electro': 'Электромагнитные закономерности', 'kkv': 'Соотношения ККВ' };
+	for (let type in data.laws) {
+		let h = document.createElement('h3');
+		h.innerHTML = change[type];
+		let ul = document.createElement("ul");
+		for (let law in data.laws[type]) {
+			let li = document.createElement('li');
+			let pre = document.createElement('pre');
+			pre.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].config}\n${data.laws[type][law].formula}`;
+			li.appendChild(pre);
+			//li.innerHTML = `${data.laws[type][law].name} -> ${data.laws[type][law].config} -> ${data.laws[type][law].formula}`;
+			ul.appendChild(li);
+		}
+		document.getElementById('laws').appendChild(h);
+		document.getElementById('laws').appendChild(ul);
+	}
+}
+
+
 function writeFromForm(gk)  {
 	//document.getElementById("form").classList.add("invisible")
 	writeIntoObjFromInput(gk,"name","name")
-	writeIntoObjFromInput(gk,"ed_izm","unit")
+	writeIntoObjFromInput(gk,"ed_izm","unit_full")
 	writeIntoObjFromInput(gk,"usl_ob","symbol")
-	writeIntoObjFromInput(gk,"ob_ed_izm","unit_full")
+	writeIntoObjFromInput(gk,"ob_ed_izm","unit")
 	writeIntoObjFromInput(gk,"M","M")
 	writeIntoObjFromInput(gk,"L","L")
 	writeIntoObjFromInput(gk,"T","T")
@@ -138,8 +187,10 @@ function writeFromForm(gk)  {
 }
 
 document.getElementById("l2").onclick = function(){
-	gkInput = getFromInput("GK")
-	ltInput = getFromInput("LT")
+	//удалить 2 строки ниже
+	//gkInput = getFromInput("GK")
+	//ltInput = getFromInput("LT")
+
 	//newRedactHexElement = findHex(ltInput)
 	let delHexElement = getMainHexFromSiblings(ContextElement.target)
 	gk = getHexData(delHexElement)
