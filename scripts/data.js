@@ -388,7 +388,7 @@ dataMix = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L³T⁻¹", GK: "G⁻¹K⁻²"}},
   ],
   "L⁴T⁻²": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Ускорение объёма", color: "yellow", usl_ob: "", M:  0, L: 4, T: -2, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "Локализация массы", color: "gray", usl_ob: "mr", M: 1, L: 1, T: 0, I: 0, ed_izm: "килограмм*метр", ob_ed_izm: "кг*м", LT: "L⁴T⁻²", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G²K⁰"}},
@@ -681,7 +681,7 @@ dataMix = {row1: {
   ],
   "L²T⁻²": [
   {"G⁰K⁰":{name: "Скорость²", color: "yellow", usl_ob: "v²", M: 0, L: 2, T: -2, I: 0, ed_izm: "метр²/сек²", ob_ed_izm: "м²/с²", LT: "L²T⁻²", GK: "G⁰K⁰"}},
-  {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻²", GK: "G¹K⁰"}},
+  {"G¹K⁰":{name: "Градиент массы", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻²", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻²", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻²", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻²", GK: "G⁰K¹"}},
@@ -796,7 +796,7 @@ dataMix = {row1: {
   "L⁻¹T⁰": [
   {"G⁰K⁰":{name: "Кривизна", color: "yellow", usl_ob: "L⁻¹", M: 0, L: -1, T: 0, I: 0, ed_izm: "метр⁻¹", ob_ed_izm: "м⁻¹", LT: "L⁻¹T⁰", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁰", GK: "G¹K⁰"}},
-  {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁰", GK: "G⁻¹K⁰"}},
+  {"G⁻¹K⁰":{name: "Градиент G", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁰", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁰", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁰", GK: "G⁰K¹"}},
   {"G¹K¹":{name: "", color: "light_green", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁰", GK: "G¹K¹"}},
@@ -812,7 +812,7 @@ dataMix = {row1: {
   "L⁰T⁻¹": [
   {"G⁰K⁰":{name: "Частота", color: "yellow", usl_ob: "f", M: 0, L: 0, T: -1, I: 0, ed_izm: "Герц", ob_ed_izm: "Гц", LT: "L⁰T⁻¹", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻¹", GK: "G¹K⁰"}},
-  {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻¹", GK: "G⁻¹K⁰"}},
+  {"G⁻¹K⁰":{name: "Изменение G", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻¹", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻¹", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻¹", GK: "G⁰K¹"}},
   {"G¹K¹":{name: "Плотн. заряда", color: "light_green", usl_ob: "ρ", M: 0, L: -3, T: 1, I: 1, ed_izm: "Кулон/метр³", ob_ed_izm: "Кл/м³", LT: "L⁰T⁻¹", GK: "G¹K¹"}},
@@ -924,7 +924,7 @@ dataMix = {row1: {
   },
   row7: {
   "L⁻³T¹": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻³T¹", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Объёмн. плотн. времени", color: "yellow", usl_ob: "", M:  0, L: -3, T: 1, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻³T¹", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻³T¹", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻³T¹", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻³T¹", GK: "G²K⁰"}},
@@ -972,7 +972,7 @@ dataMix = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻¹", GK: "G⁻¹K⁻²"}},
   ],
   "L⁰T⁻²": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻²", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Квадрат частоты", color: "yellow", usl_ob: "", M:  0, L: 0, T: -2, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻²", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "Плотность массы", color: "gray", usl_ob: "ρ", M: 1, L: -3, T: 0, I: 0, ed_izm: "килограмм/метр³", ob_ed_izm: "кг/м³", LT: "L⁰T⁻²", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻²", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻²", GK: "G²K⁰"}},
@@ -1102,7 +1102,7 @@ dataMix = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻³T⁰", GK: "G⁻¹K⁻²"}},
   ],
   "L⁻²T⁻¹": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻¹", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Градиент вихря", color: "yellow", usl_ob: "", M:  0, L: -2, T: -1, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻¹", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻¹", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻¹", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻¹", GK: "G²K⁰"}},
@@ -1118,7 +1118,7 @@ dataMix = {row1: {
   {"G⁻¹K⁻²":{name: "Градиент электр. сопротивл.", color: "purple", usl_ob: "grad\ R", M: 1, L: 1, T: -3, I: -2, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻¹", GK: "G⁻¹K⁻²"}},
   ],
   "L⁻¹T⁻²": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Изменение вихря", color: "yellow", usl_ob: "", M:  0, L: -1, T: -2, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "Градиент плотности массы", color: "gray", usl_ob: "gradρ_m", M: 1, L: -4, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G²K⁰"}},
@@ -1126,7 +1126,7 @@ dataMix = {row1: {
   {"G¹K¹":{name: "", color: "light_green", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G¹K¹"}},
   {"G¹K²":{name: "", color: "vinous", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G¹K²"}},
   {"G²K²":{name: "", color: "dark_green", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G²K²"}},
-  {"G⁰K⁻¹":{name: "", color: "blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁰K⁻¹"}},
+  {"G⁰K⁻¹":{name: "Ротор В", color: "blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁰K⁻¹"}},
   {"G¹K⁻¹":{name: "", color: "mint", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G¹K⁻¹"}},
   {"G²K⁻¹":{name: "", color: "white_blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G²K⁻¹"}},
   {"G⁻¹K⁻¹":{name: "", color: "swamp", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻¹T⁻²", GK: "G⁻¹K⁻¹"}},
@@ -1151,7 +1151,7 @@ dataMix = {row1: {
   ],
   "L¹T⁻⁴": [
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L¹T⁻⁴", GK: "G⁰K⁰"}},
-  {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L¹T⁻⁴", GK: "G¹K⁰"}},
+  {"G¹K⁰":{name: "Градиент давления", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L¹T⁻⁴", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L¹T⁻⁴", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L¹T⁻⁴", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L¹T⁻⁴", GK: "G⁰K¹"}},
@@ -1264,7 +1264,7 @@ dataMix = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻³T⁻¹", GK: "G⁻¹K⁻²"}},
   ],
   "L⁻²T⁻²": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻²", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Квадрат вихря", color: "yellow", usl_ob: "", M:  0, L: -2, T: -2, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻²", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻²", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻²", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T⁻²", GK: "G²K⁰"}},
@@ -1299,7 +1299,7 @@ dataMix = {row1: {
   {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G⁻¹K⁰"}},
-  {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G²K⁰"}},
+  {"G²K⁰":{name: "Квадрат плотности массы", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G²K⁰"}},
   {"G⁰K¹":{name: "", color: "sky", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G⁰K¹"}},
   {"G¹K¹":{name: "", color: "light_green", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G¹K¹"}},
   {"G¹K²":{name: "", color: "vinous", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻⁴", GK: "G¹K²"}},
@@ -1340,7 +1340,7 @@ dataMix = {row1: {
   {"G¹K⁻¹":{name: "", color: "mint", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻⁶", GK: "G¹K⁻¹"}},
   {"G²K⁻¹":{name: "", color: "white_blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻⁶", GK: "G²K⁻¹"}},
   {"G⁻¹K⁻¹":{name: "", color: "swamp", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻⁶", GK: "G⁻¹K⁻¹"}},
-  {"G⁰K⁻²":{name: "", color: "dark_blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻⁶", GK: "G⁰K⁻²"}},
+  {"G⁰K⁻²":{name: "Квадрат Е", color: "dark_blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻⁶", GK: "G⁰K⁻²"}},
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L²T⁻⁶", GK: "G⁻¹K⁻²"}},
   ],
   "L³T⁻⁷": [
@@ -1804,7 +1804,7 @@ dataEmpty = {row1: {
   {"G⁻¹K⁻²":{name: "", color: "purple", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L³T⁻¹", GK: "G⁻¹K⁻²"}},
   ],
   "L⁴T⁻²": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 4, T: -2, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁴T⁻²", GK: "G²K⁰"}},
@@ -2194,7 +2194,7 @@ dataEmpty = {row1: {
   },
   row6: {
   "L⁻²T¹": [
-  {"G⁰K⁰":{name: "", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T¹", GK: "G⁰K⁰"}},
+  {"G⁰K⁰":{name: "Поверхн. плотн. времени", color: "yellow", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T¹", GK: "G⁰K⁰"}},
   {"G¹K⁰":{name: "", color: "gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T¹", GK: "G¹K⁰"}},
   {"G⁻¹K⁰":{name: "", color: "grideperlevy", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T¹", GK: "G⁻¹K⁰"}},
   {"G²K⁰":{name: "", color: "dark_gray", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁻²T¹", GK: "G²K⁰"}},
