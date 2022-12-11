@@ -21,6 +21,13 @@
 	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
 	<script>
+		function reloadValues() {
+			data = dataMix;
+			localStorage.setItem('testObject', JSON.stringify(data));
+			sortGK(data);
+            createTable("newf", data)
+        }
+
 		function ChangetoMix() {
 			data = dataMix;
 			createTable("newf", data);
@@ -245,6 +252,7 @@
 				<li><a>Вперед</a></li>
 			</ul>
 		</li>-->
+		<li><a href="#" onclick="reloadValues();">Обновить</a></li>
 	</ul>
 
 	<br />
