@@ -44,7 +44,8 @@ function addHexEventListeners() {
               hexData[findGKIndex(hexData,gk.GK)] = hexData[0]
               hexData[0] = swap
 
-              createTable("newf",data)
+                createTable("newf", data);
+                localStorage.setItem('testObject', JSON.stringify(data));
             })
             gkmenu.appendChild(gkLiMenu)
           }
