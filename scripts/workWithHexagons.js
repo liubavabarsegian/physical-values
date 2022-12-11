@@ -248,6 +248,23 @@ fileSelector.addEventListener('change', (event) => {
 });
 
 
+function color_gk_input(){
+	var gk_colors = [{'G': 0, 'K': 0, color: "rgb(218, 218, 139)" }, {'G': 1, 'K': 0, color: "rgb(194, 197, 200)"}, 
+    {'G': -1, 'K': 0, color: "rgb(69, 76, 80)"}, {'G': 2, 'K': 0, color: "rgb(171, 170, 170)"},
+    {'G': 0, 'K': 1, color: "rgb(173, 207, 221)"}, {'G': 1, 'K':1, color: "rgb(182, 238, 182)"}, 
+    {'G': 1, 'K': 2, color: "rgb(247, 130, 134)"}, {'G': 2, 'K': 2, color: "rgb(87, 174, 87)"},
+    {'G': 0, 'K': 1, color: "gb(111, 154, 233)"}, {'G': 1, 'K': -1, color: "rgb(177, 203, 228)"},
+    {'G': 2, 'K': -1, color: "rgb(207, 223, 238)"}, {'G': -1, 'K': -1, color: "rgb(39, 127, 56)"},
+    {'G': 0, 'K': -2, color: "rgb(91, 91, 180)"}, {'G': -1, 'K': -2, color: "rgb(210, 166, 227)"}]
 
+	var g = document.getElementById("GGK")
+	var k = document.getElementById("KGK")
 
+	for (one in gk_colors) {
+		if (gk_colors[one]["G"] == g.value && gk_colors[one]["K"] == k.value) {
+			alert(gk_colors[one]["G"])
+			g.style.backgroundColor = gk_colors[one]["color"];
+		}
+	}
+}
 
