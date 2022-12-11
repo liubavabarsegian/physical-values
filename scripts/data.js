@@ -2819,3 +2819,10 @@ dataEmpty = {row1: {
 
 
 data = dataMix;
+
+if (localStorage.getItem('testObject') == null) {
+  data = dataMix;
+}
+else {
+  data = JSON.parse(localStorage.getItem('testObject'));
+}

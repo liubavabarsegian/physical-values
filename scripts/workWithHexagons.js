@@ -45,6 +45,7 @@ function rememberHexagon(hex) {
 	clickedHexagons.push(hex);
 	
 	console.log(clickedHexagons)
+	localStorage.setItem('testObject', JSON.stringify(data));
 	drawingParallelogram = true
 	//console.log(hex)
 	if (clickedHexagons.length == 3) {
@@ -134,7 +135,8 @@ function finRedact() {
 	//console.log(data["row5"]["L⁰T⁰"])
 	sortGK(data);
 	createTable("newf", data);
-/*	localStorage.setItem('testObject', JSON.stringify(data));*/
+	
+	localStorage.setItem('testObject', JSON.stringify(data));
 }
 
 function addLaw() {
@@ -150,7 +152,8 @@ function addLaw() {
 		alert("Закон сохранен");
 	}
 	else {alert('Данный закон уже существует') }
-	/*	localStorage.setItem('testObject', JSON.stringify(data));*/
+	
+	localStorage.setItem('testObject', JSON.stringify(data));
 }
 
 function showLaws() {
@@ -198,6 +201,8 @@ document.getElementById("l2").onclick = function(){
 	sortGK(data)
 	createTable("newf",data)
 	menu.classList.remove("active")
+
+	localStorage.setItem('testObject', JSON.stringify(data));
 }
 
 function deleteHexGK(gk) {
