@@ -1142,7 +1142,7 @@ dataMix = {row1: {
   {"G¹K¹":{name: "", color: "light_green", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G¹K¹"}},
   {"G¹K²":{name: "", color: "vinous", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G¹K²"}},
   {"G²K²":{name: "", color: "dark_green", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G²K²"}},
-  {"G⁰K⁻¹":{name: "divE; rotB", color: "blue", usl_ob: "", M: 1, L: 0, T: -3, I: -1, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G⁰K⁻¹"}},
+  {"G⁰K⁻¹":{name: "dE/dt", color: "blue", usl_ob: "", M: 1, L: 0, T: -3, I: -1, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G⁰K⁻¹"}},
   {"G¹K⁻¹":{name: "", color: "mint", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G¹K⁻¹"}},
   {"G²K⁻¹":{name: "", color: "white_blue", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G²K⁻¹"}},
   {"G⁻¹K⁻¹":{name: "", color: "swamp", usl_ob: "", M:  0, L: 0, T: 0, I: 0, ed_izm: "", ob_ed_izm: "", LT: "L⁰T⁻³", GK: "G⁻¹K⁻¹"}},
