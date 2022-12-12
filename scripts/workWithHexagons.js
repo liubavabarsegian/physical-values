@@ -214,6 +214,15 @@ function deleteHexGK(gk) {
 	gk.ob_ed_izm = ""
 	gk.ed_izm = ""
 }
+
+function goBack() {
+	console.log('goBack()')
+}
+
+function goForward() {
+	console.log('goForward()')
+}
+
 //не работает
 //function showMenuLevels() {
 //	document.getElementById('moreLevels').removeAttribute("hidden");
@@ -250,6 +259,7 @@ fileSelector.addEventListener('change', (event) => {
 	reader.readAsText(fileList[0]);
 	document.getElementById('sota_filenm').value = fileList[0].name.replace('.jsota','');
 });
+
 
 
 //function color_gk_input() {
