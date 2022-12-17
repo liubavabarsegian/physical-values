@@ -2818,7 +2818,7 @@ dataEmpty = {row1: {
 };
 
 
-//data = dataMix;
+var data;
 
 if (localStorage.getItem('testObject') == null) {
   data = dataMix;

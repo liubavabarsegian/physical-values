@@ -1,3 +1,49 @@
+window.onload = function() {
+	step = 0;
+	resources = [data, data, data, data];
+}
+function goBack() {
+	console.log('goBack()');
+	step = step + 1;
+	if (step < resources.length) {
+		data = resources[step];
+		sortGK(data);
+		createTable("newf", data);
+		console.log(data);
+	}
+	else {alert('Отменить действия невозможно!') }
+}
+
+function ReplacingSteps(actualData) {
+	//if (1 <= resources.length <= 4) {
+	//	resources.push(data);
+ //   }
+	for (let i = resources.length - 1; i >= 1; i--) {
+		console.log(resources[i], resources[i - 1]);
+		resources[i] = resources[i - 1];
+	}
+	resources[0] = actualData;
+	step = 0;
+	console.log(resources);
+}
+
+//store = (function (prev) {
+//	callee = arguments.callee;
+//	return function (curr) {
+//		console.log(prev);
+//		console.log("prev:" + prev, "curr:" + curr);
+//		store = callee(curr);
+//	}
+//}(data)) //Initial value
+
+//store(1); //Output : prev:0 curr:1 
+//store(2); //Output : prev:1 curr:2
+//store(5); //Output : prev:2 curr:3
+//console.log(prev);
+
+//function goForward() {
+//	console.log('goForward()')
+//}
 
 document.addEventListener("click", event => {
 	if (event.button !== 2) { menu.classList.remove("active"); gkmenu.classList.remove("active")}
@@ -136,6 +182,8 @@ function finRedact() {
 	createTable("newf", data);
 	
 	localStorage.setItem('testObject', JSON.stringify(data));
+	ReplacingSteps(data);
+	//store(data);
 }
 
 function addLaw() {
@@ -213,14 +261,6 @@ function deleteHexGK(gk) {
 	gk.I = 0
 	gk.ob_ed_izm = ""
 	gk.ed_izm = ""
-}
-
-function goBack() {
-	console.log('goBack()')
-}
-
-function goForward() {
-	console.log('goForward()')
 }
 
 //не работает

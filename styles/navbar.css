@@ -1,7 +1,7 @@
 #navbar ul {
     display: none;
     background-color: #f90;
-    /* position: absolute; */
+    position: absolute;
     top: 100%;
 }
 
@@ -36,7 +36,7 @@
     width: 100px;
     color: #fff;
     text-decoration: none;
-    /* text-align: center; */
+    text-align: center;
     position: relative;
     z-index: 10;
 }
@@ -44,13 +44,13 @@
 #navbar ul li {
     float: none;
 }
-#back {
+/*#back {*/
     /* width: 30px;   */
-    width: 30px;
+    /*width: 30px;
 }
 #forward {
     width: 30px;
-}
+}*/
 
 #navbar ul li ul{
     float: none;
