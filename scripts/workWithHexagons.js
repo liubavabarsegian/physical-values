@@ -1,12 +1,10 @@
-window.onload = function() {
-	step = 0;
-	resources = [data, data, data, data];
-}
+	var step = 0;
+var resources = [JSON.stringify(data), JSON.stringify(data), JSON.stringify(data), JSON.stringify(data)];
 function goBack() {
 	console.log('goBack()');
 	step = step + 1;
 	if (step < resources.length) {
-		data = resources[step];
+		data = JSON.parse(resources[step]);
 		sortGK(data);
 		createTable("newf", data);
 		console.log(data);
@@ -19,11 +17,12 @@ function ReplacingSteps(actualData) {
 	//	resources.push(data);
  //   }
 	for (let i = resources.length - 1; i >= 1; i--) {
-		console.log(resources[i], resources[i - 1]);
+		console.log(JSON.parse(resources[i]), JSON.parse(resources[i - 1]));
 		resources[i] = resources[i - 1];
 	}
-	resources[0] = actualData;
+	resources[0] = JSON.stringify(actualData);
 	step = 0;
+	console.log(JSON.parse(resources[0]))
 	console.log(resources);
 }
 
