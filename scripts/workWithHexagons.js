@@ -1,5 +1,5 @@
 	var step = 0;
-var resources = [JSON.stringify(data), JSON.stringify(data), JSON.stringify(data), JSON.stringify(data)];
+var resources = [JSON.stringify(data)];
 function goBack() {
 	console.log('goBack()');
 	step = step + 1;
@@ -8,20 +8,22 @@ function goBack() {
 		sortGK(data);
 		createTable("newf", data);
 		console.log(data);
+		ReplacingSteps(data, false);
+		resources.pop();
 	}
 	else {alert('Отменить действия невозможно!') }
 }
 
-function ReplacingSteps(actualData) {
-	//if (1 <= resources.length <= 4) {
-	//	resources.push(data);
- //   }
+function ReplacingSteps(actualData,fls) {
+	if (1 <= resources.length < 4) {
+		resources.push(JSON.stringify(data));
+    }
 	for (let i = resources.length - 1; i >= 1; i--) {
 		console.log(JSON.parse(resources[i]), JSON.parse(resources[i - 1]));
 		resources[i] = resources[i - 1];
 	}
 	resources[0] = JSON.stringify(actualData);
-	step = 0;
+	if (fls) { step = 0; }
 	console.log(JSON.parse(resources[0]))
 	console.log(resources);
 }
@@ -181,7 +183,7 @@ function finRedact() {
 	createTable("newf", data);
 	
 	localStorage.setItem('testObject', JSON.stringify(data));
-	ReplacingSteps(data);
+	ReplacingSteps(data,true);
 	//store(data);
 }
 
