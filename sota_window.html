@@ -236,7 +236,8 @@
 		<li>
 			<a href="#" class="js-open-modal" data-modal="6">Правка</a>
 			<ul>
-				<li><a href="#" onclick="goBack();">↺ - назад</a></li>
+				<li><a href="#" onclick="undoableCounter.goBack();">↺ - назад</a></li>
+				<li><a href="#" onclick="undoableCounter.goForward();">↻ - вперед</a></li>
 			</ul>
 		</li>
 		<!--<li>
@@ -252,8 +253,6 @@
 		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
 		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
 		<li><a href="#" onclick="reloadValues();">Обновить</a></li>
-		<!--<li id="back"><a href="#" onclick="goBack();"> ↺ </a></li>
-	<li id="forward"><a href="#" onclick="goForward();"> ↻ </a></li>-->
 	</ul>
 
 	<br />

@@ -46,6 +46,7 @@ function addHexEventListeners() {
 
                 createTable("newf", data);
                 localStorage.setItem('testObject', JSON.stringify(data));
+                //undoableCounter.setValue(data); - убрать комментарий, если необходимо возвращаться к старым уровням(плохо работает)
             })
             gkmenu.appendChild(gkLiMenu)
           }

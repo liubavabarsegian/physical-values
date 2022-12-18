@@ -1,50 +1,43 @@
-	var step = 0;
-var resources = [JSON.stringify(data)];
-function goBack() {
-	console.log('goBack()');
-	step = step + 1;
-	if (step < resources.length) {
-		data = JSON.parse(resources[step]);
-		sortGK(data);
-		createTable("newf", data);
-		console.log(data);
-		ReplacingSteps(data, false);
-		resources.pop();
+const createUndoableCounter = () => {
+	let history = [JSON.stringify(data)];
+	let position = 0;
+
+	return {
+
+		value() {
+			return JSON.parse(history[position]);
+		},
+
+		setValue(value) {
+			if (position < history.length - 1) {
+				history = history.slice(0, position + 1);
+			}
+			history.push(JSON.stringify(value));
+			position += 1;
+		},
+
+		goBack() {
+			if (position > 0) {
+				position -= 1;
+				data = this.value()
+				sortGK(data);
+				createTable("newf", data);
+			}
+			else { alert('Больше назад нельзя'); }
+		},
+
+		goForward() {
+			if (position < history.length - 1) {
+				position += 1;
+				data = this.value()
+				sortGK(data);
+				createTable("newf", data);
+			}
+			else { alert('Больше вперед нельзя'); }
+		}
 	}
-	else {alert('Отменить действия невозможно!') }
 }
-
-function ReplacingSteps(actualData,fls) {
-	if (1 <= resources.length < 4) {
-		resources.push(JSON.stringify(data));
-    }
-	for (let i = resources.length - 1; i >= 1; i--) {
-		console.log(JSON.parse(resources[i]), JSON.parse(resources[i - 1]));
-		resources[i] = resources[i - 1];
-	}
-	resources[0] = JSON.stringify(actualData);
-	if (fls) { step = 0; }
-	console.log(JSON.parse(resources[0]))
-	console.log(resources);
-}
-
-//store = (function (prev) {
-//	callee = arguments.callee;
-//	return function (curr) {
-//		console.log(prev);
-//		console.log("prev:" + prev, "curr:" + curr);
-//		store = callee(curr);
-//	}
-//}(data)) //Initial value
-
-//store(1); //Output : prev:0 curr:1 
-//store(2); //Output : prev:1 curr:2
-//store(5); //Output : prev:2 curr:3
-//console.log(prev);
-
-//function goForward() {
-//	console.log('goForward()')
-//}
+const undoableCounter = createUndoableCounter();
 
 document.addEventListener("click", event => {
 	if (event.button !== 2) { menu.classList.remove("active"); gkmenu.classList.remove("active")}
@@ -53,8 +46,6 @@ document.addEventListener("click", event => {
 menu.addEventListener("click", event => {
 		event.stopPropagation();
 }, false);
-
-
 
 
 function Activate(hex) {
@@ -183,8 +174,7 @@ function finRedact() {
 	createTable("newf", data);
 	
 	localStorage.setItem('testObject', JSON.stringify(data));
-	ReplacingSteps(data,true);
-	//store(data);
+	undoableCounter.setValue(data);
 }
 
 function addLaw() {
@@ -202,6 +192,7 @@ function addLaw() {
 	else {alert('Данный закон уже существует') }
 	
 	localStorage.setItem('testObject', JSON.stringify(data));
+	//undoableCounter.setValue(data); - убрать комментарий, если не реализуем удаление законов
 }
 
 function showLaws() {
@@ -251,6 +242,7 @@ document.getElementById("l2").onclick = function(){
 	menu.classList.remove("active")
 
 	localStorage.setItem('testObject', JSON.stringify(data));
+	undoableCounter.setValue(data);
 }
 
 function deleteHexGK(gk) {
