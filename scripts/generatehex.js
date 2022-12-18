@@ -1,5 +1,5 @@
 sortGK(data)
-createTable("newf",data)
+createTable("newf", data)
 
 // Array.prototype.swapsss = function (x,y) {
 //   var b = this[x];
@@ -38,7 +38,7 @@ function addHexEventListeners() {
             gkAMenu.classList.add("context-menu__link")
             gkAMenu.innerHTML = gk.name
             gkLiMenu.appendChild(gkAMenu)
-            gkLiMenu.addEventListener("click", function() {
+              gkLiMenu.addEventListener("click", function () {
 
               swap = hexData[findGKIndex(hexData,gk.GK)]
               hexData[findGKIndex(hexData,gk.GK)] = hexData[0]
@@ -46,9 +46,9 @@ function addHexEventListeners() {
 
                 createTable("newf", data);
                 localStorage.setItem('testObject', JSON.stringify(data));
-                //undoableCounter.setValue(data); - убрать комментарий, если необходимо возвращаться к старым уровням(плохо работает)
+                undoableCounter.setValue(data);
             })
-            gkmenu.appendChild(gkLiMenu)
+              gkmenu.appendChild(gkLiMenu);
           }
         })
 
@@ -56,11 +56,12 @@ function addHexEventListeners() {
                 document.getElementById("l0").style.display = "none"
 					document.getElementById("l1a").innerHTML = "Добавить"
 					document.getElementById("l2").style.display = "none"
-            } else {
+            }
+            else {
                 document.getElementById("l0").style.display = ""
 					document.getElementById("l1a").innerHTML = "Редактировать"
 					document.getElementById("l2").style.display = ""
-				}
+			}
 		});
 	
 	hex.addEventListener("click", function() {
