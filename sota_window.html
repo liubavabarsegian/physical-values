@@ -27,16 +27,6 @@
 			sortGK(data);
             createTable("newf", data)
         }
-
-		function ChangetoMix() {
-			data = dataMix;
-			createTable("newf", data);
-		}
-
-		function ChangetoEmpty() {
-			data = dataEmpty;
-			createTable("newf", data);
-		} //уберу
 		function showMenuLevels() {
 			document.getElementById("moreLevels").hidden = false;
 		}
@@ -240,14 +230,6 @@
 				<li><a href="#" onclick="undoableCounter.goForward();">↻ - вперед</a></li>
 			</ul>
 		</li>
-		<!--<li>
-		<a href="#">Представления</a>
-		<ul>
-			<li><a href="#" onclick="ChangetoMix();">Смешанное</a></li>-->
-		<!--<li><a href="#" onclick="ChangetoMech();">Механика</a></li>-->
-		<!--<li><a href="#" onclick="ChangetoEmpty();">Пустой</a></li>
-		</ul>
-	</li>-->
 		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
 		<li><a href="#" onclick="showLaws();" class="js-open-modal" data-modal="6">Законы</a></li>
 		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
