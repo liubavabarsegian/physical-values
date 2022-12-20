@@ -34,11 +34,14 @@
 	<script>
         document.onmousedown = function (event) {
             var tar = event.target;
-            if (tar.id != 'myfoto') return;
-            tar.style.position = 'absolute';
+            if (tar.id != 'myfoto' && !tar.classList.contains('modal')) return;
+			tar.style.position = 'absolute';
+			//tar.style.removeProperty('transform');
+            var shiftX = event.clientX - tar.getBoundingClientRect().left;
+            var shiftY = event.clientY - tar.getBoundingClientRect().top;
             document.onmousemove = function (event) {
-                tar.style.left = event.pageX - 150 + 'px';
-                tar.style.top = event.pageY - 150 + 'px';
+                tar.style.left = event.pageX - shiftX + 'px';
+                tar.style.top = event.pageY - shiftY + 'px';
                 //return false;
             }
             tar.onmouseup = function () {

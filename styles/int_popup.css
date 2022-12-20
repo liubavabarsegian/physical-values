@@ -28,7 +28,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+/*    transform: translate(-50%, -50%);*/
     z-index: 30; /* Должен быть выше чем у подложки*/
     /*  Побочные стили   */
     box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
@@ -36,7 +36,7 @@
     padding: 30px;
     border-radius: 3px;
     background-color: #fff;
-    transition: 0.3s all;
+/*    transition: 0.3s all;*/
 }
 
 
