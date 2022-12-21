@@ -45,13 +45,15 @@ function getPowFromLTGK(ltgk) {
 // ⁰,⁻¹,⁻²,⁻³,⁻⁴,⁻⁵,⁻⁶,⁻⁷,⁻⁸,⁻⁹ 
 
 function replacePowNumbersBtoS(string) {
-  return string.replace(/0/g,"⁰").replace(/1/g,"¹").replace(/2/g,"²").replace(/3/g,"³").replace(/4/g,"⁴").replace(/5/g,"⁵")
-               .replace(/6/g,"⁶").replace(/7/g,"⁷").replace(/8/g,"⁸").replace(/9/g,"⁹").replace(/-/g,"⁻")
+    return string.replace(/_0/g, "₀").replace(/_1/g, "₁").replace(/_2/g, "₂")
+        .replace(/0/g, "⁰").replace(/1/g, "¹").replace(/2/g, "²").replace(/3/g, "³").replace(/4/g, "⁴")
+        .replace(/5/g, "⁵").replace(/6/g,"⁶").replace(/7/g,"⁷").replace(/8/g,"⁸").replace(/9/g,"⁹").replace(/-/g,"⁻")
 }
 
 function replacePowNumbersStoB(string) {
-  return string.replace(/⁰/g,"0").replace(/¹/g,"1").replace(/²/g,"2").replace(/³/g,"3").replace(/⁴/g,"4").replace(/⁵/g,"5")
-               .replace(/⁶/g,"6").replace(/⁷/g,"7").replace(/⁸/g,"8").replace(/⁹/g,"9").replace(/⁻/g,"-")
+    return string.replace(/₀/g, "_0").replace(/₁/g, "_1").replace(/₂/g, "_2")
+        .replace(/⁰/g, "0").replace(/¹/g, "1").replace(/²/g, "2").replace(/³/g, "3").replace(/⁴/g, "4")
+        .replace(/⁵/g, "5").replace(/⁶/g,"6").replace(/⁷/g,"7").replace(/⁸/g,"8").replace(/⁹/g,"9").replace(/⁻/g,"-")
 }
 
 function getMLT(hex) {
