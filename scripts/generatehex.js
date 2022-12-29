@@ -153,10 +153,6 @@ function createHexagon(hexData,name) {
   newHex.setAttribute("id",name)
   newHex.classList.add("one-hexagon","menu")
 
-  //leftTriangle = document.createElement("div")
-  //leftTriangle.classList.add("triangleLeft",`hexagon-${hexData.color}`,"hexagon_zero", "hexagon_triangle_left", "hexagon_triangle_left_large")
-  //rightTriangle = document.createElement("div")
-  //rightTriangle.classList.add("triangleRight",`hexagon-${hexData.color}`, "hexagon_zero", "hexagon_triangle_right", "hexagon_triangle_right_large")
   hexText = document.createElement("div")
   hexText.classList.add("inside",hexData.color)
 
@@ -175,9 +171,7 @@ if (hexData.usl_ob != "") {
   mlt2 = document.createElement("p")
   mlt2.innerHTML = getMLT(hexData)
   hexText.appendChild(mlt2)
-  //newHex.appendChild(leftTriangle)
   newHex.appendChild(hexText)
-  //newHex.appendChild(rightTriangle)
 
   return newHex
 };

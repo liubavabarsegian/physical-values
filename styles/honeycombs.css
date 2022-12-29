@@ -13,11 +13,10 @@ h1, h2
 	z-index: 5;
 }
 
-/*.hexagon{
-	width: 150px;
-	height: 100px;*/
-	/*не используется?*/
-/*}*/
+.hexagon{
+	width: 100px;
+	height: 100px;
+}
 
 /*.hexagon_zero, .triangleLeft, .triangleRight{
 	width: 0;
