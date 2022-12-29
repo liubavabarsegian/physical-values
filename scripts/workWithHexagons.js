@@ -50,20 +50,12 @@ menu.addEventListener("click", event => {
 
 function Activate(hex) {
 	let inside = hex.querySelector(".inside");
-	let leftTriangle = hex.querySelector(".triangleLeft");
-	let rightTriangle = hex.querySelector(".triangleRight");
 	inside.classList.add("active-hexagon")
-	leftTriangle.classList.add("active-triangle")
-	rightTriangle.classList.add("active-triangle")
 }
 
 function Deactivate(hex) {
 	let inside = hex.querySelector(".inside");
-	let leftTriangle = hex.querySelector(".triangleLeft");
-	let rightTriangle = hex.querySelector(".triangleRight");
 	inside.classList.remove("active-hexagon")
-	leftTriangle.classList.remove("active-triangle")
-	rightTriangle.classList.remove("active-triangle")
 }
 
 document.addEventListener("keydown", (event) => {

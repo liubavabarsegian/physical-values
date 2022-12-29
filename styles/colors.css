@@ -43,225 +43,143 @@
 	--color-purple-dark:rgb(188, 141, 203);
 }
 
-.hexagon-yellow
-{
-	border: 30px solid var(--color-yellow);
-}
-.active-triangle.hexagon-yellow {
-	border: 30px solid var(--color-yellow-dark);
-}
-.yellow
-{
+.yellow {
 	background-color:  var(--color-yellow);
+	/*background-image: url("img/yt.png");*/
+	/*background-size: 100% 94.5%;*/
+	
 }
-.active-hexagon.yellow
-{
-	background-color: var(--color-yellow-dark);
+.active-hexagon.yellow {
+	background-image: url("img/testtt.png");
+	/*background: url("img/yt.png"), url("img/testtt.png");*/
+	background-size: 100% 94.5%;
+	/*background-blend-mode: multiply;*/
 }
 
-.hexagon-gray
-{
-	border: 30px solid var(--color-gray);
-}
-.active-triangle.hexagon-gray {
-	border: 30px solid var(--color-gray-dark);
-}
 .gray
 {
 	background-color: var(--color-gray);
 }
-.active-hexagon.gray
-{
-	background-color:var(--color-gray-dark);
+.active-hexagon.gray {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-grideperlevy
-{
-	border: 30px solid var(--color-grideperlevy);
-}
-.active-triangle.hexagon-grideperlevy {
-	border: 30px solid var(--color-grideperlevy-dark);
-}
 .grideperlevy
 {
 	background-color: var(--color-grideperlevy);
 }
-.active-hexagon.grideperlevy
-{
-	background-color: var(--color-grideperlevy-dark);
+.active-hexagon.grideperlevy {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-dark_gray
-{
-	border: 30px solid var(--color-dark_gray);
-}
-.active-triangle.hexagon-dark_gray {
-	border: 30px solid var(--color-dark_gray-dark);
-}
+
 .dark_gray
 {
 	background-color: var(--color-dark_gray);
 }
-.active-hexagon.dark_gray
-{
-	background-color: var(--color-dark_gray-dark);
+.active-hexagon.dark_gray {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-sky
-{
-	border: 30px solid var(--color-sky);
-}
-.active-triangle.hexagon-sky {
-	border: 30px solid var(--color-sky-dark);
-}
+
 .sky
 {
 	background-color: var(--color-sky);
 }
-.active-hexagon.sky
-{
-	background-color: var(--color-sky-dark);
+.active-hexagon.sky {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-vinous
-{
-	border: 30px solid var(--color-vinous);
-}
-.active-triangle.hexagon-vinous {
-	border: 30px solid var(--color-vinous-dark);
-}
+
 .vinous
 {
 	background-color: var(--color-vinous);
 }
-.active-hexagon.vinous
-{
-	background-color:  var(--color-vinous-dark);
+.active-hexagon.vinous {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-dark_green
-{
-	border: 30px solid var(--color-dark_green);
-}
-.active-triangle.hexagon-dark_green {
-	border: 30px solid var(--color-dark_green-dark);
-}
+
 .dark_green
 {
 	background-color: var(--color-dark_green);
 }
-.active-hexagon.dark_green
-{
-	background-color: var(--color-dark_green-dark);
+.active-hexagon.dark_green {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-light_green
-{
-	border: 30px solid var(--color-light_green);
-}
-.active-triangle.hexagon-light_green {
-	border: 30px solid var(--color-light_green-dark);
-}
+
 .light_green
 {
 	background-color: var(--color-light_green);
 }
-.active-hexagon.light_green
-{
-	background-color: var(--color-light_green-dark);
+.active-hexagon.light_green {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-blue
-{
-	border: 30px solid var(--color-blue) ;
-}
-.active-triangle.hexagon-blue {
-	border: 30px solid var(--color-blue-dark) ;
-}
+
 .blue
 {
 	background-color: var(--color-blue) ;
 }
-.active-hexagon.blue
-{
-	background-color: var(--color-blue-dark) ;
+.active-hexagon.blue {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-mint
-{
-	border: 30px solid var(--color-mint);
-}
-.active-triangle.hexagon-mint {
-	border: 30px solid var(--color-mint-dark);
-}
+
 .mint
 {
 	background-color: var(--color-mint);
 }
-.active-hexagon.mint
-{
-	background-color: var(--color-mint-dark);
+.active-hexagon.mint {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-white_blue
-{
-	border: 30px solid var(--color-white_blue);
-}
-.active-triangle.hexagon-white_blue {
-	border: 30px solid var(--color-white_blue-dark);
-}
+
 .white_blue
 {
 	background-color: var(--color-white_blue);
 }
-.active-hexagon.white_blue
-{
-	background-color: var(--color-white_blue-dark);
+.active-hexagon.white_blue {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-swamp
-{
-	border: 30px solid var(--color-swamp);
-}
-.active-triangle.hexagon-swamp {
-	border: 30px solid var(--color-swamp-dark);
-}
+
 .swamp
 {
 	background-color: var(--color-swamp);
 }
-.active-hexagon.swamp
-{
-	background-color: var(--color-swamp-dark);
+.active-hexagon.swamp {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
 
-.hexagon-dark_blue
-{
-	border: 30px solid var(--color-dark_blue);
-}
-.active-triangle.hexagon-dark_blue {
-	border: 30px solid var(--color-dark_blue-dark);
-}
+
 .dark_blue
 {
 	background-color: var(--color-dark_blue);
 }
-.active-hexagon.dark_blue
-{
-	background-color: var(--color-dark_blue-dark);
+.active-hexagon.dark_blue {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }
-.hexagon-purple
-{
-	border: 30px solid  var(--color-purple);
-}
-.active-triangle.hexagon-purple {
-	border: 30px solid var(--color-purple-dark);
-}
+
+
 .purple
 {
 	background-color: var(--color-purple);
 }
-.active-hexagon.purple
-{
-	background-color: var(--color-purple-dark);
+.active-hexagon.purple {
+	background-image: url("img/testtt.png");
+	background-size: contain;
 }

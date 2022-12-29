@@ -16,10 +16,9 @@ h1, h2
 .hexagon{
 	width: 100px;
 	height: 100px;
-	
 }
 
-.hexagon_zero, .triangleLeft, .triangleRight{
+/*.hexagon_zero, .triangleLeft, .triangleRight{
 	width: 0;
 	height: 0;
 	border-top-width: 45px !important;				
@@ -34,18 +33,21 @@ h1, h2
 
 .triangleRight{
 	border-right-width: 0 !important;
-}
+}*/
 
-.inside{
-	width: 90px;			
+.inside {
+	width: 150px;
 	height: 90px;
 }
 
-.inside
-{
+.inside {
 	position: relative;
 	bottom: 0px;
 	top: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	word-break: break-word;
 }
 
 .row {
@@ -53,20 +55,21 @@ h1, h2
 	justify-content: center;
 }
 
-.one-hexagon
-{
+.one-hexagon {
 	display: flex;
 	text-align: center;
+	width: 150px;
+	height: 90px;
+	clip-path: polygon(20% 0, 80% 0, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
 }
 
-.one-hexagon:hover								/*убрал :nth-child(1) --> выделяются все сотики*/
-{
-	/*background-color: rgb(211, 211, 125);*/
-	/*border-radius: 5em;*/
-	/*font-weight: bold;*/
-	/*color: red;*/
-	opacity: 0.7;
-}
+	.one-hexagon:hover /*убрал :nth-child(1) --> выделяются все сотики*/ {
+		/*background-color: rgb(211, 211, 125);*/
+		/*border-radius: 5em;*/
+		/*font-weight: bold;*/
+		/*color: red;*/
+		opacity: 0.7;
+	}
 
 .invisible {
 	opacity: 0;
@@ -76,7 +79,7 @@ h1, h2
 	opacity: 0.5;
 }
 
-p{
+p {
 	word-wrap: normal;
 	font-size: 16px;
 }
