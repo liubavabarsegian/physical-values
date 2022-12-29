@@ -168,7 +168,7 @@ if (hexData.usl_ob != "") {
       symbolMeasure.innerHTML = `${hexData.usl_ob}, ${hexData.ob_ed_izm}`
     hexText.appendChild(symbolMeasure)
   }
-  mlt2 = document.createElement("p")
+  mlt2 = document.createElement("b")
   mlt2.innerHTML = getMLT(hexData)
   hexText.appendChild(mlt2)
   newHex.appendChild(hexText)
