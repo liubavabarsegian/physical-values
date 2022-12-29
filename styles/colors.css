@@ -56,7 +56,9 @@
 }
 .active-hexagon.yellow
 {
-	background-color: var(--color-yellow-dark);
+	background-image: url("img/testtt.png");
+	background-size:cover;
+	/*background-color: var(--color-yellow-dark);*/
 }
 
 .hexagon-gray
