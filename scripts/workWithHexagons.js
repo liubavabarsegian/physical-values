@@ -63,7 +63,6 @@ document.addEventListener("keydown", (event) => {
 		clickedHexagons.forEach(hexElement => Deactivate(hexElement));
 		clickedHexagons = [];
 		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-		drawingParallelogram = false;
 	}
 })
 
@@ -114,6 +113,9 @@ function rememberHexagon(hex) {
 		} else {
 			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
 			alert(`Закономерности\n${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}\nне существует!`);
+			clickedHexagons.forEach(hexElement => Deactivate(hexElement));
+			clickedHexagons = [];
+			drawingParallelogram = false;
 		}
 	}
 }
