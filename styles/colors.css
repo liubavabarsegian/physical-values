@@ -44,142 +44,208 @@
 }
 
 .yellow {
-	background-color:  var(--color-yellow);
-	/*background-image: url("img/yt.png");*/
-	/*background-size: 100% 94.5%;*/
-	
+	/*background-color: var(--color-yellow);*/
+	background: url("img/yellow.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.yellow {
-	background-image: url("img/red_dashed.png");
-	/*background: url("img/yt.png"), url("img/red_dashed.png");*/
-	background-size: 100% 94.5%;
-	/*background-blend-mode: multiply;*/
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/yellow.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 
-.gray
-{
-	background-color: var(--color-gray);
+.gray {
+	/*background-color: var(--color-gray);*/
+	background: url("img/gray.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.gray {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/gray.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
-.grideperlevy
-{
-	background-color: var(--color-grideperlevy);
+.grideperlevy {
+	/*background-color: var(--color-grideperlevy);*/
+	background: url("img/grideperlevy.png"), url("img/black_thin_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.grideperlevy {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/grideperlevy.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.dark_gray
-{
-	background-color: var(--color-dark_gray);
+.dark_gray {
+	/*background-color: var(--color-dark_gray);*/
+	background: url("img/dark_gray.png"), url("img/black_double.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.dark_gray {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/dark_gray.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.sky
-{
-	background-color: var(--color-sky);
+.sky {
+	/*background-color: var(--color-sky);*/
+	background: url("img/sky.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.sky {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/sky.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.vinous
-{
-	background-color: var(--color-vinous);
+.vinous {
+	/*background-color: var(--color-vinous);*/
+	background: url("img/vinous.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.vinous {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/vinous.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.dark_green
-{
-	background-color: var(--color-dark_green);
+.dark_green {
+	/*background-color: var(--color-dark_green);*/
+	background: url("img/dark_green.png"), url("img/black_double.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.dark_green {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/dark_green.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.light_green
-{
-	background-color: var(--color-light_green);
+.light_green {
+	/*background-color: var(--color-light_green);*/
+	background: url("img/light_green.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.light_green {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/light_green.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.blue
-{
-	background-color: var(--color-blue) ;
+.blue {
+	/*background-color: var(--color-blue);*/
+	background: url("img/blue.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.blue {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/blue.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.mint
-{
-	background-color: var(--color-mint);
+.mint {
+	/*background-color: var(--color-mint);*/
+	background: url("img/mint.png"), url("img/black_dashed.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.mint {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/mint.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.white_blue
-{
-	background-color: var(--color-white_blue);
+.white_blue {
+	/*background-color: var(--color-white_blue);*/
+	background: url("img/white_blue.png"), url("img/black_dashed.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.white_blue {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/white_blue.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.swamp
-{
-	background-color: var(--color-swamp);
+.swamp {
+	/*background-color: var(--color-swamp);*/
+	background: url("img/swamp.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.swamp {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/swamp.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.dark_blue
-{
-	background-color: var(--color-dark_blue);
+.dark_blue {
+	/*background-color: var(--color-dark_blue);*/
+	background: url("img/dark_blue.png"), url("img/black_double.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.dark_blue {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/dark_blue.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
 
 
-.purple
-{
-	background-color: var(--color-purple);
+.purple {
+	/*background-color: var(--color-purple);*/
+	background: url("img/purple.png"), url("img/black_solid.png");
+	background-blend-mode: multiply;
+	background-size: contain;
 }
 .active-hexagon.purple {
-	background-image: url("img/red_dashed.png");
+	/*background-image: url("img/red_dashed.png");*/
+	/*background-size: contain;*/
+	background: url("img/purple.png"), url("img/red_dashed.png");
+	background-blend-mode: multiply;
 	background-size: contain;
 }
