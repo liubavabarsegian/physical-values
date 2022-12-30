@@ -5626,13 +5626,13 @@ dataMix = {
                 "G²K²": {
                     "name": "Квадрат силы тока",
                     "color": "dark_green",
-                    "usl_ob": "",
+                    "usl_ob": "I²",
                     "M": 0,
                     "L": 0,
                     "T": 0,
                     "I": 2,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "ed_izm": "Ампер²",
+                    "ob_ed_izm": "A²",
                     "LT": "L⁶T⁻⁴",
                     "GK": "G²K²"
                 }
@@ -10191,13 +10191,13 @@ dataMix = {
                 "G⁰K⁰": {
                     "name": "Поверхн. плотн. времени",
                     "color": "yellow",
-                    "usl_ob": "",
+                    "usl_ob": "t/S",
                     "M": 0,
                     "L": -2,
                     "T": 1,
                     "I": 0,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "ed_izm": "ceк/метр²",
+                    "ob_ed_izm": "с/м²",
                     "LT": "L⁻²T¹",
                     "GK": "G⁰K⁰"
                 }
@@ -10403,7 +10403,7 @@ dataMix = {
                 "G⁻¹K⁰": {
                     "name": "Градиент G",
                     "color": "grideperlevy",
-                    "usl_ob": "",
+                    "usl_ob": "gradG",
                     "M": -1,
                     "L": 2,
                     "T": -2,
@@ -10615,7 +10615,7 @@ dataMix = {
                 "G⁻¹K⁰": {
                     "name": "Изменение G",
                     "color": "grideperlevy",
-                    "usl_ob": "",
+                    "usl_ob": "dG/dt",
                     "M": -1,
                     "L": 3,
                     "T": -3,
@@ -12101,13 +12101,13 @@ dataMix = {
                 "G⁰K⁰": {
                     "name": "Объёмн. плотн. времени",
                     "color": "yellow",
-                    "usl_ob": "",
+                    "usl_ob": "t/V",
                     "M": 0,
                     "L": -3,
                     "T": 1,
                     "I": 0,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "ed_izm": "сек/метр³",
+                    "ob_ed_izm": "с/м³",
                     "LT": "L⁻³T¹",
                     "GK": "G⁰K⁰"
                 }
@@ -13266,13 +13266,13 @@ dataMix = {
                 "G²K²": {
                     "name": "Квадрат плотности тока",
                     "color": "dark_green",
-                    "usl_ob": "",
+                    "usl_ob": "j²",
                     "M": 0,
                     "L": -4,
                     "T": 0,
                     "I": 2,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "ed_izm": "Ампер²/метр⁴",
+                    "ob_ed_izm": "A²/м⁴",
                     "LT": "L²T⁻⁴",
                     "GK": "G²K²"
                 }
@@ -13585,13 +13585,13 @@ dataMix = {
                 "G⁰K⁻²": {
                     "name": "Потенциал²",
                     "color": "dark_blue",
-                    "usl_ob": "",
+                    "usl_ob": "φ²",
                     "M": 2,
                     "L": 4,
                     "T": -6,
                     "I": -2,
-                    "ed_izm": "",
-                    "ob_ed_izm": "\u000barphi²",
+                    "ed_izm": "Вольт",
+                    "ob_ed_izm": "В²",
                     "LT": "L⁴T⁻⁶",
                     "GK": "G⁰K⁻²"
                 }
@@ -15283,7 +15283,7 @@ dataMix = {
                 "G¹K⁰": {
                     "name": "Удельная мощность",
                     "color": "gray",
-                    "usl_ob": "",
+                    "usl_ob": "N/V",
                     "M": 1,
                     "L": -1,
                     "T": -3,
@@ -17405,13 +17405,13 @@ dataMix = {
                 "G⁰K⁻²": {
                     "name": "Квадрат Е",
                     "color": "dark_blue",
-                    "usl_ob": "",
+                    "usl_ob": "Е²",
                     "M": 2,
                     "L": 2,
                     "T": -6,
                     "I": -2,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "ed_izm": "Вольт²/метр²",
+                    "ob_ed_izm": "В²/м²",
                     "LT": "L²T⁻⁶",
                     "GK": "G⁰K⁻²"
                 }
