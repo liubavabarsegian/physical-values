@@ -50,8 +50,8 @@
 	
 }
 .active-hexagon.yellow {
-	background-image: url("img/testtt.png");
-	/*background: url("img/yt.png"), url("img/testtt.png");*/
+	background-image: url("img/red_dashed.png");
+	/*background: url("img/yt.png"), url("img/red_dashed.png");*/
 	background-size: 100% 94.5%;
 	/*background-blend-mode: multiply;*/
 }
@@ -61,7 +61,7 @@
 	background-color: var(--color-gray);
 }
 .active-hexagon.gray {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -70,7 +70,7 @@
 	background-color: var(--color-grideperlevy);
 }
 .active-hexagon.grideperlevy {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -80,7 +80,7 @@
 	background-color: var(--color-dark_gray);
 }
 .active-hexagon.dark_gray {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -90,7 +90,7 @@
 	background-color: var(--color-sky);
 }
 .active-hexagon.sky {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -100,7 +100,7 @@
 	background-color: var(--color-vinous);
 }
 .active-hexagon.vinous {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -110,7 +110,7 @@
 	background-color: var(--color-dark_green);
 }
 .active-hexagon.dark_green {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -120,7 +120,7 @@
 	background-color: var(--color-light_green);
 }
 .active-hexagon.light_green {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -130,7 +130,7 @@
 	background-color: var(--color-blue) ;
 }
 .active-hexagon.blue {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -140,7 +140,7 @@
 	background-color: var(--color-mint);
 }
 .active-hexagon.mint {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -150,7 +150,7 @@
 	background-color: var(--color-white_blue);
 }
 .active-hexagon.white_blue {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -160,7 +160,7 @@
 	background-color: var(--color-swamp);
 }
 .active-hexagon.swamp {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -170,7 +170,7 @@
 	background-color: var(--color-dark_blue);
 }
 .active-hexagon.dark_blue {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
@@ -180,6 +180,6 @@
 	background-color: var(--color-purple);
 }
 .active-hexagon.purple {
-	background-image: url("img/testtt.png");
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }

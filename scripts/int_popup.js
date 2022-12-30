@@ -46,6 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
             parentModal.classList.remove('active');
             overlay.classList.remove('active');
             //document.getElementsByTagName("body")[0].style.overflow = 'scroll';
+            clickedHexagons.forEach(hexElement => Deactivate(hexElement));
+            clickedHexagons = [];
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            drawingParallelogram = false;
         });
 
     }); // end foreach
