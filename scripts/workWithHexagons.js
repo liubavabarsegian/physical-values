@@ -222,15 +222,12 @@ function showLaws() {
 			let li = document.createElement('li');
 			let pre = document.createElement('pre');
 			pre.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].equationInTerms}\n${data.laws[type][law].equationInLetters}`;
-			li.appendChild(pre);
-			let but = document.createElement("button");
-			but.innerHTML = 'Нарисовать';
-			but.addEventListener('click', function (e) {
-				
+			pre.addEventListener('click', function (e) {
+
 				currentShownLaw = data.laws[type][law]
 				drawLaw(currentShownLaw)
 			});
-			li.appendChild(but);
+			li.appendChild(pre);
 			//li.innerHTML = `${data.laws[type][law].name} -> ${data.laws[type][law].config} -> ${data.laws[type][law].formula}`;
 			ul.appendChild(li);
 		}
