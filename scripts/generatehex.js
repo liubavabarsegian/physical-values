@@ -64,14 +64,14 @@ function addHexEventListeners() {
 			}
 		});
 	
-	hex.addEventListener("click", function() {
-			if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
-			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-    Activate(this)
-			rememberHexagon(this);
-        
-			} 			
-	});
+    hex.addEventListener("click", function() {
+        if (!this.querySelector(".inside").classList.contains("active-hexagon")) {
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+        Activate(this)
+        rememberHexagon(this);
+          
+        } 			
+    });
   
     hex.addEventListener("mouseover", function(event) {
 

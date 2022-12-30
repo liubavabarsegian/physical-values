@@ -49,8 +49,12 @@ menu.addEventListener("click", event => {
 
 
 function Activate(hex) {
+	console.log(hex)
 	let inside = hex.querySelector(".inside");
+	console.log(inside)
 	inside.classList.add("active-hexagon")
+	console.log(inside)
+
 }
 
 function Deactivate(hex) {
@@ -63,6 +67,8 @@ document.addEventListener("keydown", (event) => {
 		clickedHexagons.forEach(hexElement => Deactivate(hexElement));
 		clickedHexagons = [];
 		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		hexagons = currentShownLaw.hexes.map(hex => document.getElementById(hex))
+		hexagons.forEach(hex => Deactivate(hex))
 	}
 })
 
@@ -78,13 +84,13 @@ let currentLaw = {
 	hexesGK: [],
 	id: "", // это id каждого hexa записанные подряд
 };
+let currentShownLaw = {}
 function rememberHexagon(hex) {
 
 	hexCoords = getHexCanvasCoords(hex)
 
 	clickedHexagons.push(hex);
 	
-	console.log(clickedHexagons)
 	drawingParallelogram = true
 	//console.log(hex)
 	if (clickedHexagons.length == 3) {
@@ -220,7 +226,9 @@ function showLaws() {
 			let but = document.createElement("button");
 			but.innerHTML = 'Нарисовать';
 			but.addEventListener('click', function (e) {
-				drawLaw(data.laws[type][law])
+				
+				currentShownLaw = data.laws[type][law]
+				drawLaw(currentShownLaw)
 			});
 			li.appendChild(but);
 			//li.innerHTML = `${data.laws[type][law].name} -> ${data.laws[type][law].config} -> ${data.laws[type][law].formula}`;
@@ -232,10 +240,22 @@ function showLaws() {
 }
 
 function drawLaw(law) {
-	console.log(law)
-	hexagons = law.hexes.map(hex => getHexCanvasCoords(document.getElementById(hex)))
+	hexagons = law.hexes.map(hex => document.getElementById(hex))
+	hexagonsGK = law.hexesGK
+	hexagonsData = hexagons.map(hex => getHexFullData(hex))
+	hexagonsCoords = hexagons.map(hex => getHexCanvasCoords(hex))
 	console.log(hexagons)
-	drawParallelogram(hexagons, "red");
+	hexagonsData.forEach(function (hexData, i) {
+    swap = hexData[findGKIndex(hexData,hexagonsGK[i])]
+		hexData[findGKIndex(hexData,hexagonsGK[i])] = hexData[0]
+		hexData[0] = swap
+	});
+	createTable("newf", data)
+	hexagons = law.hexes.map(hex => document.getElementById(hex))
+	hexagons.forEach(hex => Activate(hex))
+	currentShownLaw = law
+	// findGK(hex,reqGK)
+	drawParallelogram(hexagonsCoords, "red");
 }
 
 
@@ -279,11 +299,6 @@ function deleteHexGK(gk) {
 	gk.ed_izm = ""
 }
 
-//не работает
-//function showMenuLevels() {
-//	document.getElementById('moreLevels').removeAttribute("hidden");
-//}
-
 document.getElementById("export").onclick = function (e) {
 	fileName = document.getElementById("sota_filenm").value
 	if (fileName == "") {
@@ -315,26 +330,3 @@ fileSelector.addEventListener('change', (event) => {
 	reader.readAsText(fileList[0]);
 	document.getElementById('sota_filenm').value = fileList[0].name.replace('.jsota','');
 });
-
-
-
-//function color_gk_input() {
-//	var gk_colors = [{ 'G': 0, 'K': 0, color: "rgb(218, 218, 139)" }, { 'G': 1, 'K': 0, color: "rgb(194, 197, 200)" },
-//	{ 'G': -1, 'K': 0, color: "rgb(69, 76, 80)" }, { 'G': 2, 'K': 0, color: "rgb(171, 170, 170)" },
-//	{ 'G': 0, 'K': 1, color: "rgb(173, 207, 221)" }, { 'G': 1, 'K': 1, color: "rgb(182, 238, 182)" },
-//	{ 'G': 1, 'K': 2, color: "rgb(247, 130, 134)" }, { 'G': 2, 'K': 2, color: "rgb(87, 174, 87)" },
-//	{ 'G': 0, 'K': 1, color: "gb(111, 154, 233)" }, { 'G': 1, 'K': -1, color: "rgb(177, 203, 228)" },
-//	{ 'G': 2, 'K': -1, color: "rgb(207, 223, 238)" }, { 'G': -1, 'K': -1, color: "rgb(39, 127, 56)" },
-//	{ 'G': 0, 'K': -2, color: "rgb(91, 91, 180)" }, { 'G': -1, 'K': -2, color: "rgb(210, 166, 227)" }]
-
-//	var g = document.getElementById("GGK")
-//	var k = document.getElementById("KGK")
-
-//	for (one in gk_colors) {
-//		if (gk_colors[one]["G"] == g.value && gk_colors[one]["K"] == k.value) {
-//			alert(gk_colors[one]["G"])
-//			g.style.backgroundColor = gk_colors[one]["color"];
-//		}
-//	}
-//}
-

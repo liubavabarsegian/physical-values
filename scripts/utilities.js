@@ -91,6 +91,10 @@ function getHexData(hex) {
   return getNGK(data[hex.parentElement.id][hex.id],0)
 }
 
+function getHexFullData(hex) {
+  return data[hex.parentElement.id][hex.id]
+}
+
 
 function getMainHexFromSiblings(element) {
   while (!element.classList.contains("one-hexagon") ) {
