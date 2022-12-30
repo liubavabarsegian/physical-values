@@ -68,6 +68,16 @@ document.addEventListener("keydown", (event) => {
 
 drawingParallelogram = false
 clickedHexagons = [];
+// This is just an example of a law, it is not a real one.
+let currentLaw = {
+	name: "name",
+	type: "force",
+	equationInTerms: "Площ * Площ = Площ * Площ",
+	equationInLetters: "A * B = C * D",
+	hexes: [],
+	hexesGK: [],
+	id: "", // это id каждого hexa записанные подряд
+};
 function rememberHexagon(hex) {
 
 	hexCoords = getHexCanvasCoords(hex)
@@ -81,14 +91,19 @@ function rememberHexagon(hex) {
 		tempclickedHexagons = [clickedHexagons[0], clickedHexagons[1], clickedHexagons[2], clickedHexagons[1]];
 		if (checkParallelogram(tempclickedHexagons)) {
 			clickedHexagonsCoords = tempclickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
-			document.getElementById("lawOpen").click();
+			document.getElementById("lawOpen").click(); // someone pls fix this line 
 			hexDataLaw = tempclickedHexagons.map(hex => getHexData(hex));
-			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = (${hexDataLaw[1].name})^2`;
-			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})^2`;
-			let keyArray = [`${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I}`, `${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I}`, `(${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`];
-			//document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = (${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I})^2`;
-			document.getElementById("lawMLTI").innerHTML = keyArray.sort();
-			document.getElementById("lawArray").innerHTML = `${tempclickedHexagons[0].outerHTML}***${tempclickedHexagons[1].outerHTML}***${tempclickedHexagons[2].outerHTML}***${tempclickedHexagons[3].outerHTML}`;
+			currentLaw = {
+				name: null,
+				type: null,
+				equationInTerms: `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = (${hexDataLaw[1].name})^2`,
+				equationInLetters: `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})^2`,
+				hexes: tempclickedHexagons.map(hex => hex.id),
+				hexesGK: hexDataLaw.map(hexData => hexData.GK),
+				id: tempclickedHexagons.map(hex => hex.id).join('')
+			};
+			document.getElementById("lawConfig").innerHTML = currentLaw.equationInTerms;
+			document.getElementById("lawFormula").innerHTML = currentLaw.equationInLetters;
 			drawParallelogram(clickedHexagonsCoords, "red");
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
@@ -97,16 +112,19 @@ function rememberHexagon(hex) {
 	if (clickedHexagons.length == 4) {
 		if (checkParallelogram(clickedHexagons)) {
 			clickedHexagonsCoords = clickedHexagons.map(hexagon => getHexCanvasCoords(hexagon));
-			document.getElementById("lawOpen").click();
+			document.getElementById("lawOpen").click(); // and this one too
 			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
-			document.getElementById("lawConfig").innerHTML = `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}`;
-			document.getElementById("lawFormula").innerHTML = `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = ${hexDataLaw[1].usl_ob} * ${hexDataLaw[3].usl_ob}`;
-			let keyArray = [`${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I}`, `${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I}`, `${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I}`, `${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`];
-			//document.getElementById("lawMLTI").innerHTML = `${hexDataLaw[0].M}${hexDataLaw[0].L}${hexDataLaw[0].T}${hexDataLaw[0].I} * ${hexDataLaw[2].M}${hexDataLaw[2].L}${hexDataLaw[2].T}${hexDataLaw[2].I} = ${hexDataLaw[1].M}${hexDataLaw[1].L}${hexDataLaw[1].T}${hexDataLaw[1].I} * ${hexDataLaw[3].M}${hexDataLaw[3].L}${hexDataLaw[3].T}${hexDataLaw[3].I}`;
-			document.getElementById("lawMLTI").innerHTML = keyArray.sort();
-			document.getElementById("lawArray").innerHTML = `${clickedHexagons[0].outerHTML}***${clickedHexagons[1].outerHTML}***${clickedHexagons[2].outerHTML}***${clickedHexagons[3].outerHTML}`;
-			console.log(clickedHexagons);
-			console.log(clickedHexagonsCoords);
+			currentLaw = {
+				name: null,
+				type: null,
+				equationInTerms: `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}`,
+				equationInLetters: `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = ${hexDataLaw[1].usl_ob} * ${hexDataLaw[3].usl_ob}`,
+				hexes: clickedHexagons.map(hex => hex.id),
+				hexesGK: hexDataLaw.map(hexData => hexData.GK),
+				id: clickedHexagons.map(hex => hex.id).join('')
+			};
+			document.getElementById("lawConfig").innerHTML = currentLaw.equationInTerms;
+			document.getElementById("lawFormula").innerHTML = currentLaw.equationInLetters;
 			drawParallelogram(clickedHexagonsCoords, "red");
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
@@ -170,21 +188,19 @@ function finRedact() {
 }
 
 function addLaw() {
-	let element = {
-		name: document.getElementById("lawName").value,
-		config: document.getElementById("lawConfig").innerHTML,
-		formula: document.getElementById("lawFormula").innerHTML,
-		array: document.getElementById("lawArray").innerHTML
-	}
-	key = document.getElementById("lawMLTI").innerHTML;
-	let chselect = document.getElementById("lawType").value;
-	if (data.laws[chselect][key] === undefined) {
-		data.laws[chselect][key] = element;
+	// clickedHexagons
+	currentLaw.name = document.getElementById("lawName").value
+	currentLaw.type = document.getElementById("lawType").value
+
+	if (data.laws[currentLaw.type][currentLaw.name] === undefined) {
+		data.laws[currentLaw.type][currentLaw.name] = currentLaw;
 		alert("Закон сохранен");
+
 	}
 	else { alert('Данный закон уже существует') }
-	drawLaws(document.getElementById("lawArray").innerHTML);
-	
+	//drawLaws(currentLaw.hexes);
+	currentLaw = {}
+	// временно отключено
 	localStorage.setItem('testObject', JSON.stringify(data));
 	//undoableCounter.setValue(data); - убрать комментарий, если не реализуем удаление законов
 }
@@ -199,12 +215,13 @@ function showLaws() {
 		for (let law in data.laws[type]) {
 			let li = document.createElement('li');
 			let pre = document.createElement('pre');
-			pre.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].config}\n${data.laws[type][law].formula}`;
+			pre.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].equationInTerms}\n${data.laws[type][law].equationInLetters}`;
 			li.appendChild(pre);
 			let but = document.createElement("button");
-			but.setAttribute("id", data.laws[type][law].array);
 			but.innerHTML = 'Нарисовать';
-			but.setAttribute("onclick", "drawLaws(this.id)");
+			but.addEventListener('click', function (e) {
+				drawLaw(data.laws[type][law])
+			});
 			li.appendChild(but);
 			//li.innerHTML = `${data.laws[type][law].name} -> ${data.laws[type][law].config} -> ${data.laws[type][law].formula}`;
 			ul.appendChild(li);
@@ -214,21 +231,11 @@ function showLaws() {
 	}
 }
 
-function drawLaws(arrStr) {
-	clickedHexforDraw = arrStr.split('***');
-	arrHex = [];
-	for (let i = 0; i < 4; i++) {
-		var xmlString = clickedHexforDraw[i];
-		console.log(xmlString);
-		var doc = new DOMParser().parseFromString(xmlString, "text/xml");
-		console.log(doc.firstChild);
-		arrHex.push(doc.firstChild)
-	}
-	console.log(arrHex);
-	clickedHexCoordsforDraw = arrHex.map(hexagon => getHexCanvasCoords(hexagon));
-	//почему-то получаем одинаковые координаты
-	console.log(clickedHexCoordsforDraw);
-	drawParallelogram(clickedHexCoordsforDraw, "red");
+function drawLaw(law) {
+	console.log(law)
+	hexagons = law.hexes.map(hex => getHexCanvasCoords(document.getElementById(hex)))
+	console.log(hexagons)
+	drawParallelogram(hexagons, "red");
 }
 
 
