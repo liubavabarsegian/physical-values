@@ -109,6 +109,7 @@ function rememberHexagon(hex) {
 			document.getElementById("lawMLTI").innerHTML = keyArray.sort();
 			document.getElementById("lawArray").innerHTML = `${clickedHexagons[0].outerHTML}***${clickedHexagons[1].outerHTML}***${clickedHexagons[2].outerHTML}***${clickedHexagons[3].outerHTML}`;
 			console.log(clickedHexagons);
+			console.log(clickedHexagonsCoords);
 			drawParallelogram(clickedHexagonsCoords, "red");
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
@@ -229,6 +230,8 @@ function drawLaws(arrStr) {
 	}
 	console.log(arrHex);
 	clickedHexCoordsforDraw = arrHex.map(hexagon => getHexCanvasCoords(hexagon));
+	//почему-то получаем одинаковые координаты
+	console.log(clickedHexCoordsforDraw);
 	drawParallelogram(clickedHexCoordsforDraw, "red");
 }
 
