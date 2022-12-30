@@ -1,251 +1,171 @@
 :root {
-
-	--color-yellow:rgb(218, 218, 139);
-	--color-yellow-dark:rgb(198, 198, 81);
-
-	--color-gray:rgb(194, 197, 200);
-	--color-gray-dark:rgb(168, 170, 171);
-		
-	--color-grideperlevy:rgb(85, 85, 85);
-	--color-grideperlevy-dark:rgb(65, 65, 65);
-		
-	--color-dark_gray:rgb(171, 170, 170);
-	--color-dark_gray-dark:rgb(162, 161, 161);
-		
-	--color-sky:rgb(173, 207, 221);
-	--color-sky-dark:rgb(153, 178, 204);
-		
-	--color-light_green:rgb(182, 238, 182);
-	--color-light_green-dark:rgb(138, 178, 140);
-		
-	--color-vinous:rgb(247, 130, 134);
-	--color-vinous-dark:rgb(182, 79, 79);
-		
-	--color-dark_green:rgb(87, 174, 87);
-	--color-dark_green-dark:rgb(65, 120, 58);
-		
-	--color-blue:rgb(111, 154, 233);
-	--color-blue-dark:rgb(93, 139, 185);
-		
-	--color-mint:rgb(177, 203, 228);
-	--color-mint-dark:rgb(127, 168, 206);
-		
-	--color-white_blue:rgb(207, 223, 238);
-	--color-white_blue-dark:rgb(168, 184, 201);
-		
-	--color-swamp:rgb(39, 127, 56);
-	--color-swamp-dark:rgb(19, 107, 40);
-		
-	--color-dark_blue:rgb(91, 91, 180);
-	--color-dark_blue-dark:rgb(68, 73, 159);
-		
-	--color-purple:rgb(210, 166, 227);
-	--color-purple-dark:rgb(188, 141, 203);
+	--color-yellow: rgb(218, 218, 139);
+	--color-yellow-dark: rgb(198, 198, 81);
+	--color-gray: rgb(194, 197, 200);
+	--color-gray-dark: rgb(168, 170, 171);
+	--color-grideperlevy: rgb(85, 85, 85);
+	--color-grideperlevy-dark: rgb(65, 65, 65);
+	--color-dark_gray: rgb(171, 170, 170);
+	--color-dark_gray-dark: rgb(162, 161, 161);
+	--color-sky: rgb(173, 207, 221);
+	--color-sky-dark: rgb(153, 178, 204);
+	--color-light_green: rgb(182, 238, 182);
+	--color-light_green-dark: rgb(138, 178, 140);
+	--color-vinous: rgb(247, 130, 134);
+	--color-vinous-dark: rgb(182, 79, 79);
+	--color-dark_green: rgb(87, 174, 87);
+	--color-dark_green-dark: rgb(65, 120, 58);
+	--color-blue: rgb(111, 154, 233);
+	--color-blue-dark: rgb(93, 139, 185);
+	--color-mint: rgb(177, 203, 228);
+	--color-mint-dark: rgb(127, 168, 206);
+	--color-white_blue: rgb(207, 223, 238);
+	--color-white_blue-dark: rgb(168, 184, 201);
+	--color-swamp: rgb(39, 127, 56);
+	--color-swamp-dark: rgb(19, 107, 40);
+	--color-dark_blue: rgb(91, 91, 180);
+	--color-dark_blue-dark: rgb(68, 73, 159);
+	--color-purple: rgb(210, 166, 227);
+	--color-purple-dark: rgb(188, 141, 203);
 }
 
 .yellow {
-	/*background-color: var(--color-yellow);*/
-	background: url("img/yellow.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-yellow);
+	/*background-image: url("img/yt.png");*/
+	/*	background-size: contain;*/
 }
+
 .active-hexagon.yellow {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/yellow.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
+	/*background: url("img/yt.png"), url("img/red_dashed.png");*/
 	background-size: contain;
+	/*background-blend-mode: multiply;*/
 }
 
 .gray {
-	/*background-color: var(--color-gray);*/
-	background: url("img/gray.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-gray);
 }
+
 .active-hexagon.gray {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/gray.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 .grideperlevy {
-	/*background-color: var(--color-grideperlevy);*/
-	background: url("img/grideperlevy.png"), url("img/black_thin_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-grideperlevy);
 }
+
 .active-hexagon.grideperlevy {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/grideperlevy.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .dark_gray {
-	/*background-color: var(--color-dark_gray);*/
-	background: url("img/dark_gray.png"), url("img/black_double.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-dark_gray);
 }
+
 .active-hexagon.dark_gray {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/dark_gray.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .sky {
-	/*background-color: var(--color-sky);*/
-	background: url("img/sky.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-sky);
 }
+
 .active-hexagon.sky {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/sky.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .vinous {
-	/*background-color: var(--color-vinous);*/
-	background: url("img/vinous.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-vinous);
 }
+
 .active-hexagon.vinous {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/vinous.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .dark_green {
-	/*background-color: var(--color-dark_green);*/
-	background: url("img/dark_green.png"), url("img/black_double.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-dark_green);
 }
+
 .active-hexagon.dark_green {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/dark_green.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .light_green {
-	/*background-color: var(--color-light_green);*/
-	background: url("img/light_green.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-light_green);
 }
+
 .active-hexagon.light_green {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/light_green.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .blue {
-	/*background-color: var(--color-blue);*/
-	background: url("img/blue.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-blue);
 }
+
 .active-hexagon.blue {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/blue.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .mint {
-	/*background-color: var(--color-mint);*/
-	background: url("img/mint.png"), url("img/black_dashed.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-mint);
 }
+
 .active-hexagon.mint {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/mint.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .white_blue {
-	/*background-color: var(--color-white_blue);*/
-	background: url("img/white_blue.png"), url("img/black_dashed.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-white_blue);
 }
+
 .active-hexagon.white_blue {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/white_blue.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .swamp {
-	/*background-color: var(--color-swamp);*/
-	background: url("img/swamp.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-swamp);
 }
+
 .active-hexagon.swamp {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/swamp.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .dark_blue {
-	/*background-color: var(--color-dark_blue);*/
-	background: url("img/dark_blue.png"), url("img/black_double.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-dark_blue);
 }
+
 .active-hexagon.dark_blue {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/dark_blue.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
 
 
 .purple {
-	/*background-color: var(--color-purple);*/
-	background: url("img/purple.png"), url("img/black_solid.png");
-	background-blend-mode: multiply;
-	background-size: contain;
+	background-color: var(--color-purple);
 }
+
 .active-hexagon.purple {
-	/*background-image: url("img/red_dashed.png");*/
-	/*background-size: contain;*/
-	background: url("img/purple.png"), url("img/red_dashed.png");
-	background-blend-mode: multiply;
+	background-image: url("img/red_dashed.png");
 	background-size: contain;
 }
