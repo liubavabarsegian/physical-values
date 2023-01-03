@@ -164,12 +164,13 @@ function createHexagon(hexData,name) {
   hexText.appendChild(label)
 /*    if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {*/
 if (hexData.usl_ob != "") {
-    symbolMeasure = document.createElement("p")
+    symbolMeasure = document.createElement("i")
       symbolMeasure.innerHTML = `${hexData.usl_ob}, ${hexData.ob_ed_izm}`
     hexText.appendChild(symbolMeasure)
   }
   mlt2 = document.createElement("b")
   mlt2.innerHTML = getMLT(hexData)
+  hexText.appendChild(document.createElement("br"))
   hexText.appendChild(mlt2)
   newHex.appendChild(hexText)
 
