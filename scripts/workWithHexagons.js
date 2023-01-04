@@ -235,7 +235,7 @@ function lawExist(law) {
 
 function showLaws() {
 	document.getElementById('laws').innerHTML = '';
-	change = { 'force': 'Силовые соотношения', 'magn': 'Магнитное поле', 'gravity': 'Гравитационные законы', 'electro': 'Электромагнитные закономерности', 'kkv': 'Соотношения ККВ' };
+	change = { 'force': 'Силовые соотношения', 'mech': 'Законы механики', 'magn': 'Магнитное поле', 'gravity': 'Гравитационные законы', 'electro': 'Электромагнитные закономерности', 'kkv': 'Соотношения ККВ' };
 	for (let type in data.laws) {
 		let h = document.createElement('h3');
 		h.innerHTML = change[type];
