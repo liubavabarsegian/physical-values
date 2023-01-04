@@ -106,13 +106,21 @@ function rememberHexagon(hex) {
 				equationInLetters: `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})^2`,
 				hexes: tempclickedHexagons.map(hex => hex.id),
 				hexesGK: hexDataLaw.map(hexData => hexData.GK),
-				id: tempclickedHexagons.map(hex => hex.id).join('')
+				id: hexDataLaw.map(hex => `${hex.LT}${hex.GK}`).sort().join('')
 			};
 			document.getElementById("lawConfig").innerHTML = currentLaw.equationInTerms;
 			document.getElementById("lawFormula").innerHTML = currentLaw.equationInLetters;
 			drawParallelogram(clickedHexagonsCoords, "red");
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
+			document.getElementById("addorchangelaw").innerHTML = "Добавить"
+			foundLaw = lawExist(currentLaw)
+			if (foundLaw) {
+
+				writeIntoInput(foundLaw.name,"lawName")
+				writeIntoInput(foundLaw.type,"lawType")
+				document.getElementById("addorchangelaw").innerHTML = "Изменить"
+			}
 		}
 	}
 	if (clickedHexagons.length == 4) {
@@ -127,13 +135,20 @@ function rememberHexagon(hex) {
 				equationInLetters: `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = ${hexDataLaw[1].usl_ob} * ${hexDataLaw[3].usl_ob}`,
 				hexes: clickedHexagons.map(hex => hex.id),
 				hexesGK: hexDataLaw.map(hexData => hexData.GK),
-				id: clickedHexagons.map(hex => hex.id).join('')
+				id: hexDataLaw.map(hex => `${hex.LT}${hex.GK}`).sort().join('')
 			};
 			document.getElementById("lawConfig").innerHTML = currentLaw.equationInTerms;
 			document.getElementById("lawFormula").innerHTML = currentLaw.equationInLetters;
 			drawParallelogram(clickedHexagonsCoords, "red");
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
+			document.getElementById("addorchangelaw").innerHTML = "Добавить"
+			foundLaw = lawExist(currentLaw)
+			if (foundLaw) {
+				writeIntoInput(foundLaw.name,"lawName")
+				writeIntoInput(foundLaw.type,"lawType")
+				document.getElementById("addorchangelaw").innerHTML = "Изменить"
+			}
 		} else {
 			hexDataLaw = clickedHexagons.map(hex => getHexData(hex));
 			alert(`Закономерности\n${hexDataLaw[0].name} * ${hexDataLaw[2].name} = ${hexDataLaw[1].name} * ${hexDataLaw[3].name}\nне существует!`);
@@ -198,17 +213,24 @@ function addLaw() {
 	currentLaw.name = document.getElementById("lawName").value
 	currentLaw.type = document.getElementById("lawType").value
 
-	if (data.laws[currentLaw.type][currentLaw.name] === undefined) {
-		data.laws[currentLaw.type][currentLaw.name] = currentLaw;
+	if (data.laws[currentLaw.type][currentLaw.id] === undefined) {
+		data.laws[currentLaw.type][currentLaw.id] = currentLaw;
 		alert("Закон сохранен");
 
 	}
 	else { alert('Данный закон уже существует') }
-	//drawLaws(currentLaw.hexes);
 	currentLaw = {}
-	// временно отключено
-	localStorage.setItem('testObject', JSON.stringify(data));
-	//undoableCounter.setValue(data); - убрать комментарий, если не реализуем удаление законов
+
+	//localStorage.setItem('testObject', JSON.stringify(data));
+}
+
+function lawExist(law) {
+	for (type in data.laws) {
+		if (data.laws[type][law.id] != undefined) {
+			return data.laws[type][law.id]
+    }
+	}
+	return false
 }
 
 function showLaws() {

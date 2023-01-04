@@ -153,11 +153,12 @@
 		<h2 class="modal__title">Авторы</h2>
 		<b>Автор системы: Чуев А.С.</b>
 		<table width="300px" style="border:dotted" border="1">
+			<!-- Уберите свойство border пожалуйста  ^^^^^^   -->
 			<tr>
 				<td>Воронин Александр</td>
 				<td>Шатский Артем</td>
 				<td>Барсегян Люба</td>
-				<td>Варняга  Максим</td>
+				<td>Варняга Максим</td>
 			</tr>
 			<tr>
 				<td>ИУ6-32Б</td>
@@ -210,7 +211,7 @@
 		<h2 class="modal__title">Закон</h2>
 		<input type="text" id="lawName" placeholder="Название закона" /><br />
 		<select id="lawType">
-			<option value="">-- Выберите группу закона --</option>
+			<option value="" hidden>-- Выберите группу закона --</option>
 			<option value="force">Силовые соотношения</option>
 			<option value="magn">Магнитное поле</option>
 			<option value="gravity">Гравитационные законы</option>
@@ -219,10 +220,8 @@
 		</select>
 		<h4 id="lawConfig"></h4>
 		<h4 id="lawFormula"></h4>
-		<p id="lawMLTI" hidden></p>
-		<p id="lawArray" hidden></p>
-		<button class="js-modal-close" onclick="addLaw();" style="color:forestgreen">Добавить</button>
-		<button class="js-modal-close" style="color:crimson">Отмена</button>
+		<button class="js-modal-close" onclick="addLaw();" style="color:forestgreen" id="addorchangelaw">Добавить</button>
+		<button class="js-modal-close" style="color:crimson" >Отмена</button>
 	</div>
 
 	<div class="modal" data-modal="6">

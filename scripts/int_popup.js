@@ -50,8 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
             clickedHexagons = [];
             ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
             drawingParallelogram = false;
-            hexagons = currentShownLaw.hexes.map(hex => document.getElementById(hex))
-            hexagons.forEach(hex => Deactivate(hex))
+            if (currentShownLaw.hexes) {
+                hexagons = currentShownLaw.hexes.map(hex => document.getElementById(hex))
+                hexagons.forEach(hex => Deactivate(hex))
+            }
         });
 
     }); // end foreach
