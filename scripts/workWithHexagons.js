@@ -114,7 +114,7 @@ function rememberHexagon(hex) {
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
 			document.getElementById("addorchangelaw").innerHTML = "Добавить"
-			foundLaw = lawExist(currentLaw)
+			foundLaw = getLaw(currentLaw)
 			if (foundLaw) {
 
 				writeIntoInput(foundLaw.name,"lawName")
@@ -143,7 +143,7 @@ function rememberHexagon(hex) {
 			document.getElementById("lawName").value = "";
 			document.getElementById("lawType").value = "";
 			document.getElementById("addorchangelaw").innerHTML = "Добавить"
-			foundLaw = lawExist(currentLaw)
+			foundLaw = getLaw(currentLaw)
 			if (foundLaw) {
 				writeIntoInput(foundLaw.name,"lawName")
 				writeIntoInput(foundLaw.type,"lawType")
@@ -213,6 +213,10 @@ function addLaw() {
 	currentLaw.name = document.getElementById("lawName").value
 	currentLaw.type = document.getElementById("lawType").value
 
+	prewLaw = getLaw(currentLaw)
+	if (prewLaw) {
+		delete data.laws[prewLaw.type][prewLaw.id]
+	}
 	if (data.laws[currentLaw.type][currentLaw.id] === undefined) {
 		data.laws[currentLaw.type][currentLaw.id] = currentLaw;
 		alert("Закон сохранен");
@@ -221,10 +225,10 @@ function addLaw() {
 	else { alert('Данный закон уже существует') }
 	currentLaw = {}
 
-	//localStorage.setItem('testObject', JSON.stringify(data));
+	localStorage.setItem('testObject', JSON.stringify(data));
 }
 
-function lawExist(law) {
+function getLaw(law) {
 	for (type in data.laws) {
 		if (data.laws[type][law.id] != undefined) {
 			return data.laws[type][law.id]
