@@ -73,6 +73,17 @@ function addHexEventListeners() {
       let a = document.createElement("a")
       a.classList.add("context-menu__link")
       a.innerHTML = "Скрыть"
+      a.addEventListener('click', function() {
+        if (a.innerHTML = "Скрыть") {
+          hex.style.opacity = "0.0";
+          a.innerHTML.textContext = "Показать";
+        }
+        else if (a.innerHTML = "Показать")
+        {
+          hex.style.opacity = "1.0";
+          a.innerHTML = "Скрыть";
+        }
+      })
       li.appendChild(a)
       gkmenu.appendChild(li)
 		});
