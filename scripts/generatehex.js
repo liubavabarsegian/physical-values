@@ -40,9 +40,12 @@ function addHexEventListeners() {
             gkLiMenu.appendChild(gkAMenu)
               gkLiMenu.addEventListener("click", function () {
 
+              
               swap = hexData[findGKIndex(hexData,gk.GK)]
+              // console.log(findGKIndex(hexData,gk.GK))
               hexData[findGKIndex(hexData,gk.GK)] = hexData[0]
               hexData[0] = swap
+
 
                 createTable("newf", data);
                 localStorage.setItem('testObject', JSON.stringify(data));
