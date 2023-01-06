@@ -9,12 +9,13 @@ createTable("newf", data)
 // }
 // почему-то эта функция ломает проект
 
+
 let ContextElement
 function addHexEventListeners() {
   menuArea = document.querySelectorAll(".one-hexagon");
 
 	for (hex of menuArea) {
-
+    hex.hidden = false;
 		hex.addEventListener("contextmenu", function(event) {
 				event.preventDefault();
       	menu.style.top = `${event.clientY}px`;
@@ -72,16 +73,25 @@ function addHexEventListeners() {
       li.classList.add("context-menu__item")
       let a = document.createElement("a")
       a.classList.add("context-menu__link")
-      a.innerHTML = "Скрыть"
+      if (hex.hidden == false)
+      {
+        a.innerHTML = "Скрыть"
+      }
+      else
+      {
+        a.innerHTML = "Показать"
+      }
       a.addEventListener('click', function() {
-        if (a.innerHTML = "Скрыть") {
+        if (a.innerHTML == "Скрыть") {
           hex.style.opacity = "0.0";
-          a.innerHTML.textContext = "Показать";
+          a.innerHTML = "Показать";
+          hex.hidden = true;
         }
-        else if (a.innerHTML = "Показать")
+        else if (a.innerHTML == "Показать")
         {
           hex.style.opacity = "1.0";
           a.innerHTML = "Скрыть";
+          hex.hidden = false;
         }
       })
       li.appendChild(a)
