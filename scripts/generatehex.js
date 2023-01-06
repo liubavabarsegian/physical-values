@@ -29,6 +29,7 @@ function addHexEventListeners() {
 
         hexData = findHex(hex.id)
         gkmenu.innerHTML = ""
+
         hexData.forEach(function (gk,index) {
           gk = getNGK(hexData,index)
           if (gk.name != "" && gk.name != getNGK(hexData,0).name) {
@@ -53,7 +54,9 @@ function addHexEventListeners() {
             })
               gkmenu.appendChild(gkLiMenu);
           }
+          
         })
+
 
             if (hex.classList.contains("invisible")) {
                 document.getElementById("l0").style.display = "none"
@@ -65,6 +68,13 @@ function addHexEventListeners() {
 					document.getElementById("l1a").innerHTML = "Редактировать"
 					document.getElementById("l2").style.display = ""
 			}
+      let li = document.createElement("li")
+      li.classList.add("context-menu__item")
+      let a = document.createElement("a")
+      a.classList.add("context-menu__link")
+      a.innerHTML = "Скрыть"
+      li.appendChild(a)
+      gkmenu.appendChild(li)
 		});
 	
     hex.addEventListener("click", function() {
@@ -179,7 +189,6 @@ if (hexData.usl_ob != "") {
 
   return newHex
 };
-
 
 
 
