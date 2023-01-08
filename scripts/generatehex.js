@@ -15,7 +15,7 @@ function addHexEventListeners() {
   menuArea = document.querySelectorAll(".one-hexagon");
 
 	for (hex of menuArea) {
-    hex.hidden = false;
+    //hex.hidden = false;
 		hex.addEventListener("contextmenu", function(event) {
 				event.preventDefault();
       	menu.style.top = `${event.clientY}px`;
@@ -69,7 +69,7 @@ function addHexEventListeners() {
 					document.getElementById("l1a").innerHTML = "Редактировать"
 					document.getElementById("l2").style.display = ""
 			}
-      let li = document.createElement("li")
+      /*let li = document.createElement("li")
       li.classList.add("context-menu__item")
       let a = document.createElement("a")
       a.classList.add("context-menu__link")
@@ -95,7 +95,7 @@ function addHexEventListeners() {
         }
       })
       li.appendChild(a)
-      gkmenu.appendChild(li)
+      gkmenu.appendChild(li)*/
 		});
 	
     hex.addEventListener("click", function() {
