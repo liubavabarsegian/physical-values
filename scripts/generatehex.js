@@ -165,7 +165,7 @@ function createHexagon(hexData,name) {
 /*    if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {*/
 if (hexData.usl_ob != "") {
     symbolMeasure = document.createElement("i")
-      symbolMeasure.innerHTML = `${hexData.usl_ob}, ${hexData.ob_ed_izm}`
+    symbolMeasure.innerHTML = `${hexData.usl_ob.split(/[{}]/)[0]}${(hexData.usl_ob.split(/[{}]/)[1]) ? (hexData.usl_ob.split(/[{}]/)[1].fontsize(1)) : ''}${(hexData.usl_ob.split(/[{}]/)[2]) ? (hexData.usl_ob.split(/[{}]/)[2]) : ''}, ${hexData.ob_ed_izm}`
     hexText.appendChild(symbolMeasure)
   }
   mlt2 = document.createElement("b")
