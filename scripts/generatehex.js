@@ -9,12 +9,13 @@ createTable("newf", data)
 // }
 // почему-то эта функция ломает проект
 
+
 let ContextElement
 function addHexEventListeners() {
   menuArea = document.querySelectorAll(".one-hexagon");
 
 	for (hex of menuArea) {
-
+    hex.hidden = false;
 		hex.addEventListener("contextmenu", function(event) {
 				event.preventDefault();
       	menu.style.top = `${event.clientY}px`;
@@ -29,6 +30,7 @@ function addHexEventListeners() {
 
         hexData = findHex(hex.id)
         gkmenu.innerHTML = ""
+
         hexData.forEach(function (gk,index) {
           gk = getNGK(hexData,index)
           if (gk.name != "" && gk.name != getNGK(hexData,0).name) {
@@ -40,9 +42,12 @@ function addHexEventListeners() {
             gkLiMenu.appendChild(gkAMenu)
               gkLiMenu.addEventListener("click", function () {
 
+              
               swap = hexData[findGKIndex(hexData,gk.GK)]
+              // console.log(findGKIndex(hexData,gk.GK))
               hexData[findGKIndex(hexData,gk.GK)] = hexData[0]
               hexData[0] = swap
+
 
                 createTable("newf", data);
                 localStorage.setItem('testObject', JSON.stringify(data));
@@ -50,7 +55,9 @@ function addHexEventListeners() {
             })
               gkmenu.appendChild(gkLiMenu);
           }
+          
         })
+
 
             if (hex.classList.contains("invisible")) {
                 document.getElementById("l0").style.display = "none"
@@ -62,6 +69,33 @@ function addHexEventListeners() {
 					document.getElementById("l1a").innerHTML = "Редактировать"
 					document.getElementById("l2").style.display = ""
 			}
+      let li = document.createElement("li")
+      li.classList.add("context-menu__item")
+      let a = document.createElement("a")
+      a.classList.add("context-menu__link")
+      if (hex.hidden == false)
+      {
+        a.innerHTML = "Скрыть"
+      }
+      else
+      {
+        a.innerHTML = "Показать"
+      }
+      a.addEventListener('click', function() {
+        if (a.innerHTML == "Скрыть") {
+          hex.style.opacity = "0.0";
+          a.innerHTML = "Показать";
+          hex.hidden = true;
+        }
+        else if (a.innerHTML == "Показать")
+        {
+          hex.style.opacity = "1.0";
+          a.innerHTML = "Скрыть";
+          hex.hidden = false;
+        }
+      })
+      li.appendChild(a)
+      gkmenu.appendChild(li)
 		});
 	
     hex.addEventListener("click", function() {
@@ -176,7 +210,6 @@ if (hexData.usl_ob != "") {
 
   return newHex
 };
-
 
 
 
