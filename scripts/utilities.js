@@ -189,3 +189,11 @@ function checkParallelogram(hexArray) {
   }
   return JSON.stringify(mlti2) == JSON.stringify(mlti1) // такая проверка на то что объекты одинаковы
 }
+
+function checkAnyGKExistence(hexData) {
+  return (hexData.find(hexGK => hexGK[Object.keys(hexGK)[0]].name != "") != undefined)
+}
+
+function getEmptyGKIndex(hexData) {
+  return hexData.findIndex(hexGK => hexGK[Object.keys(hexGK)[0]].name == "")
+}

@@ -69,33 +69,33 @@ function addHexEventListeners() {
 					document.getElementById("l1a").innerHTML = "Редактировать"
 					document.getElementById("l2").style.display = ""
 			}
-      /*let li = document.createElement("li")
-      li.classList.add("context-menu__item")
-      let a = document.createElement("a")
-      a.classList.add("context-menu__link")
-      if (hex.hidden == false)
-      {
+      console.log(getHexFullData(hex))
+      console.log(checkAnyGKExistence(getHexFullData(hex)))
+      console.log(getEmptyGKIndex(getHexFullData(hex)))
+      if (checkAnyGKExistence(getHexFullData(hex)) && getHexData(hex).name != "") {
+
+        let li = document.createElement("li")
+        li.classList.add("context-menu__item")
+        let a = document.createElement("a")
+        a.classList.add("context-menu__link")
         a.innerHTML = "Скрыть"
+
+        a.addEventListener('click', function() {
+          emptyIndex = getEmptyGKIndex(hexData)
+          // hexGK[Object.keys(hexGK)[0]].name
+          let swap = data[hex.parentElement.id][hex.id][0]
+          data[hex.parentElement.id][hex.id][0] = data[hex.parentElement.id][hex.id][emptyIndex]
+          data[hex.parentElement.id][hex.id][emptyIndex] = swap
+          createTable("newf", data)
+        })
+
+        li.appendChild(a)
+        gkmenu.appendChild(li)
+
       }
-      else
-      {
-        a.innerHTML = "Показать"
-      }
-      a.addEventListener('click', function() {
-        if (a.innerHTML == "Скрыть") {
-          hex.style.opacity = "0.0";
-          a.innerHTML = "Показать";
-          hex.hidden = true;
-        }
-        else if (a.innerHTML == "Показать")
-        {
-          hex.style.opacity = "1.0";
-          a.innerHTML = "Скрыть";
-          hex.hidden = false;
-        }
-      })
-      li.appendChild(a)
-      gkmenu.appendChild(li)*/
+
+    
+
 		});
 	
     hex.addEventListener("click", function() {
