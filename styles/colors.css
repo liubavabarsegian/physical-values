@@ -1,32 +1,18 @@
 :root {
-	--color-yellow: rgb(218, 218, 139);
-	--color-yellow-dark: rgb(198, 198, 81);
+	--color-yellow: rgb(219, 219, 123);
 	--color-gray: rgb(194, 197, 200);
-	--color-gray-dark: rgb(168, 170, 171);
-	--color-grideperlevy: rgb(115, 115, 115);
-	--color-grideperlevy-dark: rgb(100, 100, 100);
+	--color-grideperlevy: rgb(109, 109, 109);
 	--color-dark_gray: rgb(155, 155, 155);
-	--color-dark_gray-dark: rgb(140, 140, 140);
-	--color-sky: rgb(173, 207, 221);
-	--color-sky-dark: rgb(153, 178, 204);
-	--color-light_green: rgb(182, 238, 182);
-	--color-light_green-dark: rgb(138, 178, 140);
-	--color-vinous: rgb(247, 130, 134);
-	--color-vinous-dark: rgb(182, 79, 79);
-	--color-dark_green: rgb(87, 174, 87);
-	--color-dark_green-dark: rgb(65, 120, 58);
-	--color-blue: rgb(111, 154, 233);
-	--color-blue-dark: rgb(93, 139, 185);
-	--color-mint: rgb(177, 203, 228);
-	--color-mint-dark: rgb(127, 168, 206);
-	--color-white_blue: rgb(207, 223, 238);
-	--color-white_blue-dark: rgb(168, 184, 201);
-	--color-swamp: rgb(39, 127, 56);
-	--color-swamp-dark: rgb(19, 107, 40);
-	--color-dark_blue: rgb(91, 91, 180);
-	--color-dark_blue-dark: rgb(68, 73, 159);
-	--color-purple: rgb(210, 166, 227);
-	--color-purple-dark: rgb(188, 141, 203);
+	--color-sky: rgb(163, 202, 218);
+	--color-light_green: rgb(146, 232, 146);
+	--color-vinous: rgb(231, 150, 112);
+	--color-dark_green: rgb(100, 160, 32);
+	--color-blue: rgb(116, 175, 236);
+	--color-mint: rgb(191, 215, 153);
+	--color-white_blue: rgb(162, 200, 235);
+	--color-swamp: rgb(188, 203, 152);
+	--color-dark_blue: rgb(87, 91, 223);
+	--color-purple: rgb(231, 155, 222);
 }
 
 .yellow {

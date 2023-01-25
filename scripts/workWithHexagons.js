@@ -102,8 +102,8 @@ function rememberHexagon(hex) {
 			currentLaw = {
 				name: null,
 				type: null,
-				equationInTerms: `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = (${hexDataLaw[1].name})^2`,
-				equationInLetters: `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})^2`,
+				equationInTerms: `${hexDataLaw[0].name} * ${hexDataLaw[2].name} = (${hexDataLaw[1].name})²`,
+				equationInLetters: `${hexDataLaw[0].usl_ob} * ${hexDataLaw[2].usl_ob} = (${hexDataLaw[1].usl_ob})²`,
 				hexes: tempclickedHexagons.map(hex => hex.id),
 				hexesGK: hexDataLaw.map(hexData => hexData.GK),
 				id: hexDataLaw.map(hex => `${hex.LT}${hex.GK}`).sort().join('')

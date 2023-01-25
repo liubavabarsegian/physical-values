@@ -152,7 +152,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -163,7 +163,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -364,7 +364,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -375,7 +375,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -576,7 +576,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -587,7 +587,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -788,7 +788,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -799,7 +799,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -1000,7 +1000,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -1011,7 +1011,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -1212,7 +1212,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -1223,7 +1223,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -1424,7 +1424,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -1435,7 +1435,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁶T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -1636,7 +1636,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -1647,7 +1647,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁷T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -1848,7 +1848,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -1859,7 +1859,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁸T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -2060,7 +2060,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -2071,7 +2071,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁹T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -2274,7 +2274,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -2285,7 +2285,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -2486,7 +2486,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -2497,7 +2497,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -2698,7 +2698,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -2709,7 +2709,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -2910,7 +2910,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -2921,7 +2921,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -3122,7 +3122,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -3133,7 +3133,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -3334,7 +3334,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -3345,7 +3345,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -3546,7 +3546,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -3557,7 +3557,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁶T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -3758,7 +3758,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -3769,7 +3769,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁷T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -3970,7 +3970,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -3981,7 +3981,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁸T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -4184,7 +4184,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -4195,7 +4195,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻¹T³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -4337,15 +4337,15 @@ dataMix = {
             },
             {
                 "G⁰K⁰": {
-                    "name": "Квадрат времени",
+                    "name": "Время²",
                     "color": "yellow",
                     "usl_ob": "t²",
                     "M": 0,
                     "L": 0,
                     "T": 2,
                     "I": 0,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "ed_izm": "сек²",
+                    "ob_ed_izm": "с²",
                     "LT": "L⁰T²",
                     "GK": "G⁰K⁰"
                 }
@@ -4396,7 +4396,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -4407,7 +4407,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -4608,7 +4608,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -4619,7 +4619,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -4820,7 +4820,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -4831,7 +4831,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -5032,7 +5032,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -5043,7 +5043,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -5244,7 +5244,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -5255,7 +5255,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -5456,7 +5456,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -5467,7 +5467,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -5624,7 +5624,7 @@ dataMix = {
             },
             {
                 "G²K²": {
-                    "name": "Квадрат силы тока",
+                    "name": "(Сила тока)²",
                     "color": "dark_green",
                     "usl_ob": "I²",
                     "M": 0,
@@ -5668,7 +5668,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -5679,7 +5679,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁶T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -5880,7 +5880,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -5891,7 +5891,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁷T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -6092,7 +6092,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -6103,7 +6103,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁸T⁻⁶",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -6306,7 +6306,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -6317,7 +6317,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻¹T²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -6518,7 +6518,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -6529,7 +6529,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -6730,7 +6730,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -6741,7 +6741,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -6942,7 +6942,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -6953,7 +6953,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -7154,7 +7154,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -7165,7 +7165,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -7366,7 +7366,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -7377,7 +7377,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -7578,7 +7578,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -7589,7 +7589,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -7790,7 +7790,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -7801,7 +7801,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁶T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -8002,7 +8002,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -8013,7 +8013,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁷T⁻⁶",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -8216,7 +8216,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -8227,7 +8227,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻²T²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -8428,7 +8428,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -8439,7 +8439,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻¹T¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -8499,7 +8499,7 @@ dataMix = {
                     "T": 0,
                     "I": 0,
                     "ed_izm": "",
-                    "ob_ed_izm": "1",
+                    "ob_ed_izm": "",
                     "LT": "L⁰T⁰",
                     "GK": "G⁰K⁰"
                 }
@@ -8640,7 +8640,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -8651,7 +8651,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -8852,7 +8852,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -8863,7 +8863,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -9064,7 +9064,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -9075,7 +9075,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -9142,9 +9142,9 @@ dataMix = {
             },
             {
                 "G¹K⁰": {
-                    "name": "Расход массы",
+                    "name": "Расход массы (вращение)",
                     "color": "gray",
-                    "usl_ob": "",
+                    "usl_ob": "∂m/∂t",
                     "M": 1,
                     "L": 0,
                     "T": -1,
@@ -9276,7 +9276,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -9287,7 +9287,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -9444,7 +9444,7 @@ dataMix = {
             },
             {
                 "G²K²": {
-                    "name": "Квадрат намагниченн.",
+                    "name": "(Намагниченн.)²",
                     "color": "dark_green",
                     "usl_ob": "J²",
                     "M": 0,
@@ -9488,7 +9488,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -9499,7 +9499,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -9700,7 +9700,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -9711,7 +9711,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -9912,7 +9912,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -9923,7 +9923,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁶T⁻⁶",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -10124,7 +10124,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -10135,7 +10135,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁷T⁻⁷",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -10338,7 +10338,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -10349,7 +10349,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻²T¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -10550,7 +10550,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -10561,7 +10561,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻¹T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -10762,7 +10762,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -10773,7 +10773,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -10974,7 +10974,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -10985,7 +10985,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -11186,7 +11186,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -11197,7 +11197,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -11398,7 +11398,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -11409,7 +11409,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -11610,7 +11610,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -11621,7 +11621,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -11822,7 +11822,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -11833,7 +11833,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻⁶",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -12034,7 +12034,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -12045,7 +12045,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁶T⁻⁷",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -12248,7 +12248,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -12259,7 +12259,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻³T¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -12460,7 +12460,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -12471,7 +12471,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻²T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -12672,7 +12672,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -12683,7 +12683,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻¹T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -12810,7 +12810,7 @@ dataMix = {
             },
             {
                 "G⁰K⁰": {
-                    "name": "Квадрат частоты",
+                    "name": "Частота²",
                     "color": "yellow",
                     "usl_ob": "ω²",
                     "M": 0,
@@ -12884,7 +12884,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -12895,7 +12895,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -13096,7 +13096,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -13107,7 +13107,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -13279,7 +13279,7 @@ dataMix = {
             },
             {
                 "G²K²": {
-                    "name": "Квадрат плотности тока",
+                    "name": "(Плотность тока)²",
                     "color": "dark_green",
                     "usl_ob": "j²",
                     "M": 0,
@@ -13308,7 +13308,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -13319,7 +13319,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -13339,15 +13339,15 @@ dataMix = {
             },
             {
                 "G⁰K⁻²": {
-                    "name": "A²",
+                    "name": "(Векторный потенциал)²",
                     "color": "dark_blue",
                     "usl_ob": "A²",
-                    "M": 0,
-                    "L": 0,
-                    "T": 0,
-                    "I": 0,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "M": 2,
+                    "L": 2,
+                    "T": -4,
+                    "I": -2,
+                    "ed_izm": "Ньютон²/Ампер²",
+                    "ob_ed_izm": "Н²/A²",
                     "LT": "L²T⁻⁴",
                     "GK": "G⁰K⁻²"
                 }
@@ -13520,7 +13520,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -13531,7 +13531,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -13583,7 +13583,7 @@ dataMix = {
         "L⁴T⁻⁶": [
             {
                 "G⁰K⁻²": {
-                    "name": "Потенциал²",
+                    "name": "(Электр. потенциал)²",
                     "color": "dark_blue",
                     "usl_ob": "φ²",
                     "M": 2,
@@ -13732,7 +13732,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -13743,7 +13743,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻⁶",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -13944,7 +13944,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -13955,7 +13955,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻⁷",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -14156,7 +14156,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -14167,7 +14167,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁶T⁻⁸",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -14370,7 +14370,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -14381,7 +14381,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻³T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -14582,7 +14582,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -14593,7 +14593,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻²T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -14794,7 +14794,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -14805,7 +14805,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻¹T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -15006,7 +15006,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -15017,7 +15017,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -15218,7 +15218,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -15229,7 +15229,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -15430,7 +15430,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -15441,7 +15441,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -15642,7 +15642,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -15653,7 +15653,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁻⁶",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -15854,7 +15854,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -15865,7 +15865,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻⁷",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -16066,7 +16066,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -16077,7 +16077,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻⁸",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -16280,7 +16280,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -16291,7 +16291,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻⁴T⁰",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -16492,7 +16492,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -16503,7 +16503,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻³T⁻¹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -16675,7 +16675,7 @@ dataMix = {
             },
             {
                 "G⁰K⁰": {
-                    "name": "Квадрат вихря",
+                    "name": "Вихрь²",
                     "color": "yellow",
                     "usl_ob": "ξ²",
                     "M": 0,
@@ -16704,7 +16704,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -16715,7 +16715,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻²T⁻²",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -16916,7 +16916,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -16927,7 +16927,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁻¹T⁻³",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -16979,7 +16979,7 @@ dataMix = {
         "L⁰T⁻⁴": [
             {
                 "G⁰K⁻²": {
-                    "name": "Квадрат В",
+                    "name": "(Магн. индукция)²",
                     "color": "dark_blue",
                     "usl_ob": "B²",
                     "M": 2,
@@ -17128,7 +17128,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -17139,7 +17139,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁰T⁻⁴",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -17159,15 +17159,15 @@ dataMix = {
             },
             {
                 "G²K⁰": {
-                    "name": "Квадрат плотности массы",
+                    "name": "(Плотности массы)²",
                     "color": "dark_gray",
-                    "usl_ob": "",
+                    "usl_ob": "ρ{m}²",
                     "M": 2,
                     "L": -6,
                     "T": 0,
                     "I": 0,
-                    "ed_izm": "",
-                    "ob_ed_izm": "",
+                    "ed_izm": "килограмм²/метр⁶",
+                    "ob_ed_izm": "кг²/м⁶",
                     "LT": "L⁰T⁻⁴",
                     "GK": "G²K⁰"
                 }
@@ -17340,7 +17340,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -17351,7 +17351,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L¹T⁻⁵",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -17403,7 +17403,7 @@ dataMix = {
         "L²T⁻⁶": [
             {
                 "G⁰K⁻²": {
-                    "name": "Квадрат Е",
+                    "name": "(Напряженн. электр. поля)²",
                     "color": "dark_blue",
                     "usl_ob": "Е²",
                     "M": 2,
@@ -17552,7 +17552,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -17563,7 +17563,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L²T⁻⁶",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -17764,7 +17764,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -17775,7 +17775,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L³T⁻⁷",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -17976,7 +17976,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -17987,7 +17987,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁴T⁻⁸",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -18188,7 +18188,7 @@ dataMix = {
                 }
             },
             {
-                "G²K⁻¹": {
+                "G²K¹": {
                     "name": "",
                     "color": "white_blue",
                     "usl_ob": "",
@@ -18199,7 +18199,7 @@ dataMix = {
                     "ed_izm": "",
                     "ob_ed_izm": "",
                     "LT": "L⁵T⁻⁹",
-                    "GK": "G²K⁻¹"
+                    "GK": "G²K¹"
                 }
             },
             {
@@ -18277,7 +18277,7 @@ dataMix = {
             "L³T⁰G⁰K⁰L³T⁻²G¹K⁰L⁰T⁰G⁻¹K⁰L⁰T⁻²G⁰K⁰": {
                 "name": "Масса и частота",
                 "type": "gravity",
-                "equationInTerms": "Квадрат частоты * Объем = Гравитац. постоянная * Масса",
+                "equationInTerms": "Частота² * Объем = Гравитац. постоянная * Масса",
                 "equationInLetters": "ω² * V = G * m",
                 "hexes": [
                     "L⁰T⁻²",
@@ -18315,8 +18315,8 @@ dataMix = {
             "L⁰T⁰G⁻¹K⁰L⁰T⁻²G¹K⁰L⁰T⁻¹G⁰K⁰L⁰T⁻¹G⁰K⁰": {
                 "name": "Частота при пл массы",
                 "type": "gravity",
-                "equationInTerms": "Гравитац. постоянная * Плотность массы = (Частота)^2",
-                "equationInLetters": "G * ρ_m = (f)^2",
+                "equationInTerms": "Гравитац. постоянная * Плотность массы = (Частота)²",
+                "equationInLetters": "G * ρ_m = (f)²",
                 "hexes": [
                     "L⁰T⁰",
                     "L⁰T⁻¹",
@@ -18545,7 +18545,7 @@ dataMix = {
             "L²T⁻⁴G²K²L¹T⁻⁴G¹K⁰L⁻²T⁻¹G⁻¹K⁻²L⁻¹T⁻¹G⁰K⁰": {
                 "name": "Вихрь плотн тока и давление",
                 "type": "electro",
-                "equationInTerms": "Вихрь * Градиент давления = Градиент эл. сопротивл. * Квадрат плотности тока",
+                "equationInTerms": "Вихрь * Градиент давления = Градиент эл. сопротивл. * (Плотность тока)²",
                 "equationInLetters": "ξ * gradp = grad R * j²",
                 "hexes": [
                     "L⁻¹T⁻¹",
@@ -18602,7 +18602,7 @@ dataMix = {
             "L³T⁻²G¹K¹L³T⁻³G¹K⁰L⁻¹T⁻²G⁰K⁻¹L⁻¹T⁻¹G⁰K⁰": {
                 "name": "Вихрь массы 2",
                 "type": "electro",
-                "equationInTerms": "Ротор В * Сила тока = Вихрь * Расход массы",
+                "equationInTerms": "Ротор В * Сила тока = Вихрь * Расход массы (вращение)",
                 "equationInLetters": "rotB * I = ξ * ",
                 "hexes": [
                     "L⁻¹T⁻²",

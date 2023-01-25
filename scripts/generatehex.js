@@ -69,16 +69,15 @@ function addHexEventListeners() {
 					document.getElementById("l1a").innerHTML = "Редактировать"
 					document.getElementById("l2").style.display = ""
 			}
-      console.log(getHexFullData(hex))
-      console.log(checkAnyGKExistence(getHexFullData(hex)))
-      console.log(getEmptyGKIndex(getHexFullData(hex)))
       if (checkAnyGKExistence(getHexFullData(hex)) && getHexData(hex).name != "") {
 
-        let li = document.createElement("li")
-        li.classList.add("context-menu__item")
-        let a = document.createElement("a")
-        a.classList.add("context-menu__link")
-        a.innerHTML = "Скрыть"
+          let li = document.createElement("li");
+          li.classList.add("context-menu__item");
+          let a = document.createElement("a");
+          a.classList.add("context-menu__link");
+          a.style.backgroundColor = '#000000';
+          a.style.color = '#FFFFFF';
+          a.innerHTML = "Скрыть 👁";
 
         a.addEventListener('click', function() {
           emptyIndex = getEmptyGKIndex(hexData)
