@@ -18316,7 +18316,7 @@ dataMix = {
                 "name": "Частота при пл массы",
                 "type": "gravity",
                 "equationInTerms": "Гравитац. постоянная * Плотность массы = (Частота)²",
-                "equationInLetters": "G * ρ_m = (f)²",
+                "equationInLetters": "G * ρ{m} = (f)²",
                 "hexes": [
                     "L⁰T⁰",
                     "L⁰T⁻¹",
@@ -18335,7 +18335,7 @@ dataMix = {
                 "name": "Градиент пл массы и вихрь",
                 "type": "gravity",
                 "equationInTerms": "Градиент пл. массы * Гравитац. постоянная = Вихрь * Частота",
-                "equationInLetters": "gradρ_m * G = ξ * f",
+                "equationInLetters": "gradρ{m} * G = ξ * f",
                 "hexes": [
                     "L⁻¹T⁻²",
                     "L⁻¹T⁻¹",
@@ -18527,7 +18527,7 @@ dataMix = {
                 "name": "Неизв с рот В",
                 "type": "electro",
                 "equationInTerms": "Ротор В * Электр. заряд² = Плотность заряда * Момент импульса",
-                "equationInLetters": "rotB * q² = ρ_q * L",
+                "equationInLetters": "rotB * q² = ρ{q} * L",
                 "hexes": [
                     "L⁻¹T⁻²",
                     "L⁰T⁻¹",
@@ -18603,7 +18603,7 @@ dataMix = {
                 "name": "Вихрь массы 2",
                 "type": "electro",
                 "equationInTerms": "Ротор В * Сила тока = Вихрь * Расход массы (вращение)",
-                "equationInLetters": "rotB * I = ξ * ",
+                "equationInLetters": "rotB * I = ξ * ∂m/∂t",
                 "hexes": [
                     "L⁻¹T⁻²",
                     "L⁻¹T⁻¹",

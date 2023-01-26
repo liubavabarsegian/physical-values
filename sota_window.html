@@ -142,10 +142,9 @@
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
 		<h2 class="modal__title">Скриншот</h2>
 		<div class="wrapper exmpl">
-			<div id="output_screen"></div>
+			<div id="output_screen" style="display: block; width: 100%; height: 100%; object-fit: contain "></div>
 		</div>
 		<b>Правая кнопка мыши -> сохранить изображение как</b>
-		<p>Примечание: загружается полное изображения, несмотря на предпросмотр</p>
 	</div>
 
 	<div class="modal" data-modal="4">
@@ -287,8 +286,6 @@
 			</li>
 		</ul>
 		<ul class="gkcontext-menu__items context-menu__items" id="moreLevels" hidden>
-			<!--хм, думал скрывать по клику по кнопки уровни, функция сверху - но не работает-->
-
 		</ul>
 	</nav>
 	<script src="scripts/utilities.js"></script>

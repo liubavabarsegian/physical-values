@@ -198,7 +198,8 @@ function createHexagon(hexData,name) {
 /*    if (hexData.ob_ed_izm != "" && hexData.usl_ob != "") {*/
 if (hexData.usl_ob != "") {
     symbolMeasure = document.createElement("i")
-    symbolMeasure.innerHTML = `${hexData.usl_ob.split(/[{}]/)[0]}${(hexData.usl_ob.split(/[{}]/)[1]) ? (hexData.usl_ob.split(/[{}]/)[1].fontsize(1)) : ''}${(hexData.usl_ob.split(/[{}]/)[2]) ? (hexData.usl_ob.split(/[{}]/)[2]) : ''}, ${hexData.ob_ed_izm}`
+    if (hexData.M == 0 & hexData.L == 0 & hexData.T == 0 & hexData.I == 0 & hexData.name != "" & hexData.LT == 'L⁰T⁰') { symbolMeasure.innerHTML = '1' }
+    else { symbolMeasure.innerHTML = `${hexData.usl_ob.split(/[{}]/)[0]}${(hexData.usl_ob.split(/[{}]/)[1]) ? (hexData.usl_ob.split(/[{}]/)[1].fontsize(1)) : ''}${(hexData.usl_ob.split(/[{}]/)[2]) ? (hexData.usl_ob.split(/[{}]/)[2]) : ''}, ${hexData.ob_ed_izm}` }
     hexText.appendChild(symbolMeasure)
   }
   mlt2 = document.createElement("b")

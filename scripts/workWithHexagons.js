@@ -64,11 +64,15 @@ function Deactivate(hex) {
 
 document.addEventListener("keydown", (event) => {
 	if (event.keyCode == 27) {
-		clickedHexagons.forEach(hexElement => Deactivate(hexElement));
-		clickedHexagons = [];
+		if (clickedHexagons.length > 0) {
+			clickedHexagons.forEach(hexElement => Deactivate(hexElement));
+			clickedHexagons = [];
+		}
+		if (currentShownLaw.hexes) {
+			hexagons = currentShownLaw.hexes.map(hex => document.getElementById(hex))
+			hexagons.forEach(hex => Deactivate(hex))
+		}
 		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-		hexagons = currentShownLaw.hexes.map(hex => document.getElementById(hex))
-		hexagons.forEach(hex => Deactivate(hex))
 	}
 })
 
@@ -196,11 +200,9 @@ function finRedact() {
 
 	arrayGK = findGK(newRedactHexElement,gkInput)
 	gk = getHexData(redactHexElement)
-	//console.log(data["row5"]["L⁰T⁰"])
 	deleteHexGK(gk)
 	gk = arrayGK[Object.keys(arrayGK)]
 	writeFromForm(gk)
-	//console.log(data["row5"]["L⁰T⁰"])
 	sortGK(data);
 	createTable("newf", data);
 	
@@ -247,7 +249,7 @@ function showLaws() {
 		for (let law in data.laws[type]) {
 			let li = document.createElement('li');
 			let pre = document.createElement('pre');
-			pre.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].equationInTerms}\n${data.laws[type][law].equationInLetters}`;
+			pre.innerHTML = `${data.laws[type][law].name}\n${data.laws[type][law].equationInTerms}\n${(data.laws[type][law].equationInLetters).italics()}`;
 			pre.addEventListener('click', function (e) {
 
 				currentShownLaw = data.laws[type][law]
@@ -295,9 +297,6 @@ function writeFromForm(gk)  {
 }
 
 document.getElementById("l2").onclick = function(){
-	//удалить 2 строки ниже
-	//gkInput = getFromInput("GK")
-	//ltInput = getFromInput("LT")
 
 	//newRedactHexElement = findHex(ltInput)
 	let delHexElement = getMainHexFromSiblings(ContextElement.target)

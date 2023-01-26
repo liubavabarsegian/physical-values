@@ -3,39 +3,26 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* ���������� � ���������� ������ ���������-������ � ��������.
-       �������� ������� id, ����� �� ������ �� ������ �������� � ������� overlay*/
     var modalButtons = document.querySelectorAll('.js-open-modal'),
         overlay = document.querySelector('.js-overlay-modal'),
         closeButtons = document.querySelectorAll('.js-modal-close');
 
-
-    /* ���������� ������ ������ */
     modalButtons.forEach(function (item) {
 
-        /* ��������� ������ ������ ���������� ����� */
         item.addEventListener('click', function (e) {
 
-            /* ������������� ����������� �������� ��������. ��� ��� ������ ������
-               ���� ����� ������� ��-�������. ���-�� ������� ������, ���-�� ������.
-               ����� ���������������. */
             e.preventDefault();
 
-            /* ��� ������ ����� �� ������ �� ����� �������� ���������� �������� data-modal
-               � ����� ������ ��������� ���� � ����� �� ���������. */
             var modalId = this.getAttribute('data-modal'),
                 modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
             console.log(modalId);
 
-
-            /* ����� ���� ��� ����� ������ ��������� ����, ������� ������
-               �������� � ���� ����� �������� ��. */
             modalElem.classList.add('active');
             overlay.classList.add('active');
             //document.getElementsByTagName("body")[0].style.overflow = 'hidden';
-        }); // end click
+        });
 
-    }); // end foreach
+    });
 
 
     closeButtons.forEach(function (item) {
@@ -46,17 +33,19 @@ document.addEventListener('DOMContentLoaded', function () {
             parentModal.classList.remove('active');
             overlay.classList.remove('active');
             //document.getElementsByTagName("body")[0].style.overflow = 'scroll';
-            clickedHexagons.forEach(hexElement => Deactivate(hexElement));
-            clickedHexagons = [];
-            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-            drawingParallelogram = false;
-            if (currentShownLaw.hexes) {
-                hexagons = currentShownLaw.hexes.map(hex => document.getElementById(hex))
-                hexagons.forEach(hex => Deactivate(hex))
+            if (clickedHexagons.length > 0) {
+                clickedHexagons.forEach(hexElement => Deactivate(hexElement));
+                clickedHexagons = [];
+                ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                drawingParallelogram = false;
             }
+            //if (currentShownLaw.hexes) {
+            //    hexagons = currentShownLaw.hexes.map(hex => document.getElementById(hex))
+            //    hexagons.forEach(hex => Deactivate(hex))
+            //}
         });
 
-    }); // end foreach
+    });
 
 
     //document.body.addEventListener('keyup', function (e) {
@@ -78,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-}); // end ready
+});
 
 
 
