@@ -8,6 +8,11 @@ const createUndoableCounter = () => {
 			return JSON.parse(history[position]);
 		},
 
+		history() {
+			historyArray = history.forEach(data => JSON.parse(data))
+			return historyArray;
+		},
+
 		setValue(value) {
 			if (position < history.length - 1) {
 				history = history.slice(0, position + 1);
@@ -20,7 +25,6 @@ const createUndoableCounter = () => {
 			if (position > 0) {
 				position -= 1;
 				data = this.value()
-				sortGK(data);
 				createTable("newf", data);
 			}
 			else { alert('Больше назад нельзя'); }
@@ -30,7 +34,6 @@ const createUndoableCounter = () => {
 			if (position < history.length - 1) {
 				position += 1;
 				data = this.value()
-				sortGK(data);
 				createTable("newf", data);
 			}
 			else { alert('Больше вперед нельзя'); }
@@ -203,7 +206,6 @@ function finRedact() {
 	deleteHexGK(gk)
 	gk = arrayGK[Object.keys(arrayGK)]
 	writeFromForm(gk)
-	sortGK(data);
 	createTable("newf", data);
 	
 	localStorage.setItem('testObject', JSON.stringify(data));

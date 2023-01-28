@@ -86,6 +86,7 @@ function addHexEventListeners() {
           data[hex.parentElement.id][hex.id][0] = data[hex.parentElement.id][hex.id][emptyIndex]
           data[hex.parentElement.id][hex.id][emptyIndex] = swap
           createTable("newf", data)
+          undoableCounter.setValue(data)
         })
 
         li.appendChild(a)
