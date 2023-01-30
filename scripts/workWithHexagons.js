@@ -304,11 +304,11 @@ document.getElementById("l2").onclick = function(){
 	let delHexElement = getMainHexFromSiblings(ContextElement.target)
 	gk = getHexData(delHexElement)
 	deleteHexGK(gk)
-	sortGK(data)
+	showNotEmptyGK(findRow(gk.LT),gk.LT)
 	createTable("newf",data)
 	menu.classList.remove("active")
 
-	localStorage.setItem('testObject', JSON.stringify(data));
+	//localStorage.setItem('testObject', JSON.stringify(data));
 	undoableCounter.setValue(data);
 }
 

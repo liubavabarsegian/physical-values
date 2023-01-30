@@ -13,15 +13,16 @@ function findGKIndex(hex,reqGK) {
   return hex.indexOf(findGK(hex,reqGK))
 }
 
-//function convert
+
 
 function findHex(lt) {
+  return data[findRow(lt)][lt]
+}
 
+function findRow(lt) {
   ltArray = getPowFromLTGK(lt)
-  //console.log(lt)
   rowNumber = 5-(ltArray[0]+ltArray[2])
-  //console.log(rowNumber)
-  return data[`row${rowNumber}`][lt]
+  return `row${rowNumber}`
 }
 
 function getPowFromLTGK(ltgk) {

@@ -1,13 +1,7 @@
 sortGK(data)
 createTable("newf", data)
 
-// Array.prototype.swapsss = function (x,y) {
-//   var b = this[x];
-//   this[x] = this[y];
-//   this[y] = b;
-//   return this;
-// }
-// почему-то эта функция ломает проект
+
 
 
 let ContextElement
@@ -137,15 +131,19 @@ function sortGK(tableData) {
         if (row != 'laws') {
             for (let hex in tableData[row]) {
                 if (findFirstNotEmptyNumber(tableData[row][hex]) != null) {
-                    firstNonEmptyGK = findFirstNotEmptyNumber(tableData[row][hex])
-                    firstGK = 0
-                    swap = tableData[row][hex][firstGK]
-                    tableData[row][hex][firstGK] = tableData[row][hex][firstNonEmptyGK]
-                    tableData[row][hex][firstNonEmptyGK] = swap
+                  showNotEmptyGK(row,hex)
                 }
             }
         }
     }
+}
+
+function showNotEmptyGK(row,hex) {
+  firstNonEmptyGK = findFirstNotEmptyNumber(data[row][hex])
+  firstGK = 0
+  swap = data[row][hex][firstGK]
+  data[row][hex][firstGK] = data[row][hex][firstNonEmptyGK]
+  data[row][hex][firstNonEmptyGK] = swap
 }
 
 function findFirstNotEmptyNumber(hex) {
