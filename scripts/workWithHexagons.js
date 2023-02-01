@@ -207,7 +207,6 @@ function finRedact() {
 	writeFromForm(gk)
 	createTable("newf", data);
 	
-	localStorage.setItem('testObject', JSON.stringify(data));
 	undoableCounter.setValue(data);
 }
 
@@ -228,7 +227,6 @@ function addLaw() {
 	else { alert('Данный закон уже существует') }
 	currentLaw = {}
 
-	localStorage.setItem('testObject', JSON.stringify(data));
 }
 
 function getLaw(law) {
@@ -307,7 +305,6 @@ document.getElementById("l2").onclick = function(){
 	createTable("newf",data)
 	menu.classList.remove("active")
 
-	localStorage.setItem('testObject', JSON.stringify(data));
 	undoableCounter.setValue(data);
 }
 

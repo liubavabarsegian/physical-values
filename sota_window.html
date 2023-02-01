@@ -21,10 +21,12 @@
 	<script>
 		function reloadValues() {
 			data = dataMix;
-			localStorage.setItem('testObject', JSON.stringify(data));
 			sortGK(data);
 			createTable("newf", data)
 		}
+		function saveValues() {
+            localStorage.setItem('testObject', JSON.stringify(data));
+        }
 		function showMenuLevels() {
 			document.getElementById("moreLevels").hidden = false;
 		}
@@ -219,8 +221,14 @@
 		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
 		<li><a href="#" onclick="showLaws();" class="js-open-modal" data-modal="6">Законы</a></li>
 		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
+		<li>
+			<a href="#">Настройки</a>
+			<ul>
+				<li><a href="#" onclick="saveValues();">Сохранить локально</a></li>
+				<li><a href="#" onclick="reloadValues();">Сбросить все</a></li>
+			</ul>
+		</li>
 		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
-		<li><a href="#" onclick="reloadValues();">Обновить</a></li>
 	</ul>
 
 	<br />
@@ -274,6 +282,7 @@
 	</script>
 	<script>
 		window.onbeforeunload = function () {
+            localStorage.setItem('testObject', JSON.stringify(data));
 			return true;
 		};
 	</script>
