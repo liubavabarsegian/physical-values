@@ -1,47 +1,43 @@
-
-
-
 function getNGK(hex,number) {
-  return hex[number][Object.keys(hex[number])[0]]
+    return hex[number][Object.keys(hex[number])[0]]
 }
 
 function findGK(hex,reqGK) { 
-  return hex.find(gk => Object.keys(gk) == reqGK)
+    return hex.find(gk => Object.keys(gk) == reqGK)
 }
 
 function findGKIndex(hex,reqGK) { 
-  return hex.indexOf(findGK(hex,reqGK))
+    return hex.indexOf(findGK(hex,reqGK))
 }
-
 
 
 function findHex(lt) {
-  return data[findRow(lt)][lt]
+    return data[findRow(lt)][lt]
 }
 
 function findRow(lt) {
-  ltArray = getPowFromLTGK(lt)
-  rowNumber = 5-(ltArray[0]+ltArray[2])
-  return `row${rowNumber}`
+    ltArray = getPowFromLTGK(lt)
+    rowNumber = 5-(ltArray[0]+ltArray[2])
+    return `row${rowNumber}`
 }
 
 function getPowFromLTGK(ltgk) {
-  ltgkNum = replacePowNumbersStoB(ltgk)
-  ltgkArray = []
-  if (ltgkNum.match(/(L[\-\d]+)/mg) != null) {
-    ltgkArray.push(ltgkNum.match(/(L[\-\d]+)/mg)[0])
-  } else {ltgkArray.push("L0")}
-  if (ltgkNum.match(/(G[\-\d]+)/mg) != null) {
-    ltgkArray.push(ltgkNum.match(/(G[\-\d]+)/mg)[0])
-  } else {ltgkArray.push("G0")}
-  if (ltgkNum.match(/(T[\-\d]+)/mg) != null) {
-    ltgkArray.push(ltgkNum.match(/(T[\-\d]+)/mg)[0])
-  } else {ltgkArray.push("T0")}
-  if (ltgkNum.match(/(K[\-\d]+)/mg) != null) {
-    ltgkArray.push(ltgkNum.match(/(K[\-\d]+)/mg)[0])
-  } else {ltgkArray.push("K0")}
-  ltgkArray = ltgkArray.map(val => parseInt(val.slice(1)))
-  return ltgkArray
+    ltgkNum = replacePowNumbersStoB(ltgk)
+    ltgkArray = []
+    if (ltgkNum.match(/(L[\-\d]+)/mg) != null) {
+        ltgkArray.push(ltgkNum.match(/(L[\-\d]+)/mg)[0])
+    } else {ltgkArray.push("L0")}
+    if (ltgkNum.match(/(G[\-\d]+)/mg) != null) {
+        ltgkArray.push(ltgkNum.match(/(G[\-\d]+)/mg)[0])
+    } else {ltgkArray.push("G0")}
+    if (ltgkNum.match(/(T[\-\d]+)/mg) != null) {
+        ltgkArray.push(ltgkNum.match(/(T[\-\d]+)/mg)[0])
+    } else {ltgkArray.push("T0")}
+    if (ltgkNum.match(/(K[\-\d]+)/mg) != null) {
+        ltgkArray.push(ltgkNum.match(/(K[\-\d]+)/mg)[0])
+    } else {ltgkArray.push("K0")}
+        ltgkArray = ltgkArray.map(val => parseInt(val.slice(1)))
+    return ltgkArray
 }
 // ⁰,⁻¹,⁻²,⁻³,⁻⁴,⁻⁵,⁻⁶,⁻⁷,⁻⁸,⁻⁹ 
 
@@ -89,39 +85,39 @@ menu = document.querySelector(".context-menu__items");
 gkmenu = document.querySelector(".gkcontext-menu__items")
 
 function getHexData(hex) {
-  return getNGK(data[hex.parentElement.id][hex.id],0)
+    return getNGK(data[hex.parentElement.id][hex.id],0)
 }
 
 function getHexFullData(hex) {
-  return data[hex.parentElement.id][hex.id]
+    return data[hex.parentElement.id][hex.id]
 }
 
 
 function getMainHexFromSiblings(element) {
-  while (!element.classList.contains("one-hexagon") ) {
-    if (element.parentElement == undefined) {
-      return undefined
+    while (!element.classList.contains("one-hexagon") ) {
+        if (element.parentElement == undefined) {
+            return undefined
+        }
+        element = element.parentElement
     }
-    element = element.parentElement
-  }
-  return element
+    return element
 }
 
 function writeIntoObjFromInput(object,field,id) {
-  val = getFromInput(id)
+    val = getFromInput(id)
 	object[field] = val
 }
 
 function writeIntoInputFromObject(object,field,id) {
-  writeIntoInput(object[field],id)
+    writeIntoInput(object[field],id)
 }
 
 function writeIntoInput(field,id) {
 	input = document.getElementById(id)
-  val = field
-  if (typeof val == "string") {
+    val = field
+    if (typeof val == "string") {
     val = replacePowNumbersStoB(val)
-  }
+    }
 	input.value = val
 }
 
@@ -140,7 +136,7 @@ function getFromInput(id) {
 }
 
 function getHexCanvasCoords(hex) {
-  let inside = hex.querySelector(".inside");
+    let inside = hex.querySelector(".inside");
 	let headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
 	let position = inside.getBoundingClientRect();
 	xCenter = (position.left + position.right) / 2;
@@ -154,7 +150,7 @@ ctx.canvas.width  = window.innerWidth;
 ctx.canvas.height = 1000;
 function drawParallelogram(points,color) {
 	
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height) // очистить
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height) // очистить
 
 	ctx.beginPath();
 	ctx.strokeStyle = color;
@@ -163,38 +159,36 @@ function drawParallelogram(points,color) {
 	points.forEach(function (point) {
 		ctx.lineTo(point.x, point.y);
 	})
-  if (points.length == 4) {
+    if (points.length == 4) {
     	ctx.lineTo(points[0].x, points[0].y);
-  }
+    }
 
 	ctx.stroke();
-	
 }
 
 function checkParallelogram(hexArray) {
 
-  
-  hexData = hexArray.map(hex => getHexData(hex))
-  console.log(hexData)
-  let mlti1 = {
+    hexData = hexArray.map(hex => getHexData(hex))
+    console.log(hexData)
+    let mlti1 = {
     M:hexData[0].M+hexData[2].M,
     L:hexData[0].L+hexData[2].L,
     T:hexData[0].T+hexData[2].T,
     I:hexData[0].I+hexData[2].I,
-  }
-  let mlti2 = {
+    }
+    let mlti2 = {
     M:hexData[1].M+hexData[3].M,
     L:hexData[1].L+hexData[3].L,
     T:hexData[1].T+hexData[3].T,
     I:hexData[1].I+hexData[3].I,
-  }
-  return JSON.stringify(mlti2) == JSON.stringify(mlti1) // такая проверка на то что объекты одинаковы
+    }
+    return JSON.stringify(mlti2) == JSON.stringify(mlti1) // такая проверка на то что объекты одинаковы
 }
 
 function checkAnyGKExistence(hexData) {
-  return (hexData.find(hexGK => hexGK[Object.keys(hexGK)[0]].name != "") != undefined)
+    return (hexData.find(hexGK => hexGK[Object.keys(hexGK)[0]].name != "") != undefined)
 }
 
 function getEmptyGKIndex(hexData) {
-  return hexData.findIndex(hexGK => hexGK[Object.keys(hexGK)[0]].name == "")
+    return hexData.findIndex(hexGK => hexGK[Object.keys(hexGK)[0]].name == "")
 }
