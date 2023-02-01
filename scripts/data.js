@@ -18271,8 +18271,48 @@ dataMix = {
                 "id": "L³T⁰G⁰K⁰L¹T⁻⁴G¹K⁰L⁰T⁰G⁰K⁰L⁴T⁻⁴G¹K⁰"
             }
         },
-        "mech": {},
-        "magn": {},
+        "mech": {
+            "L³T⁻²G¹K⁰L¹T⁻²G⁰K⁰L⁰T⁰G⁰K⁰L⁴T⁻⁴G¹K⁰": {
+                "name": "2 закон Ньютона",
+                "type": "mech",
+                "equationInTerms": "Безразмерная постоянная * Сила = Масса * Ускорение",
+                "equationInLetters": "1 * F = m * a",
+                "hexes": [
+                    "L⁰T⁰",
+                    "L³T⁻²",
+                    "L⁴T⁻⁴",
+                    "L¹T⁻²"
+                ],
+                "hexesGK": [
+                    "G⁰K⁰",
+                    "G¹K⁰",
+                    "G¹K⁰",
+                    "G⁰K⁰"
+                ],
+                "id": "L³T⁻²G¹K⁰L¹T⁻²G⁰K⁰L⁰T⁰G⁰K⁰L⁴T⁻⁴G¹K⁰"
+            }
+        },
+        "magn": {
+            "L³T⁻²G¹K¹L¹T⁰G⁰K⁰L⁰T⁻²G⁰K⁻¹L⁻²T⁰G⁻¹K⁻²": {
+                "name": "Циркуляция вектора B",
+                "type": "magn",
+                "equationInTerms": "Магнитная индукция * Длина = Сила тока * Магн. прониц.",
+                "equationInLetters": "В * l = I * μμ₀",
+                "hexes": [
+                    "L⁰T⁻²",
+                    "L³T⁻²",
+                    "L¹T⁰",
+                    "L⁻²T⁰"
+                ],
+                "hexesGK": [
+                    "G⁰K⁻¹",
+                    "G¹K¹",
+                    "G⁰K⁰",
+                    "G⁻¹K⁻²"
+                ],
+                "id": "L³T⁻²G¹K¹L¹T⁰G⁰K⁰L⁰T⁻²G⁰K⁻¹L⁻²T⁰G⁻¹K⁻²"
+            }
+        },
         "gravity": {
             "L³T⁰G⁰K⁰L³T⁻²G¹K⁰L⁰T⁰G⁻¹K⁰L⁰T⁻²G⁰K⁰": {
                 "name": "Масса и частота",
@@ -18293,63 +18333,6 @@ dataMix = {
                 ],
                 "id": "L³T⁰G⁰K⁰L³T⁻²G¹K⁰L⁰T⁰G⁻¹K⁰L⁰T⁻²G⁰K⁰"
             },
-            "L³T⁻²G¹K⁰L³T⁻¹G⁰K⁰L⁰T⁰G⁻¹K⁰L⁰T⁻¹G⁰K⁰": {
-                "name": "Частота и масса",
-                "type": "gravity",
-                "equationInTerms": "Частота * Изменение объёма = Гравитац. постоянная * Масса",
-                "equationInLetters": "f * dV/dt = G * m",
-                "hexes": [
-                    "L⁰T⁻¹",
-                    "L⁰T⁰",
-                    "L³T⁻¹",
-                    "L³T⁻²"
-                ],
-                "hexesGK": [
-                    "G⁰K⁰",
-                    "G⁻¹K⁰",
-                    "G⁰K⁰",
-                    "G¹K⁰"
-                ],
-                "id": "L³T⁻²G¹K⁰L³T⁻¹G⁰K⁰L⁰T⁰G⁻¹K⁰L⁰T⁻¹G⁰K⁰"
-            },
-            "L⁰T⁰G⁻¹K⁰L⁰T⁻²G¹K⁰L⁰T⁻¹G⁰K⁰L⁰T⁻¹G⁰K⁰": {
-                "name": "Частота при пл массы",
-                "type": "gravity",
-                "equationInTerms": "Гравитац. постоянная * Плотность массы = (Частота)²",
-                "equationInLetters": "G * ρ{m} = (f)²",
-                "hexes": [
-                    "L⁰T⁰",
-                    "L⁰T⁻¹",
-                    "L⁰T⁻²",
-                    "L⁰T⁻¹"
-                ],
-                "hexesGK": [
-                    "G⁻¹K⁰",
-                    "G⁰K⁰",
-                    "G¹K⁰",
-                    "G⁰K⁰"
-                ],
-                "id": "L⁰T⁰G⁻¹K⁰L⁰T⁻²G¹K⁰L⁰T⁻¹G⁰K⁰L⁰T⁻¹G⁰K⁰"
-            },
-            "L⁰T⁰G⁻¹K⁰L⁰T⁻¹G⁰K⁰L⁻¹T⁻²G¹K⁰L⁻¹T⁻¹G⁰K⁰": {
-                "name": "Градиент пл массы и вихрь",
-                "type": "gravity",
-                "equationInTerms": "Градиент пл. массы * Гравитац. постоянная = Вихрь * Частота",
-                "equationInLetters": "gradρ{m} * G = ξ * f",
-                "hexes": [
-                    "L⁻¹T⁻²",
-                    "L⁻¹T⁻¹",
-                    "L⁰T⁰",
-                    "L⁰T⁻¹"
-                ],
-                "hexesGK": [
-                    "G¹K⁰",
-                    "G⁰K⁰",
-                    "G⁻¹K⁰",
-                    "G⁰K⁰"
-                ],
-                "id": "L⁰T⁰G⁻¹K⁰L⁰T⁻¹G⁰K⁰L⁻¹T⁻²G¹K⁰L⁻¹T⁻¹G⁰K⁰"
-            },
             "L²T⁻²G⁰K⁰L³T⁻²G¹K⁰L⁰T⁰G⁰K⁰L⁵T⁻⁴G¹K⁰": {
                 "name": "Потенциал гравитац",
                 "type": "gravity",
@@ -18368,47 +18351,9 @@ dataMix = {
                     "G⁰K⁰"
                 ],
                 "id": "L²T⁻²G⁰K⁰L³T⁻²G¹K⁰L⁰T⁰G⁰K⁰L⁵T⁻⁴G¹K⁰"
-            },
-            "L³T⁻²G¹K⁰L¹T⁻²G⁰K⁰L⁰T⁰G⁰K⁰L⁴T⁻⁴G¹K⁰": {
-                "name": "Напряжённость поля гравитац",
-                "type": "gravity",
-                "equationInTerms": "Сила * Безразмерная постоянная = Масса * Ускорение",
-                "equationInLetters": "F * 1 = m * a",
-                "hexes": [
-                    "L⁴T⁻⁴",
-                    "L³T⁻²",
-                    "L⁰T⁰",
-                    "L¹T⁻²"
-                ],
-                "hexesGK": [
-                    "G¹K⁰",
-                    "G¹K⁰",
-                    "G⁰K⁰",
-                    "G⁰K⁰"
-                ],
-                "id": "L³T⁻²G¹K⁰L¹T⁻²G⁰K⁰L⁰T⁰G⁰K⁰L⁴T⁻⁴G¹K⁰"
             }
         },
         "electro": {
-            "L⁰T⁰G⁻¹K⁰L⁶T⁻⁴G²K⁰L⁸T⁻⁴G²K²L⁻²T⁰G⁻¹K⁻²": {
-                "name": "Связь массы и тока",
-                "type": "electro",
-                "equationInTerms": "Магн. прониц. * Элемент тока² = Гравитац. постоянная * Масса²",
-                "equationInLetters": "μμ₀ * (Il)² = G * M²",
-                "hexes": [
-                    "L⁻²T⁰",
-                    "L⁰T⁰",
-                    "L⁸T⁻⁴",
-                    "L⁶T⁻⁴"
-                ],
-                "hexesGK": [
-                    "G⁻¹K⁻²",
-                    "G⁻¹K⁰",
-                    "G²K²",
-                    "G²K⁰"
-                ],
-                "id": "L⁰T⁰G⁻¹K⁰L⁶T⁻⁴G²K⁰L⁸T⁻⁴G²K²L⁻²T⁰G⁻¹K⁻²"
-            },
             "L³T⁻²G¹K⁰L³T⁻¹G¹K¹L¹T⁻²G⁰K⁻¹L¹T⁻¹G⁰K⁰": {
                 "name": "Связь массы и заряда",
                 "type": "electro",
@@ -18447,176 +18392,24 @@ dataMix = {
                 ],
                 "id": "L³T⁻²G¹K⁰L³T⁻¹G¹K¹L⁰T⁻²G⁰K⁻¹L⁰T⁻¹G⁰K⁰"
             },
-            "L⁰T⁻²G⁰K⁻¹L⁰T⁻¹G⁰K⁰L⁴T⁻²G¹K¹L⁴T⁻³G¹K⁰": {
-                "name": "Связь тока и импульса",
+            "L²T⁻³G⁰K⁻¹L³T⁻²G¹K¹L⁰T⁰G⁰K⁰L⁻¹T⁻¹G¹K²": {
+                "name": "Закон Ома",
                 "type": "electro",
-                "equationInTerms": "Магнитная индукция * Элемент тока = Частота * Импульс",
-                "equationInLetters": "В * Il = f * Р",
-                "hexes": [
-                    "L⁰T⁻²",
-                    "L⁰T⁻¹",
-                    "L⁴T⁻²",
-                    "L⁴T⁻³"
-                ],
-                "hexesGK": [
-                    "G⁰K⁻¹",
-                    "G⁰K⁰",
-                    "G¹K¹",
-                    "G¹K⁰"
-                ],
-                "id": "L⁰T⁻²G⁰K⁻¹L⁰T⁻¹G⁰K⁰L⁴T⁻²G¹K¹L⁴T⁻³G¹K⁰"
-            },
-            "L⁰T⁻²G⁰K⁻¹L⁰T⁻¹G⁰K⁰L⁴T⁻²G¹K⁰L⁴T⁻¹G¹K¹": {
-                "name": "Новое ",
-                "type": "electro",
-                "equationInTerms": "Локализация массы * Частота = Электр. дип. момент * Магнитная индукция",
-                "equationInLetters": "mr * f = ql * В",
-                "hexes": [
-                    "L⁴T⁻²",
-                    "L⁴T⁻¹",
-                    "L⁰T⁻¹",
-                    "L⁰T⁻²"
-                ],
-                "hexesGK": [
-                    "G¹K⁰",
-                    "G¹K¹",
-                    "G⁰K⁰",
-                    "G⁰K⁻¹"
-                ],
-                "id": "L⁰T⁻²G⁰K⁻¹L⁰T⁻¹G⁰K⁰L⁴T⁻²G¹K⁰L⁴T⁻¹G¹K¹"
-            },
-            "L⁰T²G¹K²L⁵T⁻³G¹K⁰L⁶T⁻²G²K²L⁻¹T¹G⁰K⁰": {
-                "name": "Неизв 2",
-                "type": "electro",
-                "equationInTerms": "Электрич. прониц. * Момент импульса = (Скорость)⁻¹ * Электр. заряд²",
-                "equationInLetters": "ɛɛ₀ * L = v⁻¹ * q²",
-                "hexes": [
-                    "L⁰T²",
-                    "L⁻¹T¹",
-                    "L⁵T⁻³",
-                    "L⁶T⁻²"
-                ],
-                "hexesGK": [
-                    "G¹K²",
-                    "G⁰K⁰",
-                    "G¹K⁰",
-                    "G²K²"
-                ],
-                "id": "L⁰T²G¹K²L⁵T⁻³G¹K⁰L⁶T⁻²G²K²L⁻¹T¹G⁰K⁰"
-            },
-            "L¹T¹G¹K²L⁰T⁰G⁰K⁰L⁵T⁻³G¹K⁰L⁶T⁻²G²K²": {
-                "name": "Неизв 4",
-                "type": "electro",
-                "equationInTerms": "Безразмерная постоянная * Электр. заряд² = Проводимость * Момент импульса",
-                "equationInLetters": "1 * q² = R⁻¹ * L",
+                "equationInTerms": "Безразмерная постоянная * Электр. потенциал = Сопротивление * Сила тока",
+                "equationInLetters": "1 * φ = R * I",
                 "hexes": [
                     "L⁰T⁰",
-                    "L¹T¹",
-                    "L⁶T⁻²",
-                    "L⁵T⁻³"
+                    "L⁻¹T⁻¹",
+                    "L²T⁻³",
+                    "L³T⁻²"
                 ],
                 "hexesGK": [
                     "G⁰K⁰",
                     "G¹K²",
-                    "G²K²",
-                    "G¹K⁰"
-                ],
-                "id": "L¹T¹G¹K²L⁰T⁰G⁰K⁰L⁵T⁻³G¹K⁰L⁶T⁻²G²K²"
-            },
-            "L⁰T⁻¹G¹K¹L⁵T⁻³G¹K⁰L⁶T⁻²G²K²L⁻¹T⁻²G⁰K⁻¹": {
-                "name": "Неизв с рот В",
-                "type": "electro",
-                "equationInTerms": "Ротор В * Электр. заряд² = Плотность заряда * Момент импульса",
-                "equationInLetters": "rotB * q² = ρ{q} * L",
-                "hexes": [
-                    "L⁻¹T⁻²",
-                    "L⁰T⁻¹",
-                    "L⁶T⁻²",
-                    "L⁵T⁻³"
-                ],
-                "hexesGK": [
                     "G⁰K⁻¹",
-                    "G¹K¹",
-                    "G²K²",
-                    "G¹K⁰"
+                    "G¹K¹"
                 ],
-                "id": "L⁰T⁻¹G¹K¹L⁵T⁻³G¹K⁰L⁶T⁻²G²K²L⁻¹T⁻²G⁰K⁻¹"
-            },
-            "L²T⁻⁴G²K²L¹T⁻⁴G¹K⁰L⁻²T⁻¹G⁻¹K⁻²L⁻¹T⁻¹G⁰K⁰": {
-                "name": "Вихрь плотн тока и давление",
-                "type": "electro",
-                "equationInTerms": "Вихрь * Градиент давления = Градиент эл. сопротивл. * (Плотность тока)²",
-                "equationInLetters": "ξ * gradp = grad R * j²",
-                "hexes": [
-                    "L⁻¹T⁻¹",
-                    "L⁻²T⁻¹",
-                    "L¹T⁻⁴",
-                    "L²T⁻⁴"
-                ],
-                "hexesGK": [
-                    "G⁰K⁰",
-                    "G⁻¹K⁻²",
-                    "G¹K⁰",
-                    "G²K²"
-                ],
-                "id": "L²T⁻⁴G²K²L¹T⁻⁴G¹K⁰L⁻²T⁻¹G⁻¹K⁻²L⁻¹T⁻¹G⁰K⁰"
-            },
-            "L⁵T⁻²G¹K¹L⁵T⁻³G¹K⁰L⁻¹T⁻²G⁰K⁻¹L⁻¹T⁻¹G⁰K⁰": {
-                "name": "Вихрь момента импульса",
-                "type": "electro",
-                "equationInTerms": "Вихрь * Момент импульса = Магн. дип. момент * Ротор В",
-                "equationInLetters": "ξ * L = IS * rotB",
-                "hexes": [
-                    "L⁻¹T⁻¹",
-                    "L⁵T⁻²",
-                    "L⁵T⁻³",
-                    "L⁻¹T⁻²"
-                ],
-                "hexesGK": [
-                    "G⁰K⁰",
-                    "G¹K¹",
-                    "G¹K⁰",
-                    "G⁰K⁻¹"
-                ],
-                "id": "L⁵T⁻²G¹K¹L⁵T⁻³G¹K⁰L⁻¹T⁻²G⁰K⁻¹L⁻¹T⁻¹G⁰K⁰"
-            },
-            "L³T⁻²G¹K⁰L³T⁻¹G¹K¹L⁻¹T⁻²G⁰K⁻¹L⁻¹T⁻¹G⁰K⁰": {
-                "name": "Вихрь массы",
-                "type": "electro",
-                "equationInTerms": "Масса * Вихрь = Электр. заряд * Ротор В",
-                "equationInLetters": "m * ξ = q * rotB",
-                "hexes": [
-                    "L³T⁻²",
-                    "L³T⁻¹",
-                    "L⁻¹T⁻¹",
-                    "L⁻¹T⁻²"
-                ],
-                "hexesGK": [
-                    "G¹K⁰",
-                    "G¹K¹",
-                    "G⁰K⁰",
-                    "G⁰K⁻¹"
-                ],
-                "id": "L³T⁻²G¹K⁰L³T⁻¹G¹K¹L⁻¹T⁻²G⁰K⁻¹L⁻¹T⁻¹G⁰K⁰"
-            },
-            "L³T⁻²G¹K¹L³T⁻³G¹K⁰L⁻¹T⁻²G⁰K⁻¹L⁻¹T⁻¹G⁰K⁰": {
-                "name": "Вихрь массы 2",
-                "type": "electro",
-                "equationInTerms": "Ротор В * Сила тока = Вихрь * Расход массы (вращение)",
-                "equationInLetters": "rotB * I = ξ * ∂m/∂t",
-                "hexes": [
-                    "L⁻¹T⁻²",
-                    "L⁻¹T⁻¹",
-                    "L³T⁻²",
-                    "L³T⁻³"
-                ],
-                "hexesGK": [
-                    "G⁰K⁻¹",
-                    "G⁰K⁰",
-                    "G¹K¹",
-                    "G¹K⁰"
-                ],
-                "id": "L³T⁻²G¹K¹L³T⁻³G¹K⁰L⁻¹T⁻²G⁰K⁻¹L⁻¹T⁻¹G⁰K⁰"
+                "id": "L²T⁻³G⁰K⁻¹L³T⁻²G¹K¹L⁰T⁰G⁰K⁰L⁻¹T⁻¹G¹K²"
             }
         },
         "kkv": {
