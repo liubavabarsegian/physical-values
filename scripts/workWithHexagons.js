@@ -175,7 +175,6 @@ function showRedactFormWithParams(gk) {
 	writeIntoInput(gkPow[1],"GGK")
 	writeIntoInput(gkPow[3],"KGK")
 
-
 	writeIntoInputFromObject(gk,"name","name")
 	writeIntoInputFromObject(gk,"ed_izm","unit_full")
 	writeIntoInputFromObject(gk,"usl_ob","symbol")
@@ -197,7 +196,7 @@ document.getElementById("l1").onclick = function(){
 }
 
 function finRedact() {
-  ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
+	ltInput = replacePowNumbersBtoS(`L${getFromInput("LLT")}T${getFromInput("TLT")}`)
 	gkInput = replacePowNumbersBtoS(`G${getFromInput("GGK")}K${getFromInput("KGK")}`)
 	newRedactHexElement = findHex(ltInput)
 
@@ -236,7 +235,7 @@ function getLaw(law) {
 	for (type in data.laws) {
 		if (data.laws[type][law.id] != undefined) {
 			return data.laws[type][law.id]
-    }
+		}
 	}
 	return false
 }
@@ -330,27 +329,27 @@ document.getElementById("export").onclick = function (e) {
 		return
 		//fileName = "fviz"
 	}
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
+	var element = document.createElement('a');
+	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
 
-  element.setAttribute('download', fileName + ".jsota")
+	element.setAttribute('download', fileName + ".jsota")
 
-  element.style.display = 'none'
-  document.body.appendChild(element)
+	element.style.display = 'none'
+	document.body.appendChild(element)
 
-  element.click()
+	element.click()
 
-  document.body.removeChild(element)
+	document.body.removeChild(element)
 }
 
 fileSelector = document.getElementById('import')
 fileSelector.addEventListener('change', (event) => {
 	fileList = event.target.files
 	reader = new FileReader()
-  reader.addEventListener('load', (event) => {
-    data = JSON.parse(event.target.result)
+	reader.addEventListener('load', (event) => {
+		data = JSON.parse(event.target.result)
 		createTable("newf",data)
-  })
+	})
 	reader.readAsText(fileList[0]);
 	document.getElementById('sota_filenm').value = fileList[0].name.replace('.jsota','');
 });
