@@ -138,16 +138,18 @@ function getFromInput(id) {
 function getHexCanvasCoords(hex) {
     let inside = hex.querySelector(".inside");
 	let headerHeight = document.getElementById("my-canvas").getBoundingClientRect().top;
+    let contentMargin = document.getElementById("newf").getBoundingClientRect().left
+
 	let position = inside.getBoundingClientRect();
-	xCenter = (position.left + position.right) / 2;
+	xCenter = (position.left + position.right) / 2 - contentMargin;
 	yCenter = (position.top + position.bottom) / 2 - headerHeight;
 	return {x: xCenter, y: yCenter}
 }
 
 let c = document.getElementById("my-canvas");
 let ctx = c.getContext("2d");
-ctx.canvas.width  = window.innerWidth;
-ctx.canvas.height = 1000;
+ctx.canvas.width  = 1500;
+ctx.canvas.height = 810;
 function drawParallelogram(points,color) {
 	
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height) // очистить
