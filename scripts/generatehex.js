@@ -95,7 +95,10 @@ function addHexEventListeners() {
 
             //вывод в нижние окна
             document.getElementById("outLT").value = getNGK(findHex(getMainHexFromSiblings(hexElement).id), 0).LT;
-            document.getElementById("outGK").value = getNGK(findHex(getMainHexFromSiblings(hexElement).id), 0).GK;
+            if (getMainHexFromSiblings(hexElement).classList.contains('invisible')) {
+                document.getElementById("outGK").value = "-";
+            }
+            else { document.getElementById("outGK").value = getNGK(findHex(getMainHexFromSiblings(hexElement).id), 0).GK; }
             //--------------------------
 
             let futureClickedHexagons = clickedHexagons.slice()
