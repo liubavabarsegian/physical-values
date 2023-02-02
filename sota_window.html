@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="styles/colors.css">
 	<link rel="stylesheet" href="styles/honeycombs.css">
 	<link rel="stylesheet" href="styles/contextMenu.css">
-	<link rel="stylesheet" href="styles/navbar.css">
+	<link rel="stylesheet" href="styles/navbar_footer.css">
 	<link rel="stylesheet" href="styles/int_popup.css">
 	<script src="scripts/screen.js"></script>
 	<script src="scripts/int_popup.js"></script>
@@ -52,30 +52,6 @@
 			}
 		}
 	</script>
-	<style>
-		#footer {
-			position: fixed; /* Фиксированное положение */
-			left: 0;
-			bottom: 0; /* Левый нижний угол */
-			padding: 10px; /* Поля вокруг текста */
-			background: gray; /* Цвет фона */
-		}
-
-		input {
-			font-size: 16px;
-		}
-
-		pre {
-			border: dashed 2px;
-			background-color: bisque;
-			font-family: Arial, Helvetica, sans-serif;
-			font-weight: 300;
-		}
-
-            pre:hover {
-                text-shadow: 1px 1px 1px #000;
-            }
-	</style>
 </head>
 <body>
 	<!-- Несколько модальных окон -->
@@ -198,7 +174,7 @@
 		<!--Сохраненные законы-->
 		<svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" /></svg>
 		<h2 class="modal__title">Добавленные законы</h2>
-		<div id="laws" style="max-height:500px; overflow-y:scroll" ></div>
+		<div id="laws" style="max-height:500px; overflow-y:scroll"></div>
 	</div>
 
 	<!-- Подложка под модальным окном -->
@@ -239,7 +215,7 @@
 		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
 	</ul>
 
-	<br />
+	<div style="height: 2.1vw;"></div>
 	<div style="margin:auto;width: 1500px;">
 		<canvas id="my-canvas" style="position: absolute;"></canvas>
 		<div id="newf" class="font_size" style="justify-content: center;">
@@ -268,13 +244,13 @@
 	<script src="scripts/data.js"></script>
 	<script src="scripts/generatehex.js"></script>
 	<script src="scripts/workWithHexagons.js"></script>
-	<div id="footer">
-		<input type="text" id="outLT" placeholder="LT размерность" style="width:5em; color:black" disabled />
-		<input type="text" id="outGK" placeholder="GK размерность" style="width:5em; color: black" disabled />
-		<button name="sizer" data-size="1">Показать</button>
-		<button name="sizer" data-size="0">Спрятать</button>
-		<button class="js-open-modal" data-modal="5" hidden id="lawOpen">Связь уровней</button>
-	</div>
+	<ul id="footer">
+		<li><input type="text" id="outLT" placeholder="LT размерность" disabled /></li>
+		<li><input type="text" id="outGK" placeholder="GK размерность" disabled /></li>
+		<li><a name="sizer" data-size="1">Показать</a></li>
+		<li><a name="sizer" data-size="0">Спрятать</a></li>
+		<li><a class="js-open-modal" data-modal="5" id="lawOpen" style="display:none;">Связь уровней</a></li>
+	</ul>
 	<script type="text/javascript">
 		var img = document.getElementById('myfoto');
 		img.naturalWidth = img.width;
@@ -291,7 +267,7 @@
 	</script>
 	<script>
 		window.onbeforeunload = function () {
-            localStorage.setItem('testObject', JSON.stringify(data));
+			localStorage.setItem('testObject', JSON.stringify(data));
 			return true;
 		};
 	</script>

@@ -1,0 +1,110 @@
+#navbar, #navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#navbar {
+    height: 2vw;
+    background-color:#666;
+    padding-left: 1.7vw;
+    min-width: auto;
+    width:100vw;
+    position: fixed;
+    z-index: 10;
+}
+
+    #navbar ul {
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+    }
+
+    #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+    }
+
+    #navbar li a {
+        display: block;
+        padding: 0.5vw;
+        width: 7vw;
+        font-size: 1vw;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+        #navbar li:hover ul {
+            display: block;
+        }
+
+        #navbar ul li {
+            float: none;
+        }
+
+            #navbar ul li ul{
+                float: none;
+            }
+
+    #navbar li:hover {
+        background-color: #f90;
+    }
+
+        #navbar ul li:hover {
+            background-color: #666;
+        }
+
+
+
+#footer {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-left: 0.1vw;
+    background-color: #666;
+    height: 2vw;
+    z-index: 10;
+}
+
+    #footer li {
+        float: left;
+        position: relative;
+        height: 100%;
+    }
+
+        #footer li input {
+            display: block;
+            width: 5vw;
+            height: 1.6vw;
+            font-size: 1.2vw;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            background-color: white;
+            color: black;
+            border: 0.2vw solid black;
+        }
+
+        #footer li a {
+            display:block;
+            padding: 0.5vw;
+            width: 5vw;
+            font-size: 1vw;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+    #footer li:hover {
+        background-color: #f90;
+    }
