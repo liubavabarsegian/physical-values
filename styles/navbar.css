@@ -16,10 +16,10 @@
 }
 
 #navbar {
-    height: 30px;
+    height: 2vw;
     background-color:#666;
-    padding-left: 25px;
-    min-width: 470px;
+    padding-left: 1.7vw;
+    min-width: auto;
     position: relative;
     z-index: 10;
 }
@@ -30,16 +30,17 @@
     height: 100%;
 }
 
-#navbar li a {
-    display: block;
-    padding: 6px;
-    width: 100px;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-}
+    #navbar li a {
+        display: block;
+        padding: 0.5vw;
+        width: 7vw;
+        font-size: 1vw;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
 
 #navbar ul li {
     float: none;
