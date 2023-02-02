@@ -18416,7 +18416,7 @@ dataMix = {
             "L²T⁻²G⁰K⁻¹L³T⁻¹G¹K¹L⁵T⁻³G¹K⁰L⁶T⁻²G²K²": {
                 "name": "ККВ-1",
                 "type": "kkv",
-                "equationInTerms": "Момент импульса * Электр. заряд = Электр. заряд² * Магн. поток",
+                "equationInTerms": "Момент импульса * Электр. заряд = (Электр. заряд)² * Магн. поток",
                 "equationInLetters": "L * q = q² * Ф",
                 "hexes": [
                     "L⁵T⁻³",
