@@ -3,8 +3,9 @@
     "",
     "\\doc",
     "\\scripts",
-    "\\styles"
+    "\\styles",
+    "\\styles\\img"
   ],
-  "SelectedNode": "\\styles\\navbar.css",
+  "SelectedNode": "\\main_page.html",
   "PreviewInSolutionExplorer": false
 }

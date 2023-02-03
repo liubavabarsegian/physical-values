@@ -183,10 +183,10 @@
 	<ul id="navbar">
 		<li><a href="./main_page.html">Главная</a></li>
 		<li>
-			<a href="#">Файл</a>
+			<a>Файл</a>
 			<ul>
 				<li>
-					<a href="#" id="export">Скачать файл</a>
+					<a id="export">Скачать файл</a>
 					<input type="text" id="sota_filenm" placeholder="Название файла" value="" />
 				</li>
 				<li>
@@ -196,23 +196,23 @@
 			</ul>
 		</li>
 		<li>
-			<a href="#">Правка</a>
+			<a>Правка</a>
 			<ul>
-				<li><a href="#" onclick="undoableCounter.goBack();">↺ - назад</a></li>
-				<li><a href="#" onclick="undoableCounter.goForward();">↻ - вперед</a></li>
+				<li><a onclick="undoableCounter.goBack();">↺ - назад</a></li>
+				<li><a onclick="undoableCounter.goForward();">↻ - вперед</a></li>
 			</ul>
 		</li>
-		<li><a href="#" class="js-open-modal" data-modal="1">Связь уровней</a></li>
-		<li><a href="#" onclick="showLaws();" class="js-open-modal" data-modal="6">Законы</a></li>
-		<li><a href="#" class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
+		<li><a class="js-open-modal" data-modal="1">Связь уровней</a></li>
+		<li><a onclick="showLaws();" class="js-open-modal" data-modal="6">Законы</a></li>
+		<li><a class="js-open-modal" data-modal="3" onclick="takeshot()">Скриншот</a></li>
 		<li>
-			<a href="#">Настройки</a>
+			<a>Настройки</a>
 			<ul>
-				<li><a href="#" onclick="saveValues();">Сохранить локально</a></li>
-				<li><a href="#" onclick="reloadValues();">Сбросить все</a></li>
+				<li><a onclick="saveValues();">Сохранить локально</a></li>
+				<li><a onclick="reloadValues();">Сбросить все</a></li>
 			</ul>
 		</li>
-		<li><a href="#" class="js-open-modal" data-modal="4">Об авторах</a></li>
+		<li><a class="js-open-modal" data-modal="4">Об авторах</a></li>
 	</ul>
 
 	<div style="height: 2.1vw;"></div>
@@ -227,14 +227,14 @@
 	<nav id="context-menu" class="context-menu">
 		<ul class="context-menu__items">
 			<li id="l0" class="context-menu__item">
-				<a href="#" onclick="showMenuLevels();" class="context-menu__link" data-action="Levels">Уровни ></a>
+				<a onclick="showMenuLevels();" class="context-menu__link" data-action="Levels">Уровни ></a>
 
 			</li>
 			<li id="l1" class="context-menu__item">
-				<a href="#" class="context-menu__link js-open-modal" data-action="Edit" data-modal="2" id="l1a">Редактировать</a>
+				<a class="context-menu__link js-open-modal" data-action="Edit" data-modal="2" id="l1a">Редактировать</a>
 			</li>
 			<li id="l2" class="context-menu__item">
-				<a href="#" class="context-menu__link" data-action="Delete">Удалить</a>
+				<a class="context-menu__link" data-action="Delete">Удалить</a>
 			</li>
 		</ul>
 		<ul class="gkcontext-menu__items context-menu__items" id="moreLevels" hidden>

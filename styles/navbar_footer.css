@@ -27,17 +27,19 @@
         height: 100%;
     }
 
-    #navbar li a {
-        display: block;
-        padding: 0.5vw;
-        width: 7vw;
-        font-size: 1vw;
-        color: #fff;
-        text-decoration: none;
-        text-align: center;
-        position: relative;
-        z-index: 10;
-    }
+        #navbar li a {
+            display: block;
+            padding: 0.5vw;
+            width: 7vw;
+            font-size: 1vw;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+            user-select: none;
+        }
 
         #navbar li:hover ul {
             display: block;
@@ -103,6 +105,8 @@
             text-align: center;
             position: relative;
             z-index: 10;
+            cursor: pointer;
+            user-select: none;
         }
 
     #footer li:hover {
