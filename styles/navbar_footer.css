@@ -5,13 +5,15 @@
 }
 
 #navbar {
-    height: 2vw;
-    background-color:#666;
-    padding-left: 1.7vw;
+    display: flex;
+    background-color: #666;
+    padding-left: 1vw;
     min-width: auto;
-    width:100vw;
+    width: 100%;
     position: fixed;
     z-index: 10;
+    justify-content: flex-start;
+    height: 5vw;
 }
 
     #navbar ul {
@@ -27,18 +29,20 @@
         height: 100%;
     }
 
-        #navbar li a {
-            display: block;
+    #navbar li a {
+            display: flex;
             padding: 0.5vw;
-            width: 7vw;
-            font-size: 1vw;
+            width: 9vw;
+            font-size: 1.6vw;
             color: #fff;
             text-decoration: none;
             text-align: center;
+            align-items: center;
             position: relative;
             z-index: 10;
             cursor: pointer;
             user-select: none;
+            height: 80%;
         }
 
         #navbar li:hover ul {
@@ -84,8 +88,8 @@
 
         #footer li input {
             display: block;
-            width: 5vw;
-            height: 1.6vw;
+            width: 10vw;
+            height: 1.8vw;
             font-size: 1.2vw;
             text-align: center;
             position: relative;
@@ -99,7 +103,7 @@
             display:block;
             padding: 0.5vw;
             width: 5vw;
-            font-size: 1vw;
+            font-size: 1.2vw;
             color: #fff;
             text-decoration: none;
             text-align: center;
